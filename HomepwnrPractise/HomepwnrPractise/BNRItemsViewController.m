@@ -111,7 +111,7 @@
             
             self.imagePopover = [[UIPopoverController alloc] initWithContentViewController:ivc];
             self.imagePopover.delegate = self;
-            self.imagePopover.popoverContentSize = img.size;
+            self.imagePopover.popoverContentSize = CGSizeMake(600, 600);/*img.size;*/
             [self.imagePopover presentPopoverFromRect:rect inView:self.view permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
         }
     };

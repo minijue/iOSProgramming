@@ -64,7 +64,7 @@
         // Create a NSUUID object - and get its string representation
         NSUUID *uuid = [[NSUUID alloc] init];
         NSString *key = [uuid UUIDString];
-        _itemKey = key;
+        _itemKey = key;        
     }
     
     // Return the address of the newly initialized object
@@ -89,10 +89,7 @@
 }
 
 - (void)setThumbnailFromImage:(UIImage *)image {
-    CGSize origImageSize = image.size;
     CGRect newRect = CGRectMake(0, 0, 40, 40);
-    float ratioW = newRect.size.width / origImageSize.width;
-    float ratioH = newRect.size.height / origImageSize.height;
     
     UIGraphicsBeginImageContextWithOptions(newRect.size, NO, 0.0);
     

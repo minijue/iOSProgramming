@@ -10,6 +10,7 @@
 #import "BNRItem.h"
 #import "BNRImageStore.h"
 #import "BNRItemStore.h"
+#import "UIImage+BNRImageFixOrientation.h"
 
 @interface BNRDetailViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate,
     UITextFieldDelegate, UIPopoverControllerDelegate>
@@ -250,15 +251,16 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 
     // Get picked image from info dictionary
     UIImage *image = info[UIImagePickerControllerOriginalImage];
+    UIImage *img = [image fixOrientation];
     
-    [self.item setThumbnail:image];
+    [self.item setThumbnail:img];
 
     // Store the image in the BNRImageStore for this key
-    [[BNRImageStore sharedStore] setImage:image forKey:self.item.itemKey];
-
+    [[BNRImageStore sharedStore] setImage:img forKey:self.item.itemKey];
+    
     // Put that image onto the screen in our image view
-    self.imageView.image = image;
-
+    self.imageView.image = img;
+    
     // Do I have a popover?
     if (self.imagePickerPopover) {
 

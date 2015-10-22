@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		988252701BD9A89300493AB9 /* UIImage+FixOrientation.m in Sources */ = {isa = PBXBuildFile; fileRef = 9882526F1BD9A89300493AB9 /* UIImage+FixOrientation.m */; };
 		98C102751BD905CE00D2DB42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C102741BD905CE00D2DB42 /* Assets.xcassets */; };
 		98C102801BD9067600D2DB42 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C1027F1BD9067600D2DB42 /* Default-568h@2x.png */; };
 		98C102951BD9068600D2DB42 /* BNRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102821BD9068600D2DB42 /* BNRAppDelegate.m */; };
@@ -23,6 +24,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9882526E1BD9A89300493AB9 /* UIImage+FixOrientation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FixOrientation.h"; sourceTree = "<group>"; };
+		9882526F1BD9A89300493AB9 /* UIImage+FixOrientation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FixOrientation.m"; sourceTree = "<group>"; };
 		98C102651BD905CE00D2DB42 /* HomepwnrPractise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomepwnrPractise.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98C102741BD905CE00D2DB42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98C1027F1BD9067600D2DB42 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
@@ -101,6 +104,8 @@
 				98C102931BD9068600D2DB42 /* HomePwner-Info.plist */,
 				98C102941BD9068600D2DB42 /* HomePwner-Prefix.pch */,
 				98C102741BD905CE00D2DB42 /* Assets.xcassets */,
+				9882526E1BD9A89300493AB9 /* UIImage+FixOrientation.h */,
+				9882526F1BD9A89300493AB9 /* UIImage+FixOrientation.m */,
 				98C102681BD905CE00D2DB42 /* Supporting Files */,
 			);
 			path = HomepwnrPractise;
@@ -189,6 +194,7 @@
 			files = (
 				98C102961BD9068600D2DB42 /* BNRDetailViewController.m in Sources */,
 				98C1029B1BD9068600D2DB42 /* BNRItemCell.m in Sources */,
+				988252701BD9A89300493AB9 /* UIImage+FixOrientation.m in Sources */,
 				98C102951BD9068600D2DB42 /* BNRAppDelegate.m in Sources */,
 				98C1029D1BD9068600D2DB42 /* BNRItemStore.m in Sources */,
 				98C1029A1BD9068600D2DB42 /* BNRItem.m in Sources */,
