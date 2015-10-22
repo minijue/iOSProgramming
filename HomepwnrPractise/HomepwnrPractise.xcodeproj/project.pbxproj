@@ -8,19 +8,18 @@
 
 /* Begin PBXBuildFile section */
 		98C102751BD905CE00D2DB42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C102741BD905CE00D2DB42 /* Assets.xcassets */; };
-		98C102801BD9067600D2DB42 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C1027F1BD9067600D2DB42 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
-		98C102951BD9068600D2DB42 /* BNRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102821BD9068600D2DB42 /* BNRAppDelegate.m */; settings = {ASSET_TAGS = (); }; };
-		98C102961BD9068600D2DB42 /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102841BD9068600D2DB42 /* BNRDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
-		98C102971BD9068600D2DB42 /* BNRDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98C102851BD9068600D2DB42 /* BNRDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		98C102981BD9068600D2DB42 /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102871BD9068600D2DB42 /* BNRImageStore.m */; settings = {ASSET_TAGS = (); }; };
-		98C102991BD9068600D2DB42 /* BNRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102891BD9068600D2DB42 /* BNRImageViewController.m */; settings = {ASSET_TAGS = (); }; };
-		98C1029A1BD9068600D2DB42 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C1028B1BD9068600D2DB42 /* BNRItem.m */; settings = {ASSET_TAGS = (); }; };
-		98C1029B1BD9068600D2DB42 /* BNRItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C1028D1BD9068600D2DB42 /* BNRItemCell.m */; settings = {ASSET_TAGS = (); }; };
-		98C1029C1BD9068600D2DB42 /* BNRItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98C1028E1BD9068600D2DB42 /* BNRItemCell.xib */; settings = {ASSET_TAGS = (); }; };
-		98C1029D1BD9068600D2DB42 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102901BD9068600D2DB42 /* BNRItemStore.m */; settings = {ASSET_TAGS = (); }; };
-		98C1029E1BD9068600D2DB42 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102921BD9068600D2DB42 /* BNRItemsViewController.m */; settings = {ASSET_TAGS = (); }; };
-		98C1029F1BD9068600D2DB42 /* HomePwner-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98C102931BD9068600D2DB42 /* HomePwner-Info.plist */; settings = {ASSET_TAGS = (); }; };
-		98C102A11BD9069A00D2DB42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102A01BD9069A00D2DB42 /* main.m */; settings = {ASSET_TAGS = (); }; };
+		98C102801BD9067600D2DB42 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C1027F1BD9067600D2DB42 /* Default-568h@2x.png */; };
+		98C102951BD9068600D2DB42 /* BNRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102821BD9068600D2DB42 /* BNRAppDelegate.m */; };
+		98C102961BD9068600D2DB42 /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102841BD9068600D2DB42 /* BNRDetailViewController.m */; };
+		98C102971BD9068600D2DB42 /* BNRDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98C102851BD9068600D2DB42 /* BNRDetailViewController.xib */; };
+		98C102981BD9068600D2DB42 /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102871BD9068600D2DB42 /* BNRImageStore.m */; };
+		98C102991BD9068600D2DB42 /* BNRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102891BD9068600D2DB42 /* BNRImageViewController.m */; };
+		98C1029A1BD9068600D2DB42 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C1028B1BD9068600D2DB42 /* BNRItem.m */; };
+		98C1029B1BD9068600D2DB42 /* BNRItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C1028D1BD9068600D2DB42 /* BNRItemCell.m */; };
+		98C1029C1BD9068600D2DB42 /* BNRItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98C1028E1BD9068600D2DB42 /* BNRItemCell.xib */; };
+		98C1029D1BD9068600D2DB42 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102901BD9068600D2DB42 /* BNRItemStore.m */; };
+		98C1029E1BD9068600D2DB42 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102921BD9068600D2DB42 /* BNRItemsViewController.m */; };
+		98C102A11BD9069A00D2DB42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102A01BD9069A00D2DB42 /* main.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -141,7 +140,8 @@
 		98C1025D1BD905CE00D2DB42 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0700;
+				CLASSPREFIX = BNR;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "王珏";
 				TargetAttributes = {
 					98C102641BD905CE00D2DB42 = {
@@ -176,7 +176,6 @@
 				98C102971BD9068600D2DB42 /* BNRDetailViewController.xib in Resources */,
 				98C1029C1BD9068600D2DB42 /* BNRItemCell.xib in Resources */,
 				98C102751BD905CE00D2DB42 /* Assets.xcassets in Resources */,
-				98C1029F1BD9068600D2DB42 /* HomePwner-Info.plist in Resources */,
 				98C102801BD9067600D2DB42 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,7 +238,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -277,7 +276,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -326,6 +325,7 @@
 				98C1027E1BD905CE00D2DB42 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
