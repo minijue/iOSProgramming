@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		98C102751BD905CE00D2DB42 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98C102741BD905CE00D2DB42 /* Assets.xcassets */; };
+		98C102801BD9067600D2DB42 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98C1027F1BD9067600D2DB42 /* Default-568h@2x.png */; settings = {ASSET_TAGS = (); }; };
+		98C102951BD9068600D2DB42 /* BNRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102821BD9068600D2DB42 /* BNRAppDelegate.m */; settings = {ASSET_TAGS = (); }; };
+		98C102961BD9068600D2DB42 /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102841BD9068600D2DB42 /* BNRDetailViewController.m */; settings = {ASSET_TAGS = (); }; };
+		98C102971BD9068600D2DB42 /* BNRDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98C102851BD9068600D2DB42 /* BNRDetailViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		98C102981BD9068600D2DB42 /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102871BD9068600D2DB42 /* BNRImageStore.m */; settings = {ASSET_TAGS = (); }; };
+		98C102991BD9068600D2DB42 /* BNRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102891BD9068600D2DB42 /* BNRImageViewController.m */; settings = {ASSET_TAGS = (); }; };
+		98C1029A1BD9068600D2DB42 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C1028B1BD9068600D2DB42 /* BNRItem.m */; settings = {ASSET_TAGS = (); }; };
+		98C1029B1BD9068600D2DB42 /* BNRItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C1028D1BD9068600D2DB42 /* BNRItemCell.m */; settings = {ASSET_TAGS = (); }; };
+		98C1029C1BD9068600D2DB42 /* BNRItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98C1028E1BD9068600D2DB42 /* BNRItemCell.xib */; settings = {ASSET_TAGS = (); }; };
+		98C1029D1BD9068600D2DB42 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102901BD9068600D2DB42 /* BNRItemStore.m */; settings = {ASSET_TAGS = (); }; };
+		98C1029E1BD9068600D2DB42 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102921BD9068600D2DB42 /* BNRItemsViewController.m */; settings = {ASSET_TAGS = (); }; };
+		98C1029F1BD9068600D2DB42 /* HomePwner-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 98C102931BD9068600D2DB42 /* HomePwner-Info.plist */; settings = {ASSET_TAGS = (); }; };
+		98C102A11BD9069A00D2DB42 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98C102A01BD9069A00D2DB42 /* main.m */; settings = {ASSET_TAGS = (); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		98C102651BD905CE00D2DB42 /* HomepwnrPractise.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomepwnrPractise.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		98C102741BD905CE00D2DB42 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		98C1027F1BD9067600D2DB42 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		98C102811BD9068600D2DB42 /* BNRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRAppDelegate.h; sourceTree = "<group>"; };
+		98C102821BD9068600D2DB42 /* BNRAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRAppDelegate.m; sourceTree = "<group>"; };
+		98C102831BD9068600D2DB42 /* BNRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRDetailViewController.h; sourceTree = "<group>"; };
+		98C102841BD9068600D2DB42 /* BNRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRDetailViewController.m; sourceTree = "<group>"; };
+		98C102851BD9068600D2DB42 /* BNRDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRDetailViewController.xib; sourceTree = "<group>"; };
+		98C102861BD9068600D2DB42 /* BNRImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
+		98C102871BD9068600D2DB42 /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
+		98C102881BD9068600D2DB42 /* BNRImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageViewController.h; sourceTree = "<group>"; };
+		98C102891BD9068600D2DB42 /* BNRImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageViewController.m; sourceTree = "<group>"; };
+		98C1028A1BD9068600D2DB42 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		98C1028B1BD9068600D2DB42 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		98C1028C1BD9068600D2DB42 /* BNRItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemCell.h; sourceTree = "<group>"; };
+		98C1028D1BD9068600D2DB42 /* BNRItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemCell.m; sourceTree = "<group>"; };
+		98C1028E1BD9068600D2DB42 /* BNRItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRItemCell.xib; sourceTree = "<group>"; };
+		98C1028F1BD9068600D2DB42 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
+		98C102901BD9068600D2DB42 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		98C102911BD9068600D2DB42 /* BNRItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemsViewController.h; sourceTree = "<group>"; };
+		98C102921BD9068600D2DB42 /* BNRItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemsViewController.m; sourceTree = "<group>"; };
+		98C102931BD9068600D2DB42 /* HomePwner-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "HomePwner-Info.plist"; sourceTree = "<group>"; };
+		98C102941BD9068600D2DB42 /* HomePwner-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomePwner-Prefix.pch"; sourceTree = "<group>"; };
+		98C102A01BD9069A00D2DB42 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		98C102621BD905CE00D2DB42 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		98C1025C1BD905CE00D2DB42 = {
+			isa = PBXGroup;
+			children = (
+				98C1027F1BD9067600D2DB42 /* Default-568h@2x.png */,
+				98C102671BD905CE00D2DB42 /* HomepwnrPractise */,
+				98C102661BD905CE00D2DB42 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		98C102661BD905CE00D2DB42 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				98C102651BD905CE00D2DB42 /* HomepwnrPractise.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		98C102671BD905CE00D2DB42 /* HomepwnrPractise */ = {
+			isa = PBXGroup;
+			children = (
+				98C102811BD9068600D2DB42 /* BNRAppDelegate.h */,
+				98C102821BD9068600D2DB42 /* BNRAppDelegate.m */,
+				98C102831BD9068600D2DB42 /* BNRDetailViewController.h */,
+				98C102841BD9068600D2DB42 /* BNRDetailViewController.m */,
+				98C102851BD9068600D2DB42 /* BNRDetailViewController.xib */,
+				98C102861BD9068600D2DB42 /* BNRImageStore.h */,
+				98C102871BD9068600D2DB42 /* BNRImageStore.m */,
+				98C102881BD9068600D2DB42 /* BNRImageViewController.h */,
+				98C102891BD9068600D2DB42 /* BNRImageViewController.m */,
+				98C1028A1BD9068600D2DB42 /* BNRItem.h */,
+				98C1028B1BD9068600D2DB42 /* BNRItem.m */,
+				98C1028C1BD9068600D2DB42 /* BNRItemCell.h */,
+				98C1028D1BD9068600D2DB42 /* BNRItemCell.m */,
+				98C1028E1BD9068600D2DB42 /* BNRItemCell.xib */,
+				98C1028F1BD9068600D2DB42 /* BNRItemStore.h */,
+				98C102901BD9068600D2DB42 /* BNRItemStore.m */,
+				98C102911BD9068600D2DB42 /* BNRItemsViewController.h */,
+				98C102921BD9068600D2DB42 /* BNRItemsViewController.m */,
+				98C102931BD9068600D2DB42 /* HomePwner-Info.plist */,
+				98C102941BD9068600D2DB42 /* HomePwner-Prefix.pch */,
+				98C102741BD905CE00D2DB42 /* Assets.xcassets */,
+				98C102681BD905CE00D2DB42 /* Supporting Files */,
+			);
+			path = HomepwnrPractise;
+			sourceTree = "<group>";
+		};
+		98C102681BD905CE00D2DB42 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				98C102A01BD9069A00D2DB42 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		98C102641BD905CE00D2DB42 /* HomepwnrPractise */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 98C1027C1BD905CE00D2DB42 /* Build configuration list for PBXNativeTarget "HomepwnrPractise" */;
+			buildPhases = (
+				98C102611BD905CE00D2DB42 /* Sources */,
+				98C102621BD905CE00D2DB42 /* Frameworks */,
+				98C102631BD905CE00D2DB42 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HomepwnrPractise;
+			productName = HomepwnrPractise;
+			productReference = 98C102651BD905CE00D2DB42 /* HomepwnrPractise.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		98C1025D1BD905CE00D2DB42 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0700;
+				ORGANIZATIONNAME = "王珏";
+				TargetAttributes = {
+					98C102641BD905CE00D2DB42 = {
+						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = GVN682F3UK;
+					};
+				};
+			};
+			buildConfigurationList = 98C102601BD905CE00D2DB42 /* Build configuration list for PBXProject "HomepwnrPractise" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 98C1025C1BD905CE00D2DB42;
+			productRefGroup = 98C102661BD905CE00D2DB42 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				98C102641BD905CE00D2DB42 /* HomepwnrPractise */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		98C102631BD905CE00D2DB42 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98C102971BD9068600D2DB42 /* BNRDetailViewController.xib in Resources */,
+				98C1029C1BD9068600D2DB42 /* BNRItemCell.xib in Resources */,
+				98C102751BD905CE00D2DB42 /* Assets.xcassets in Resources */,
+				98C1029F1BD9068600D2DB42 /* HomePwner-Info.plist in Resources */,
+				98C102801BD9067600D2DB42 /* Default-568h@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		98C102611BD905CE00D2DB42 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				98C102961BD9068600D2DB42 /* BNRDetailViewController.m in Sources */,
+				98C1029B1BD9068600D2DB42 /* BNRItemCell.m in Sources */,
+				98C102951BD9068600D2DB42 /* BNRAppDelegate.m in Sources */,
+				98C1029D1BD9068600D2DB42 /* BNRItemStore.m in Sources */,
+				98C1029A1BD9068600D2DB42 /* BNRItem.m in Sources */,
+				98C102981BD9068600D2DB42 /* BNRImageStore.m in Sources */,
+				98C1029E1BD9068600D2DB42 /* BNRItemsViewController.m in Sources */,
+				98C102A11BD9069A00D2DB42 /* main.m in Sources */,
+				98C102991BD9068600D2DB42 /* BNRImageViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		98C1027A1BD905CE00D2DB42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		98C1027B1BD905CE00D2DB42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		98C1027D1BD905CE00D2DB42 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/HomepwnrPractise/HomePwner-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wangjuei.HomepwnrPractise;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		98C1027E1BD905CE00D2DB42 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "$(SRCROOT)/HomepwnrPractise/HomePwner-Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = wangjuei.HomepwnrPractise;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		98C102601BD905CE00D2DB42 /* Build configuration list for PBXProject "HomepwnrPractise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98C1027A1BD905CE00D2DB42 /* Debug */,
+				98C1027B1BD905CE00D2DB42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		98C1027C1BD905CE00D2DB42 /* Build configuration list for PBXNativeTarget "HomepwnrPractise" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				98C1027D1BD905CE00D2DB42 /* Debug */,
+				98C1027E1BD905CE00D2DB42 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 98C1025D1BD905CE00D2DB42 /* Project object */;
+}
