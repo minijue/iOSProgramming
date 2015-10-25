@@ -140,7 +140,7 @@
         // Use that image to put on the screen in imageView
         self.imageView.image = imageToDisplay;
         
-        [self updateFonts];
+        [self updateFonts:nil];
     } else {
         // Clear the imageView
         self.imageView.image = nil;
@@ -300,7 +300,7 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     [self.view endEditing:YES];
 }
 
-- (void)updateFonts {
+- (void)updateFonts:(NSNotification *)notification{
     UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
     
     self.nameLabel.font = font;
