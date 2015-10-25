@@ -6,7 +6,7 @@
 //  Copyright © 2015年 王珏. All rights reserved.
 //
 
-#import "UIImage+BFixOrientation.h"
+#import "UIImage+FixOrientation.h"
 
 @implementation UIImage (BNRImageFixOrientation)
 

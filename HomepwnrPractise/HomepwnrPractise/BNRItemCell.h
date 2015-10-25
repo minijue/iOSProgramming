@@ -9,12 +9,12 @@
 #import <UIKit/UIKit.h>
 
 
-@interface BNRItemCell : UITableViewCell
+@interface BNRItemCell : UICollectionViewCell
 
 @property (weak, nonatomic) IBOutlet UIImageView *thumbnailView;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
-@property (weak, nonatomic) IBOutlet UILabel *serialNumberLabel;
-@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
+
+- (id)initWithFrame:(CGRect)frame;
 
 @property (nonatomic, copy) void (^actionBlock)(void);
 

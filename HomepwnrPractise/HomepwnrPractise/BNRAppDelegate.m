@@ -8,7 +8,7 @@
 
 #import "BNRAppDelegate.h"
 #import "BNRItemStore.h"
-#import "BNRItemsViewController.h"
+#import "BNRCollectionViewController.h"
 
 @implementation BNRAppDelegate
 
@@ -18,7 +18,8 @@
     // Override point for customization after application launch.
 
     // Create a BNRItemsViewController
-    BNRItemsViewController *itemsViewController = [[BNRItemsViewController alloc] init];
+//    BNRItemsViewController *itemsViewController = [[BNRItemsViewController alloc] init];
+    BNRCollectionViewController *itemsViewController = [[BNRCollectionViewController alloc] init];
 
     // Create an instance of a UINavigationController
     // its stack contains only itemsViewController
