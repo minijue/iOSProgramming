@@ -89,10 +89,10 @@
 }
 
 - (void)setThumbnailFromImage:(UIImage *)image {
-    CGSize origImageSize = image.size;
+//    CGSize origImageSize = image.size;
     CGRect newRect = CGRectMake(0, 0, 40, 40);
-    float ratioW = newRect.size.width / origImageSize.width;
-    float ratioH = newRect.size.height / origImageSize.height;
+//    float ratioW = newRect.size.width / origImageSize.width;
+//    float ratioH = newRect.size.height / origImageSize.height;
     
     UIGraphicsBeginImageContextWithOptions(newRect.size, NO, 0.0);
     

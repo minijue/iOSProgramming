@@ -23,6 +23,11 @@
 @property (weak, nonatomic) IBOutlet UIToolbar *toolbar;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cameraButton;
 
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *serialNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *valueLabel;
+
+
 - (IBAction)takePicture:(id)sender;
 - (IBAction)backgroundTapped:(id)sender;
 
@@ -46,6 +51,9 @@
                                                                                         action:@selector(cancel:)];
             self.navigationItem.leftBarButtonItem = cancelItem;
         }
+        
+        NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+        [defaultCenter addObserver:self selector:@selector(updateFonts:) name:UIContentSizeCategoryDidChangeNotification object:nil];
     }
 
     return self;
@@ -131,6 +139,8 @@
 
         // Use that image to put on the screen in imageView
         self.imageView.image = imageToDisplay;
+        
+        [self updateFonts];
     } else {
         // Clear the imageView
         self.imageView.image = nil;
@@ -166,6 +176,11 @@
         self.imageView.hidden = NO;
         self.cameraButton.enabled = YES;
     }
+}
+
+- (void)dealloc {
+    NSNotificationCenter *defaultCenter = [NSNotificationCenter defaultCenter];
+    [defaultCenter removeObserver:self];
 }
 
 - (void)willRotateToInterfaceOrientation:(UIInterfaceOrientation)toInterfaceOrientation
@@ -232,11 +247,6 @@
     }
 }
 
-- (IBAction)backgroundTapped:(id)sender
-{
-    [self.view endEditing:YES];
-}
-
 - (void)imagePickerController:(UIImagePickerController *)picker
 didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
@@ -282,6 +292,25 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
 {
     [textField resignFirstResponder];
     return YES;
+}
+
+#pragma mark - selector
+- (IBAction)backgroundTapped:(id)sender
+{
+    [self.view endEditing:YES];
+}
+
+- (void)updateFonts {
+    UIFont *font = [UIFont preferredFontForTextStyle:UIFontTextStyleBody];
+    
+    self.nameLabel.font = font;
+    self.serialNumberLabel.font = font;
+    self.valueLabel.font = font;
+    self.dateLabel.font = font;
+    
+    self.nameField.font = font;
+    self.serialNumberField.font = font;
+    self.valueField.font = font;
 }
 
 @end

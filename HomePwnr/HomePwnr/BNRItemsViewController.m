@@ -14,7 +14,7 @@
 #import "BNRImageViewController.h"
 #import "BNRImageStore.h"
 
-@interface BNRItemsViewController () 
+@interface BNRItemsViewController () <UIPopoverControllerDelegate>
 
 @property (nonatomic, strong) UIPopoverController *imagePopover;
 
