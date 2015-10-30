@@ -10,7 +10,7 @@
 		987DE5451BE38FC200A390C3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 987DE5441BE38FC200A390C3 /* main.m */; };
 		987DE5481BE38FC200A390C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 987DE5471BE38FC200A390C3 /* AppDelegate.m */; };
 		987DE5501BE38FC200A390C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 987DE54F1BE38FC200A390C3 /* Assets.xcassets */; };
-		987DE55C1BE3910000A390C3 /* BNRCourseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 987DE55B1BE3910000A390C3 /* BNRCourseTableViewController.m */; };
+		987DE55C1BE3910000A390C3 /* BNRCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 987DE55B1BE3910000A390C3 /* BNRCourseViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,8 +20,8 @@
 		987DE5471BE38FC200A390C3 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		987DE54F1BE38FC200A390C3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		987DE5541BE38FC200A390C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		987DE55A1BE3910000A390C3 /* BNRCourseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRCourseTableViewController.h; sourceTree = "<group>"; };
-		987DE55B1BE3910000A390C3 /* BNRCourseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRCourseTableViewController.m; sourceTree = "<group>"; };
+		987DE55A1BE3910000A390C3 /* BNRCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRCourseViewController.h; sourceTree = "<group>"; };
+		987DE55B1BE3910000A390C3 /* BNRCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRCourseViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,8 +59,8 @@
 				987DE54F1BE38FC200A390C3 /* Assets.xcassets */,
 				987DE5541BE38FC200A390C3 /* Info.plist */,
 				987DE5431BE38FC200A390C3 /* Supporting Files */,
-				987DE55A1BE3910000A390C3 /* BNRCourseTableViewController.h */,
-				987DE55B1BE3910000A390C3 /* BNRCourseTableViewController.m */,
+				987DE55A1BE3910000A390C3 /* BNRCourseViewController.h */,
+				987DE55B1BE3910000A390C3 /* BNRCourseViewController.m */,
 			);
 			path = Nerdfeed;
 			sourceTree = "<group>";
@@ -99,6 +99,7 @@
 		987DE5381BE38FC200A390C3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = BNR;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "王珏";
 				TargetAttributes = {
@@ -143,7 +144,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				987DE5481BE38FC200A390C3 /* AppDelegate.m in Sources */,
-				987DE55C1BE3910000A390C3 /* BNRCourseTableViewController.m in Sources */,
+				987DE55C1BE3910000A390C3 /* BNRCourseViewController.m in Sources */,
 				987DE5451BE38FC200A390C3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
