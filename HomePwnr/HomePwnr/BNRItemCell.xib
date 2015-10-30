@@ -16,11 +16,11 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="I6H-xh-D0n">
-                        <rect key="frame" x="0.0" y="2" width="40" height="40"/>
+                        <rect key="frame" x="0.0" y="3" width="40" height="39"/>
                         <animations/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="40" id="Abf-rB-Htz"/>
-                            <constraint firstAttribute="height" constant="40" id="gMF-WJ-1YR"/>
+                            <constraint firstAttribute="width" constant="40" placeholder="YES" id="Abf-rB-Htz"/>
+                            <constraint firstAttribute="height" constant="39" id="YPj-UO-1Ng"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fOd-0t-s8h">
@@ -45,7 +45,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5gi-Dh-7ac">
-                        <rect key="frame" x="0.0" y="2" width="40" height="40"/>
+                        <rect key="frame" x="0.0" y="3" width="40" height="39"/>
                         <animations/>
                         <connections>
                             <action selector="showImage:" destination="C6x-WQ-eFA" eventType="touchUpInside" id="ArG-or-AdA"/>
@@ -64,7 +64,7 @@
                     <constraint firstItem="fOd-0t-s8h" firstAttribute="top" secondItem="jE5-5a-NqP" secondAttribute="topMargin" constant="-8" id="fbi-Fe-OjI"/>
                     <constraint firstItem="5gi-Dh-7ac" firstAttribute="top" secondItem="I6H-xh-D0n" secondAttribute="top" id="gez-Hf-5au"/>
                     <constraint firstItem="5gi-Dh-7ac" firstAttribute="leading" secondItem="I6H-xh-D0n" secondAttribute="leading" id="hqK-eW-3PM"/>
-                    <constraint firstItem="I6H-xh-D0n" firstAttribute="centerY" secondItem="jE5-5a-NqP" secondAttribute="centerY" id="sFA-s9-e4V"/>
+                    <constraint firstItem="I6H-xh-D0n" firstAttribute="centerY" secondItem="jE5-5a-NqP" secondAttribute="centerY" constant="1" id="sFA-s9-e4V"/>
                     <constraint firstItem="gLS-jb-nyt" firstAttribute="trailing" secondItem="jE5-5a-NqP" secondAttribute="trailingMargin" id="saE-Xx-eQE"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Gk3-NQ-hEg" secondAttribute="bottom" constant="-8" id="vhl-i1-EtS"/>
                     <constraint firstItem="gLS-jb-nyt" firstAttribute="centerY" secondItem="jE5-5a-NqP" secondAttribute="centerY" id="y8G-nM-bD5"/>
@@ -72,9 +72,10 @@
             </tableViewCellContentView>
             <animations/>
             <connections>
+                <outlet property="imageViewHeightConstraint" destination="YPj-UO-1Ng" id="EJm-ZE-XWs"/>
                 <outlet property="nameLabel" destination="fOd-0t-s8h" id="Iml-Xw-sSp"/>
                 <outlet property="serialNumberLabel" destination="Gk3-NQ-hEg" id="Xhz-SG-RZB"/>
-                <outlet property="thumbnailView" destination="I6H-xh-D0n" id="hBN-ds-ces"/>
+                <outlet property="thumbnailView" destination="I6H-xh-D0n" id="zR6-gB-bgk"/>
                 <outlet property="valueLabel" destination="gLS-jb-nyt" id="mWA-kt-rBV"/>
             </connections>
             <point key="canvasLocation" x="887" y="431"/>
