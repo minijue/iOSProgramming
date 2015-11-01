@@ -8,7 +8,10 @@
 
 #import "BNRCourseViewController.h"
 
-@interface BNRCourseViewController ()
+@interface BNRCourseViewController () <NSURLSessionDataDelegate>
+
+@property (nonatomic) NSURLSession *session;
+@property (nonatomic, copy) NSArray *courses;
 
 @end
 
@@ -17,11 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"UITableViewCell"];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -29,23 +28,33 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    return 0;
+- (instancetype)initWithStyle:(UITableViewStyle)style {
+    self = [super initWithStyle:style];
+    if (self) {
+        self.navigationItem.title = @"BNR Course";
+        
+        NSURLSessionConfiguration *config = [NSURLSessionConfiguration defaultSessionConfiguration];
+        _session = [NSURLSession sessionWithConfiguration:config delegate:self delegateQueue:nil];
+        
+        [self fetchFeed];
+    }
+    return self;
 }
 
+#pragma mark - Table view data source
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 0;
+    return self.courses.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-//    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    NSDictionary *course = self.courses[indexPath.row];
+    cell.textLabel.text = course[@"title"];
     
-    return nil;
+    return cell;
 }
 
 /*
@@ -67,6 +76,15 @@
     }   
 }
 */
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSDictionary *course = self.courses[indexPath.row];
+    NSURL *url = [NSURL URLWithString:course[@"url"]];
+    
+    self.webViewController.title = course[@"title"];
+    self.webViewController.URL = url;
+    [self.navigationController pushViewController:self.webViewController animated:YES];
+}
 
 /*
 // Override to support rearranging the table view.
@@ -91,5 +109,32 @@
     // Pass the selected object to the new view controller.
 }
 */
+#pragma mark - NSURLSessionDataDelegate
+- (void)URLSession:(NSURLSession *)session didReceiveChallenge:(NSURLAuthenticationChallenge *)challenge completionHandler:(void (^)(NSURLSessionAuthChallengeDisposition, NSURLCredential * _Nullable))completionHandler {
+    NSURLCredential *cred = [NSURLCredential credentialWithUser:@"BigNerdRanch" password:@"ArchieveNerdvana" persistence:NSURLCredentialPersistenceForSession];
+    
+    completionHandler(NSURLSessionAuthChallengeUseCredential, cred);
+}
+
+#pragma mark - 自定义方法
+- (void)fetchFeed {
+    NSString *requestString = @"https://bookapi.bignerdranch.com/courses.json";
+    NSURL *url = [NSURL URLWithString:requestString];
+    NSURLRequest *req = [NSURLRequest requestWithURL:url];
+    
+    NSURLSessionDataTask *dataTask = [self.session dataTaskWithRequest:req completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError * _Nullable error) {
+        NSDictionary *jsonObject = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+        self.courses = jsonObject[@"courses"];
+        
+        NSLog(@"%@", self.courses);
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [self.tableView reloadData];
+        });
+        
+    }];
+
+    [dataTask resume];
+}
 
 @end
