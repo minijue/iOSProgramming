@@ -83,7 +83,8 @@
     
     self.webViewController.title = course[@"title"];
     self.webViewController.URL = url;
-    [self.navigationController pushViewController:self.webViewController animated:YES];
+    
+    [self.splitViewController showDetailViewController:self.detailController sender:self];
 }
 
 /*

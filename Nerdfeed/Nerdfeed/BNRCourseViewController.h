@@ -12,5 +12,6 @@
 @interface BNRCourseViewController : UITableViewController
 
 @property (nonatomic) BNRWebViewController *webViewController;
+@property (nonatomic) UINavigationController *detailController;
 
 @end

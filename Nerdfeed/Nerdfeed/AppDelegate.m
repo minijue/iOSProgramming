@@ -27,8 +27,17 @@
     
     BNRWebViewController *wvc = [[BNRWebViewController alloc] init];
     cvc.webViewController = wvc;
+ 
+    UINavigationController *detailNav = [[UINavigationController alloc] initWithRootViewController:wvc];
+    cvc.detailController = detailNav;
     
-    self.window.rootViewController = masterNav;
+    UISplitViewController *svc = [[UISplitViewController alloc] init];
+    svc.viewControllers = @[masterNav, detailNav];
+    
+    svc.preferredDisplayMode = UISplitViewControllerDisplayModeAllVisible;
+    svc.delegate = wvc;
+    
+    self.window.rootViewController = svc;
     
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];

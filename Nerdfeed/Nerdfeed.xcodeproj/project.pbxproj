@@ -11,6 +11,7 @@
 		987DE5481BE38FC200A390C3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 987DE5471BE38FC200A390C3 /* AppDelegate.m */; };
 		987DE5501BE38FC200A390C3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 987DE54F1BE38FC200A390C3 /* Assets.xcassets */; };
 		987DE55C1BE3910000A390C3 /* BNRCourseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 987DE55B1BE3910000A390C3 /* BNRCourseViewController.m */; };
+		988030071BE7481200B53810 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 988030061BE7481200B53810 /* Default-568h@2x.png */; };
 		98A34B731BE655580072B87F /* BNRWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A34B721BE655580072B87F /* BNRWebViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		987DE5541BE38FC200A390C3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		987DE55A1BE3910000A390C3 /* BNRCourseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRCourseViewController.h; sourceTree = "<group>"; };
 		987DE55B1BE3910000A390C3 /* BNRCourseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRCourseViewController.m; sourceTree = "<group>"; };
+		988030061BE7481200B53810 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		98A34B711BE655580072B87F /* BNRWebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRWebViewController.h; sourceTree = "<group>"; };
 		98A34B721BE655580072B87F /* BNRWebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRWebViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -57,6 +59,7 @@
 		987DE5421BE38FC200A390C3 /* Nerdfeed */ = {
 			isa = PBXGroup;
 			children = (
+				988030061BE7481200B53810 /* Default-568h@2x.png */,
 				987DE5461BE38FC200A390C3 /* AppDelegate.h */,
 				987DE5471BE38FC200A390C3 /* AppDelegate.m */,
 				987DE54F1BE38FC200A390C3 /* Assets.xcassets */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				987DE5501BE38FC200A390C3 /* Assets.xcassets in Resources */,
+				988030071BE7481200B53810 /* Default-568h@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +253,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangjue.Nerdfeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -261,6 +266,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.wangjue.Nerdfeed;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
