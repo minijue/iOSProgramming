@@ -7,7 +7,6 @@
 //
 
 #import "BNRWebViewController.h"
-
 @interface BNRWebViewController () <UIWebViewDelegate>
 @end
 
@@ -16,8 +15,9 @@
 - (void)loadView {
     UIWebView *webView = [[UIWebView alloc] init];
     webView.scalesPageToFit = YES;
-    webView.delegate = self;
+    
     self.view = webView;
+    webView.delegate = self;
 }
 
 - (void)setURL:(NSURL *)URL {
@@ -29,34 +29,35 @@
 }
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
     CGRect rect = [[UIScreen mainScreen] bounds];
     rect.origin.y = rect.size.height - self.navigationController.navigationBar.bounds.size.height - 40;
     rect.size.height = 40;
+    
     UIToolbar *toolbar = [[UIToolbar alloc] initWithFrame:rect];
-    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
     UIBarButtonItem *back = [[UIBarButtonItem alloc] initWithTitle:@"Back" style:UIBarButtonItemStylePlain target:self action:@selector(webAction:)];
     back.enabled = NO;
     UIBarButtonItem *forward = [[UIBarButtonItem alloc] initWithTitle:@"Forward" style:UIBarButtonItemStylePlain target:self action:@selector(webAction:)];
     forward.enabled = NO;
-    NSArray *buttons = [NSArray arrayWithObjects:back,space, forward, nil];
+    UIBarButtonItem *space = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemFlexibleSpace target:self action:nil];
+    
+    NSArray *buttons = [[NSArray alloc] initWithObjects:back, space, forward, nil];
     toolbar.items = buttons;
     
     [self.view addSubview:toolbar];
-    
 }
 
 - (void)webAction:(UIBarButtonItem *)item {
-    if ([item.title  isEqualToString: @"Back"]) {
-        [(UIWebView *)self.view goBack];
+    UIWebView *webView = (UIWebView *)self.view;
+    if ([item.title isEqualToString:@"Back"]) {
+        [webView goBack];
     } else if ([item.title isEqualToString:@"Forward"]) {
-        [(UIWebView *)self.view goForward];
+        [webView goForward];
     }
 }
 
+#pragma mark - UIWebViewDelegate
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
-    UIToolbar * toolbar = (UIToolbar *)webView.subviews[1];
+    UIToolbar *toolbar = webView.subviews[1];
     toolbar.items[0].enabled = webView.canGoBack;
     toolbar.items[2].enabled = webView.canGoForward;
 }
