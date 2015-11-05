@@ -14,7 +14,6 @@
 		987E72651BEB78FF00880BC7 /* BNRImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E72641BEB78FF00880BC7 /* BNRImageTransformer.m */; };
 		987E726A1BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E72671BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.m */; };
 		987E726B1BEB7EEA00880BC7 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E72691BEB7EEA00880BC7 /* BNRItem.m */; };
-		987E726E1BEB853D00880BC7 /* BNRItem1.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E726C1BEB853D00880BC7 /* BNRItem1.m */; };
 		98F1288F1BD141E300FB850F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98F1288E1BD141E300FB850F /* Assets.xcassets */; };
 		98F128A81BD142A900FB850F /* BNRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F1289A1BD142A900FB850F /* BNRAppDelegate.m */; };
 		98F128A91BD142A900FB850F /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F1289C1BD142A900FB850F /* BNRDetailViewController.m */; };
@@ -39,8 +38,6 @@
 		987E72671BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BNRItem+CoreDataProperties.m"; sourceTree = "<group>"; };
 		987E72681BEB7EEA00880BC7 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
 		987E72691BEB7EEA00880BC7 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
-		987E726C1BEB853D00880BC7 /* BNRItem1.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem1.m; sourceTree = "<group>"; };
-		987E726D1BEB853D00880BC7 /* BNRItem1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem1.h; sourceTree = "<group>"; };
 		98F1287F1BD141E300FB850F /* HomePwnr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomePwnr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F1288E1BD141E300FB850F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98F128991BD142A900FB850F /* BNRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRAppDelegate.h; sourceTree = "<group>"; };
@@ -93,8 +90,6 @@
 			children = (
 				98F128991BD142A900FB850F /* BNRAppDelegate.h */,
 				98F1289A1BD142A900FB850F /* BNRAppDelegate.m */,
-				987E726C1BEB853D00880BC7 /* BNRItem1.m */,
-				987E726D1BEB853D00880BC7 /* BNRItem1.h */,
 				98F1289B1BD142A900FB850F /* BNRDetailViewController.h */,
 				98F1289C1BD142A900FB850F /* BNRDetailViewController.m */,
 				98F1289D1BD142A900FB850F /* BNRDetailViewController.xib */,
@@ -211,7 +206,6 @@
 				987E72621BEB77EA00880BC7 /* Homepwnr.xcdatamodeld in Sources */,
 				987E726B1BEB7EEA00880BC7 /* BNRItem.m in Sources */,
 				98F128AD1BD142A900FB850F /* BNRItemStore.m in Sources */,
-				987E726E1BEB853D00880BC7 /* BNRItem1.m in Sources */,
 				98F128A91BD142A900FB850F /* BNRDetailViewController.m in Sources */,
 				987E726A1BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.m in Sources */,
 				98F128A81BD142A900FB850F /* BNRAppDelegate.m in Sources */,
