@@ -28,39 +28,30 @@
                     <rect key="frame" x="20" y="88" width="45" height="21"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Serial" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IyW-WC-s8a">
                     <rect key="frame" x="20" y="126" width="45" height="21"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Value" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JgR-jx-IXE">
                     <rect key="frame" x="20" y="164" width="45" height="21"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qyh-9V-hKs">
                     <rect key="frame" x="20" y="198" width="280" height="21"/>
                     <animations/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAy-yn-Tdw">
-                    <rect key="frame" x="73" y="85" width="227" height="30"/>
-                    <animations/>
-                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
-                    <connections>
-                        <outlet property="delegate" destination="-1" id="Qvk-T3-FkN"/>
-                    </connections>
-                </textField>
                 <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="90u-3n-WF2">
                     <rect key="frame" x="0.0" y="524" width="320" height="44"/>
                     <animations/>
@@ -95,6 +86,15 @@
                         <outlet property="delegate" destination="-1" id="Zh9-cG-fMz"/>
                     </connections>
                 </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" verticalHuggingPriority="1000" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nAy-yn-Tdw">
+                    <rect key="frame" x="73" y="85" width="227" height="30"/>
+                    <animations/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits" returnKeyType="done"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="Qvk-T3-FkN"/>
+                    </connections>
+                </textField>
             </subviews>
             <animations/>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -103,6 +103,7 @@
                 <constraint firstItem="IyW-WC-s8a" firstAttribute="top" secondItem="DcM-Ta-Pno" secondAttribute="bottom" constant="17" id="1Aa-LW-Zk8"/>
                 <constraint firstItem="nAy-yn-Tdw" firstAttribute="leading" secondItem="DcM-Ta-Pno" secondAttribute="trailing" constant="8" id="27j-mP-vVG"/>
                 <constraint firstAttribute="trailing" secondItem="OL5-8y-X9o" secondAttribute="trailing" constant="20" id="3dO-Xu-pWc"/>
+                <constraint firstItem="OL5-8y-X9o" firstAttribute="top" secondItem="Wd6-Cs-4VP" secondAttribute="bottom" constant="8" id="7P3-Io-FG4"/>
                 <constraint firstItem="DcM-Ta-Pno" firstAttribute="leading" secondItem="IyW-WC-s8a" secondAttribute="leading" id="AlC-4I-J6J"/>
                 <constraint firstItem="JgR-jx-IXE" firstAttribute="baseline" secondItem="OL5-8y-X9o" secondAttribute="baseline" constant="1" id="CCw-06-5Uz"/>
                 <constraint firstAttribute="trailing" secondItem="Qyh-9V-hKs" secondAttribute="trailing" constant="20" id="DNt-KF-W7M"/>
@@ -112,6 +113,7 @@
                 <constraint firstItem="90u-3n-WF2" firstAttribute="leading" secondItem="1" secondAttribute="leading" id="VvZ-NQ-XFJ"/>
                 <constraint firstItem="Wd6-Cs-4VP" firstAttribute="baseline" secondItem="IyW-WC-s8a" secondAttribute="baseline" constant="-1" id="Ws3-RX-7ka"/>
                 <constraint firstItem="IyW-WC-s8a" firstAttribute="width" secondItem="DcM-Ta-Pno" secondAttribute="width" id="b6e-nx-vdv"/>
+                <constraint firstItem="Wd6-Cs-4VP" firstAttribute="top" secondItem="nAy-yn-Tdw" secondAttribute="bottom" constant="7" id="bTj-sg-azO"/>
                 <constraint firstItem="DcM-Ta-Pno" firstAttribute="top" secondItem="1" secondAttribute="top" constant="88" id="eaP-S5-dWA"/>
                 <constraint firstItem="JgR-jx-IXE" firstAttribute="top" secondItem="IyW-WC-s8a" secondAttribute="bottom" constant="17" id="hC4-ny-EEB"/>
                 <constraint firstAttribute="trailing" secondItem="nAy-yn-Tdw" secondAttribute="trailing" constant="20" id="iUz-ja-kjn"/>
@@ -120,6 +122,7 @@
                 <constraint firstAttribute="bottom" secondItem="90u-3n-WF2" secondAttribute="bottom" id="l7u-p3-yTs"/>
                 <constraint firstItem="nAy-yn-Tdw" firstAttribute="baseline" secondItem="DcM-Ta-Pno" secondAttribute="baseline" id="lLe-jL-vyb"/>
                 <constraint firstItem="Qyh-9V-hKs" firstAttribute="top" secondItem="OL5-8y-X9o" secondAttribute="bottom" constant="8" id="nre-Cd-ThC"/>
+                <constraint firstItem="nAy-yn-Tdw" firstAttribute="top" secondItem="1" secondAttribute="top" constant="85" id="qZJ-tk-XgC"/>
                 <constraint firstItem="OL5-8y-X9o" firstAttribute="leading" secondItem="JgR-jx-IXE" secondAttribute="trailing" constant="8" id="v7L-PZ-cYv"/>
                 <constraint firstItem="Wd6-Cs-4VP" firstAttribute="leading" secondItem="IyW-WC-s8a" secondAttribute="trailing" constant="8" id="vQ2-cb-1O6"/>
             </constraints>
