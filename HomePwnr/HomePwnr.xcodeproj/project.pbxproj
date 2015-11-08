@@ -23,6 +23,7 @@
 		98F128AE1BD142A900FB850F /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F128A51BD142A900FB850F /* BNRItemsViewController.m */; };
 		98F128B11BD142B900FB850F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F128B01BD142B900FB850F /* main.m */; };
 		98F128B31BD142F400FB850F /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 98F128B21BD142F300FB850F /* Default-568h@2x.png */; };
+		98F8BE601BEF5194006815EE /* BNRAssetTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F8BE5F1BEF5194006815EE /* BNRAssetTypeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -55,6 +56,8 @@
 		98F128A71BD142A900FB850F /* HomePwner-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "HomePwner-Prefix.pch"; sourceTree = "<group>"; };
 		98F128B01BD142B900FB850F /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		98F128B21BD142F300FB850F /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		98F8BE5E1BEF5194006815EE /* BNRAssetTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRAssetTypeViewController.h; sourceTree = "<group>"; };
+		98F8BE5F1BEF5194006815EE /* BNRAssetTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRAssetTypeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +116,8 @@
 				987E72671BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.m */,
 				987E72681BEB7EEA00880BC7 /* BNRItem.h */,
 				987E72691BEB7EEA00880BC7 /* BNRItem.m */,
+				98F8BE5E1BEF5194006815EE /* BNRAssetTypeViewController.h */,
+				98F8BE5F1BEF5194006815EE /* BNRAssetTypeViewController.m */,
 				987E72631BEB78FF00880BC7 /* BNRImageTransformer.h */,
 				987E72641BEB78FF00880BC7 /* BNRImageTransformer.m */,
 			);
@@ -205,6 +210,7 @@
 				986C3BC91BD7D9270057CA1D /* BNRImageViewController.m in Sources */,
 				987E72621BEB77EA00880BC7 /* Homepwnr.xcdatamodeld in Sources */,
 				987E726B1BEB7EEA00880BC7 /* BNRItem.m in Sources */,
+				98F8BE601BEF5194006815EE /* BNRAssetTypeViewController.m in Sources */,
 				98F128AD1BD142A900FB850F /* BNRItemStore.m in Sources */,
 				98F128A91BD142A900FB850F /* BNRDetailViewController.m in Sources */,
 				987E726A1BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.m in Sources */,
