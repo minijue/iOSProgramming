@@ -15,7 +15,7 @@
         <relationship name="assetType" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="BNRAssetType" inverseName="items" inverseEntity="BNRAssetType" syncable="YES"/>
     </entity>
     <elements>
-        <element name="BNRItem" positionX="-63" positionY="-18" width="128" height="165"/>
-        <element name="BNRAssetType" positionX="-54" positionY="45" width="128" height="75"/>
+        <element name="BNRAssetType" positionX="0" positionY="0" width="0" height="0"/>
+        <element name="BNRItem" positionX="0" positionY="0" width="0" height="0"/>
     </elements>
 </model>

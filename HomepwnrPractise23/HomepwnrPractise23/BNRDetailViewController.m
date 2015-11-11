@@ -16,6 +16,7 @@
     UITextFieldDelegate, UIPopoverControllerDelegate>
 
 @property (nonatomic, strong) UIPopoverController *imagePickerPopover;
+@property (nonatomic, strong) UIPopoverController *assetTypePopover;
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
@@ -291,16 +292,23 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     }
 }
 
-- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
-{
-    NSLog(@"User dismissed popover");
-    self.imagePickerPopover = nil;
-}
-
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return YES;
+}
+
+#pragma mark - UIPopoverControllerDelegate
+- (void)popoverControllerDidDismissPopover:(UIPopoverController *)popoverController
+{
+    NSLog(@"User dismissed popover");
+    self.imagePickerPopover = nil;
+    
+    NSString *typeLabel = [self.item.assetType valueForKey:@"label"];
+    if (!typeLabel) {
+        typeLabel = @"None";
+    }
+    self.assetTypeButton.title = [NSString stringWithFormat:@"Type: %@", typeLabel]; 
 }
 
 #pragma mark - selector
@@ -315,7 +323,13 @@ didFinishPickingMediaWithInfo:(NSDictionary *)info
     BNRAssetTypeViewController *avc = [[BNRAssetTypeViewController alloc] init];
     avc.item = self.item;
     
-    [self.navigationController pushViewController:avc animated:YES];
+    if ([UIDevice currentDevice].userInterfaceIdiom == UIUserInterfaceIdiomPad) {
+        self.assetTypePopover = [[UIPopoverController alloc] initWithContentViewController:avc];
+        self.assetTypePopover.delegate = self;
+                        
+        [self.assetTypePopover presentPopoverFromBarButtonItem:sender permittedArrowDirections:UIPopoverArrowDirectionAny animated:YES];
+    } else
+        [self.navigationController pushViewController:avc animated:YES];
 }
 
 - (void)updateFonts:(NSNotification *)notification{

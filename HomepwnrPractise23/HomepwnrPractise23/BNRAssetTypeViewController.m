@@ -9,6 +9,7 @@
 #import "BNRAssetTypeViewController.h"
 #import "BNRItemStore.h"
 #import "BNRItem.h"
+#import "BNRNewTypeViewController.h"
 
 @interface BNRAssetTypeViewController ()
 
@@ -36,6 +37,10 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:(UIBarButtonSystemItemAdd) target:self action:@selector(addNewType:)];
+}
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -58,6 +63,7 @@
     cell.textLabel.text = assetLabel;
     
     if (assetType == self.item.assetType) {
+        [tableView selectRowAtIndexPath:indexPath animated:NO scrollPosition:UITableViewScrollPositionNone];
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     } else {
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -76,6 +82,12 @@
     self.item.assetType = assetType;
     
     [self.navigationController popViewControllerAnimated:YES];
+}
+
+- (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
+    
+    cell.accessoryType = UITableViewCellAccessoryNone;
 }
 
 /*
@@ -121,5 +133,16 @@
     // Pass the selected object to the new view controller.
 }
 */
+
+- (IBAction)addNewType:(id)sender {
+    BNRNewTypeViewController *ntvc = [[BNRNewTypeViewController alloc] init];    
+    ntvc.dismissBlock = ^{
+        [self.tableView reloadData];
+    };
+    
+    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:ntvc];
+    navController.modalPresentationStyle = UIModalPresentationFormSheet;    
+    [self presentViewController:navController animated:YES completion:NULL];
+}
 
 @end
