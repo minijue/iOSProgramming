@@ -10,10 +10,10 @@
 		986C3BC21BD7B74F0057CA1D /* BNRItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 986C3BC11BD7B74F0057CA1D /* BNRItemCell.m */; };
 		986C3BC61BD7B7A60057CA1D /* BNRItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 986C3BC51BD7B7A60057CA1D /* BNRItemCell.xib */; };
 		986C3BC91BD7D9270057CA1D /* BNRImageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 986C3BC81BD7D9270057CA1D /* BNRImageViewController.m */; };
-		987E72621BEB77EA00880BC7 /* Homepwnr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 987E72601BEB77EA00880BC7 /* Homepwnr.xcdatamodeld */; };
 		987E72651BEB78FF00880BC7 /* BNRImageTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E72641BEB78FF00880BC7 /* BNRImageTransformer.m */; };
-		987E726A1BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E72671BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.m */; };
-		987E726B1BEB7EEA00880BC7 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 987E72691BEB7EEA00880BC7 /* BNRItem.m */; };
+		98D94B791BF466D400B3BCC4 /* Homepwnr.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 98D94B771BF466D400B3BCC4 /* Homepwnr.xcdatamodeld */; };
+		98D94B7E1BF467D600B3BCC4 /* BNRItem+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D94B7B1BF467D600B3BCC4 /* BNRItem+CoreDataProperties.m */; };
+		98D94B7F1BF467D600B3BCC4 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 98D94B7D1BF467D600B3BCC4 /* BNRItem.m */; };
 		98F1288F1BD141E300FB850F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 98F1288E1BD141E300FB850F /* Assets.xcassets */; };
 		98F128A81BD142A900FB850F /* BNRAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F1289A1BD142A900FB850F /* BNRAppDelegate.m */; };
 		98F128A91BD142A900FB850F /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98F1289C1BD142A900FB850F /* BNRDetailViewController.m */; };
@@ -32,13 +32,13 @@
 		986C3BC51BD7B7A60057CA1D /* BNRItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRItemCell.xib; sourceTree = "<group>"; };
 		986C3BC71BD7D9270057CA1D /* BNRImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageViewController.h; sourceTree = "<group>"; };
 		986C3BC81BD7D9270057CA1D /* BNRImageViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageViewController.m; sourceTree = "<group>"; };
-		987E72611BEB77EA00880BC7 /* Homepwnr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homepwnr.xcdatamodel; sourceTree = "<group>"; };
 		987E72631BEB78FF00880BC7 /* BNRImageTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageTransformer.h; sourceTree = "<group>"; };
 		987E72641BEB78FF00880BC7 /* BNRImageTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageTransformer.m; sourceTree = "<group>"; };
-		987E72661BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BNRItem+CoreDataProperties.h"; sourceTree = "<group>"; };
-		987E72671BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BNRItem+CoreDataProperties.m"; sourceTree = "<group>"; };
-		987E72681BEB7EEA00880BC7 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
-		987E72691BEB7EEA00880BC7 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		98D94B781BF466D400B3BCC4 /* Homepwnr.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Homepwnr.xcdatamodel; sourceTree = "<group>"; };
+		98D94B7A1BF467D600B3BCC4 /* BNRItem+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "BNRItem+CoreDataProperties.h"; sourceTree = "<group>"; };
+		98D94B7B1BF467D600B3BCC4 /* BNRItem+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "BNRItem+CoreDataProperties.m"; sourceTree = "<group>"; };
+		98D94B7C1BF467D600B3BCC4 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		98D94B7D1BF467D600B3BCC4 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		98F1287F1BD141E300FB850F /* HomePwnr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HomePwnr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98F1288E1BD141E300FB850F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		98F128991BD142A900FB850F /* BNRAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRAppDelegate.h; sourceTree = "<group>"; };
@@ -91,6 +91,11 @@
 		98F128811BD141E300FB850F /* HomePwnr */ = {
 			isa = PBXGroup;
 			children = (
+				98D94B771BF466D400B3BCC4 /* Homepwnr.xcdatamodeld */,
+				98D94B7A1BF467D600B3BCC4 /* BNRItem+CoreDataProperties.h */,
+				98D94B7B1BF467D600B3BCC4 /* BNRItem+CoreDataProperties.m */,
+				98D94B7C1BF467D600B3BCC4 /* BNRItem.h */,
+				98D94B7D1BF467D600B3BCC4 /* BNRItem.m */,
 				98F128991BD142A900FB850F /* BNRAppDelegate.h */,
 				98F1289A1BD142A900FB850F /* BNRAppDelegate.m */,
 				98F1289B1BD142A900FB850F /* BNRDetailViewController.h */,
@@ -111,11 +116,6 @@
 				986C3BC51BD7B7A60057CA1D /* BNRItemCell.xib */,
 				98F1288E1BD141E300FB850F /* Assets.xcassets */,
 				98F128821BD141E300FB850F /* Supporting Files */,
-				987E72601BEB77EA00880BC7 /* Homepwnr.xcdatamodeld */,
-				987E72661BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.h */,
-				987E72671BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.m */,
-				987E72681BEB7EEA00880BC7 /* BNRItem.h */,
-				987E72691BEB7EEA00880BC7 /* BNRItem.m */,
 				98F8BE5E1BEF5194006815EE /* BNRAssetTypeViewController.h */,
 				98F8BE5F1BEF5194006815EE /* BNRAssetTypeViewController.m */,
 				987E72631BEB78FF00880BC7 /* BNRImageTransformer.h */,
@@ -208,16 +208,16 @@
 				98F128AE1BD142A900FB850F /* BNRItemsViewController.m in Sources */,
 				986C3BC21BD7B74F0057CA1D /* BNRItemCell.m in Sources */,
 				986C3BC91BD7D9270057CA1D /* BNRImageViewController.m in Sources */,
-				987E72621BEB77EA00880BC7 /* Homepwnr.xcdatamodeld in Sources */,
-				987E726B1BEB7EEA00880BC7 /* BNRItem.m in Sources */,
 				98F8BE601BEF5194006815EE /* BNRAssetTypeViewController.m in Sources */,
+				98D94B7F1BF467D600B3BCC4 /* BNRItem.m in Sources */,
 				98F128AD1BD142A900FB850F /* BNRItemStore.m in Sources */,
 				98F128A91BD142A900FB850F /* BNRDetailViewController.m in Sources */,
-				987E726A1BEB7EEA00880BC7 /* BNRItem+CoreDataProperties.m in Sources */,
 				98F128A81BD142A900FB850F /* BNRAppDelegate.m in Sources */,
+				98D94B7E1BF467D600B3BCC4 /* BNRItem+CoreDataProperties.m in Sources */,
 				98F128B11BD142B900FB850F /* main.m in Sources */,
 				98F128AB1BD142A900FB850F /* BNRImageStore.m in Sources */,
 				987E72651BEB78FF00880BC7 /* BNRImageTransformer.m in Sources */,
+				98D94B791BF466D400B3BCC4 /* Homepwnr.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,12 +354,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		987E72601BEB77EA00880BC7 /* Homepwnr.xcdatamodeld */ = {
+		98D94B771BF466D400B3BCC4 /* Homepwnr.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				987E72611BEB77EA00880BC7 /* Homepwnr.xcdatamodel */,
+				98D94B781BF466D400B3BCC4 /* Homepwnr.xcdatamodel */,
 			);
-			currentVersion = 987E72611BEB77EA00880BC7 /* Homepwnr.xcdatamodel */;
+			currentVersion = 98D94B781BF466D400B3BCC4 /* Homepwnr.xcdatamodel */;
 			path = Homepwnr.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

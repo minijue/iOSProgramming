@@ -2,7 +2,7 @@
 //  BNRItem+CoreDataProperties.m
 //  HomePwnr
 //
-//  Created by 王珏 on 15/11/5.
+//  Created by 王珏 on 15/11/12.
 //  Copyright © 2015年 王珏. All rights reserved.
 //
 //  Choose "Create NSManagedObject Subclass…" from the Core Data editor menu

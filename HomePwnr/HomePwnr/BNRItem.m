@@ -2,7 +2,7 @@
 //  BNRItem.m
 //  HomePwnr
 //
-//  Created by 王珏 on 15/11/5.
+//  Created by 王珏 on 15/11/12.
 //  Copyright © 2015年 王珏. All rights reserved.
 //
 
@@ -42,5 +42,6 @@
     NSString *key = [uuid UUIDString];
     self.itemKey = key;
 }
+
 
 @end
