@@ -83,10 +83,10 @@
     return [self.privateItems copy];
 }
 
-- (NSArray *)itemsWithType:(NSString *)type {
+- (NSArray *)itemsWithType:(NSManagedObject *)type {
     NSMutableArray *items = [[NSMutableArray alloc] init];
     for (BNRItem *item in self.privateItems) {
-        if ([[item.assetType valueForKey:@"label"] isEqualToString:type]) {
+        if (item.assetType == type) {
             [items addObject:item];
         }
     }
@@ -234,6 +234,7 @@
         NSManagedObject *type = [NSEntityDescription insertNewObjectForEntityForName:@"BNRAssetType" inManagedObjectContext:self.context];
         [type setValue:typeStr forKey:@"label"];
         [_allAssetTypes addObject:type];
+
     }
 }
 

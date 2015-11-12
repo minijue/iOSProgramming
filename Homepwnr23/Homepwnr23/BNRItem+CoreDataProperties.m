@@ -1,6 +1,6 @@
 //
 //  BNRItem+CoreDataProperties.m
-//  HomepwnrPractise23
+//  Homepwnr23
 //
 //  Created by 王珏 on 15/11/12.
 //  Copyright © 2015年 王珏. All rights reserved.
@@ -13,13 +13,13 @@
 
 @implementation BNRItem (CoreDataProperties)
 
-@dynamic dateCreated;
+@dynamic thumbmail;
 @dynamic itemKey;
+@dynamic dateCreated;
+@dynamic valueInDollars;
+@dynamic serialNumber;
 @dynamic itemName;
 @dynamic orderingValue;
-@dynamic serialNumber;
-@dynamic thumbnail;
-@dynamic valueInDollars;
 @dynamic assetType;
 
 @end

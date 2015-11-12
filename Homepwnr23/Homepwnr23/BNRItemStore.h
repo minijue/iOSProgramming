@@ -6,7 +6,8 @@
 //  Copyright (c) 2014 Big Nerd Ranch. All rights reserved.
 //
 
-#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+@import CoreData;
 
 @class BNRItem;
 
@@ -26,6 +27,6 @@
 - (NSArray *)allAssetTypes;
 
 - (void)addAssetType:(NSString *)type;
-- (NSArray *)itemsWithType:(NSString *)type;
+- (NSArray *)itemsWithType:(NSManagedObject *)type;
 
 @end

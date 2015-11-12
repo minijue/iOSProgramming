@@ -59,12 +59,12 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    if (section == 0) {
+    if (section == 0)
         return [[[BNRItemStore sharedStore] allAssetTypes] count];
-    } else {
-        if (self.items)
+    else {
+        if (self.items) {
             return [self.items count];
-        else
+        } else
             return 0;
     }
 }
@@ -73,7 +73,7 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
     
-     if (indexPath.section == 0) {
+    if (indexPath.section == 0) {
         // Configure the cell...
         NSArray *allAssets = [[BNRItemStore sharedStore] allAssetTypes];
         NSManagedObject *assetType = allAssets[indexPath.row];
@@ -90,8 +90,7 @@
     } else {
         if (self.items) {
             BNRItem *item = self.items[indexPath.row];
-            NSString *label = item.itemName;
-            cell.textLabel.text = label;
+            cell.textLabel.text = item.itemName;
         }
     }
     
@@ -107,20 +106,18 @@
         NSArray *allAssets = [[BNRItemStore sharedStore] allAssetTypes];
         _assetType = allAssets[indexPath.row];
         
-        NSString *assetLabel = [self.assetType valueForKey:@"label"];
-        _items = [[BNRItemStore sharedStore] itemsWithType:assetLabel];
+        _items = [[BNRItemStore sharedStore] itemsWithType:self.assetType];
         
-        NSIndexSet * nd = [[NSIndexSet alloc] initWithIndex:1];
-        [self.tableView reloadSections:nd withRowAnimation:UITableViewRowAnimationAutomatic];
-//      [self.navigationController popViewControllerAnimated:YES];
+        NSIndexSet *ns = [[NSIndexSet alloc] initWithIndex:1];
+        [self.tableView reloadSections:ns withRowAnimation:UITableViewRowAnimationAutomatic];
+        //    [self.navigationController popViewControllerAnimated:YES];
     }
 }
 
 - (void)tableView:(UITableView *)tableView didDeselectRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     
-    if (indexPath.section == 0)
-        cell.accessoryType = UITableViewCellAccessoryNone;
+    cell.accessoryType = UITableViewCellAccessoryNone;
 }
 
 /*

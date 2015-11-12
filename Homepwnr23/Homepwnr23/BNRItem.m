@@ -1,6 +1,6 @@
 //
 //  BNRItem.m
-//  HomepwnrPractise23
+//  Homepwnr23
 //
 //  Created by 王珏 on 15/11/12.
 //  Copyright © 2015年 王珏. All rights reserved.
@@ -28,7 +28,7 @@
     [image drawInRect:projectRect];
     
     UIImage *smallImage = UIGraphicsGetImageFromCurrentImageContext();
-    self.thumbnail = smallImage;
+    self.thumbmail = smallImage;
     
     UIGraphicsEndImageContext();
 }
