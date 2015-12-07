@@ -17,6 +17,7 @@
 		980A01BE1C03146B008F6A8F /* YDRegistrationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 980A01BC1C03146B008F6A8F /* YDRegistrationViewController.m */; };
 		980A01BF1C03146B008F6A8F /* YDRegistrationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 980A01BD1C03146B008F6A8F /* YDRegistrationViewController.xib */; };
 		983CDC211C15A98400D8C7E2 /* YDCrashHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 983CDC201C15A98400D8C7E2 /* YDCrashHandler.m */; };
+		983CDC231C15C11C00D8C7E2 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 983CDC221C15C11C00D8C7E2 /* Default-568h@2x.png */; };
 		98A7CD371C073B420001CF54 /* YDLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A7CD351C073B420001CF54 /* YDLoginViewController.m */; };
 		98A7CD381C073B420001CF54 /* YDLoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 98A7CD361C073B420001CF54 /* YDLoginViewController.xib */; };
 		98A7CD3B1C0746810001CF54 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 98A7CD3A1C0746810001CF54 /* NSString+MD5.m */; };
@@ -44,6 +45,7 @@
 		980A01BD1C03146B008F6A8F /* YDRegistrationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YDRegistrationViewController.xib; sourceTree = "<group>"; };
 		983CDC1F1C15A98400D8C7E2 /* YDCrashHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDCrashHandler.h; sourceTree = "<group>"; };
 		983CDC201C15A98400D8C7E2 /* YDCrashHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDCrashHandler.m; sourceTree = "<group>"; };
+		983CDC221C15C11C00D8C7E2 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		98A7CD341C073B420001CF54 /* YDLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YDLoginViewController.h; sourceTree = "<group>"; };
 		98A7CD351C073B420001CF54 /* YDLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YDLoginViewController.m; sourceTree = "<group>"; };
 		98A7CD361C073B420001CF54 /* YDLoginViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = YDLoginViewController.xib; sourceTree = "<group>"; };
@@ -67,6 +69,7 @@
 		980A01881C030640008F6A8F = {
 			isa = PBXGroup;
 			children = (
+				983CDC221C15C11C00D8C7E2 /* Default-568h@2x.png */,
 				98A7CD3C1C0748550001CF54 /* Security.framework */,
 				980A01931C030640008F6A8F /* MyPersonalLibrary */,
 				980A01921C030640008F6A8F /* Products */,
@@ -246,6 +249,7 @@
 				980A01BF1C03146B008F6A8F /* YDRegistrationViewController.xib in Resources */,
 				980A01A11C030640008F6A8F /* Assets.xcassets in Resources */,
 				980A019F1C030640008F6A8F /* Main.storyboard in Resources */,
+				983CDC231C15C11C00D8C7E2 /* Default-568h@2x.png in Resources */,
 				98A7CD381C073B420001CF54 /* YDLoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

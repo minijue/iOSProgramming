@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "ViewController.h"
+#import "YDCrashHandler.h"
 
 @interface AppDelegate ()
 
@@ -14,9 +16,34 @@
 
 @implementation AppDelegate
 
+- (void)installYDCrashHandler {
+    InstallCrashExceptionHandler();
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    if (bYDInstallCrashHandler) {
+        [self performSelector:@selector(installYDCrashHandler) withObject:nil afterDelay:0];
+    }
+    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
+    if (![YDConfigurationHelper getBoolValueForConfigurationKey:bYDFirstLaunch]) {
+        [YDConfigurationHelper setApplicationStartupDefaults];
+    }
+    
+    if (bYDActivateGPSOnStartUp) {
+        
+    }
+    
+    if (bYDRegistrationRequired && ![YDConfigurationHelper getBoolValueForConfigurationKey:bYDRegistered]) {
+        self.registrationVC = [[YDRegistrationViewController alloc] init];
+        self.registrationVC.delegate = self;
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = _registrationVC;
+        self.window.backgroundColor = [UIColor clearColor];
+        [self.window makeKeyAndVisible];
+    }
     return YES;
 }
 
@@ -40,6 +67,45 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+#pragma Registration Delegates
+- (void)registeredWithError {
+    
+}
+
+- (void)registeredWithSuccess {
+    if (bYDShowLoginAfterRegistration) {
+        self.loginVC = [[YDLoginViewController alloc] init];
+        self.loginVC.delegate = self;
+        self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+        self.window.rootViewController = _registrationVC;
+        self.window.backgroundColor = [UIColor clearColor];
+        [self.window makeKeyAndVisible];
+    } else {
+        self.viewController = [[ViewController alloc] init];
+        self.window.rootViewController = _viewController;
+        [self.window makeKeyAndVisible];
+    }
+}
+
+- (void)cancelRegistration {
+    
+}
+
+#pragma Login delegates
+- (void)loginWithSuccess {
+    self.viewController = [[ViewController alloc] init];
+    self.window.rootViewController = _viewController;
+    [self.window makeKeyAndVisible];
+}
+
+- (void)loginWithError {
+    
+}
+
+- (void)loginCancelled {
+    
 }
 
 @end
