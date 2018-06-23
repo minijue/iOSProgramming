@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "B73603F014564C16E0FAD074415A004C992E415E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "870690579507756944537B6F53A1CF0A2C9183AE" : 9223372036854775807,
+    "B73603F014564C16E0FAD074415A004C992E415E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "88FC62D0-D2E3-41DC-83C2-1CA6E36BB493",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "870690579507756944537B6F53A1CF0A2C9183AE" : "",
+    "B73603F014564C16E0FAD074415A004C992E415E" : "iOSProgramming\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "HelloiOS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "HelloiOS\/HelloiOS.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/minijue\/SwiftProgramming.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "870690579507756944537B6F53A1CF0A2C9183AE"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/minijue\/iOSProgramming.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "B73603F014564C16E0FAD074415A004C992E415E"
+    }
+  ]
+}

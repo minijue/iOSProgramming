@@ -2,8 +2,8 @@
 //  AppDelegate.swift
 //  HelloiOS
 //
-//  Created by 王珏 on 2017/3/13.
-//  Copyright © 2017年 王珏. All rights reserved.
+//  Created by 王珏 on 2018/6/23.
+//  Copyright © 2018年 wangjue. All rights reserved.
 //
 
 import UIKit
