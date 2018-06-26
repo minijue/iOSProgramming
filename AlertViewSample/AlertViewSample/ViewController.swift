@@ -51,7 +51,7 @@ class ViewController: UIViewController {
         })
         sheetController.addAction(fbAction)
         let wbAction:UIAlertAction = UIAlertAction(title: "新浪微博", style: .default, handler: {(alerts:UIAlertAction!)->Void in
-            NSLog("取消")
+            NSLog("新浪微博")
         })
         sheetController.addAction(wbAction)
         
