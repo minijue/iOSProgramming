@@ -7,14 +7,18 @@
 //
 
 import UIKit
+import WebKit
 
-class ViewController: UIViewController,UIWebViewDelegate {
+class ViewController: UIViewController, WKNavigationDelegate {
+    var webView:WKWebView!
 
-    @IBOutlet weak var webView: UIWebView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        self.webView = WKWebView(frame:CGRect(x:10, y:200, width:self.view.bounds.width-20, height:self.view.bounds.height-210))
+        self.view.addSubview(webView)
     }
 
     override func didReceiveMemoryWarning() {
@@ -38,15 +42,25 @@ class ViewController: UIViewController,UIWebViewDelegate {
     @IBAction func testLoadRequest(_ sender: Any) {
         let url = URL(string: "https://www.baidu.com")
         let request = URLRequest(url: url!)
-        self.webView.loadRequest(request)
+        self.webView.load(request)
+        
+        self.webView.navigationDelegate = self
     }
     
-    func webView(_ webView: UIWebView, didFailLoadWithError error: Error) {
-        NSLog("error:")
+    func webView(_ webView: WKWebView, didStartProvisionalNavigation navigation: WKNavigation!) {
+        NSLog("didStartProvisionalNavigation")
     }
     
-    func webViewDidFinishLoad(_ webView: UIWebView) {
-        NSLog(webView.stringByEvaluatingJavaScript(from: "document.body.innerHTML")!)
+    func webView(_ webView: WKWebView, didCommit navigation: WKNavigation!) {
+        NSLog("didCommit")
+    }
+    
+    func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
+        NSLog("didFinish")
+    }
+    
+    func webView(_ webView: WKWebView, didFail navigation: WKNavigation!, withError error: Error) {
+        NSLog("error :", error as NSError)
     }
 }
 
