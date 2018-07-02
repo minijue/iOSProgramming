@@ -17,14 +17,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <searchBar key="tableHeaderView" contentMode="redraw" id="z5a-rg-fVc">
-                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <searchBar key="tableHeaderView" contentMode="redraw" placeholder="输入名称并搜索" showsScopeBar="YES" id="z5a-rg-fVc">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             <textInputTraits key="textInputTraits"/>
+                            <scopeButtonTitles>
+                                <string>English</string>
+                                <string>中文</string>
+                            </scopeButtonTitles>
+                            <connections>
+                                <outlet property="delegate" destination="GKP-Vj-frd" id="KfV-rZ-ikj"/>
+                            </connections>
                         </searchBar>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CellIndentifier" textLabel="Shc-qs-suN" detailTextLabel="uZU-u8-rha" style="IBUITableViewCellStyleSubtitle" id="oiu-KS-59d">
-                                <rect key="frame" x="0.0" y="72" width="375" height="44"/>
+                                <rect key="frame" x="0.0" y="84" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="oiu-KS-59d" id="KKa-yY-RuB">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="43.666666666666664"/>
@@ -53,6 +60,9 @@
                             <outlet property="delegate" destination="GKP-Vj-frd" id="tQ5-EM-aJz"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="searchBar" destination="z5a-rg-fVc" id="nmW-0S-P0F"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qNO-G6-SOm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
