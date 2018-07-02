@@ -49,9 +49,17 @@ class ViewController: UITableViewController, UISearchBarDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
+    
+    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+        return index;
+    }
+    
     // UITableViewDataSource
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
+    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
         return self.listFilterTeams.count
     }
     
@@ -64,7 +72,7 @@ class ViewController: UITableViewController, UISearchBarDelegate {
             cell = UITableViewCell(style: .subtitle, reuseIdentifier: cellIndentifier)
         }
         
-        let row = indexPath.row
+        let row = indexPath.section
         let rowDict = self.listFilterTeams[row] as? NSDictionary
         cell.textLabel?.text = rowDict!["name"] as? String
         cell.detailTextLabel?.text = rowDict!["ename"] as? String
@@ -73,6 +81,18 @@ class ViewController: UITableViewController, UISearchBarDelegate {
         cell.imageView?.image = UIImage(named: imagePath)
         
         return cell
+    }
+    
+    // 索引文字
+    override func sectionIndexTitles(for tableView: UITableView) -> [String]? {
+        var listTitles = [AnyObject]()
+        
+        for item in self.listFilterTeams {
+            let title = ((item as! NSDictionary)["name"] as! String).prefix(2)
+            listTitles.append(title as AnyObject)
+        }
+        
+        return listTitles as? [String]
     }
     
     // UISearchBarDelegate
