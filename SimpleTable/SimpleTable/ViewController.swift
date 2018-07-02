@@ -41,6 +41,7 @@ class ViewController: UITableViewController {
         let row = indexPath.row
         let rowDict = self.listTeams[row] as? NSDictionary        
         cell.textLabel?.text = rowDict!["name"] as? String
+        cell.detailTextLabel?.text = rowDict!["ename"] as? String
         
         let imagePath = String(format: "%@.png", rowDict!["image"] as! String)
         cell.imageView?.image = UIImage(named: imagePath)
