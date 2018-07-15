@@ -52,5 +52,14 @@ class ViewController: UIViewController {
             bTrashNil = !bTrashNil
         }        
     }
+    
+    @IBAction func foundPan(_ sender: Any) {
+        let paramSender = sender as! UIPanGestureRecognizer
+        
+        if paramSender.state != .ended && paramSender.state != .failed {
+            let location = paramSender.location(in: paramSender.view!.superview)
+            paramSender.view!.center = location
+        }
+    }
 }
 

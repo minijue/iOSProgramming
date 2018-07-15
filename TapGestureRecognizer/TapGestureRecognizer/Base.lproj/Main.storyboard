@@ -24,6 +24,7 @@
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="bFQ-EC-FOM" appends="YES" id="ObL-qQ-wQm"/>
                                     <outletCollection property="gestureRecognizers" destination="3W4-8i-qLG" appends="YES" id="zMu-M7-S76"/>
+                                    <outletCollection property="gestureRecognizers" destination="6Aw-Y2-4cc" appends="YES" id="o8d-oz-dwa"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -51,6 +52,11 @@
                         <action selector="longPress:" destination="BYZ-38-t0r" id="boo-M9-yUF"/>
                     </connections>
                 </pongPressGestureRecognizer>
+                <panGestureRecognizer minimumNumberOfTouches="1" id="6Aw-Y2-4cc">
+                    <connections>
+                        <action selector="foundPan:" destination="BYZ-38-t0r" id="36t-8f-XZ4"/>
+                    </connections>
+                </panGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.1875" y="117.18749999999999"/>
         </scene>
