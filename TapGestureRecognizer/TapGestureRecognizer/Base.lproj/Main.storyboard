@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TapGestureRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Image1" translatesAutoresizingMaskIntoConstraints="NO" id="0ds-RG-J9E">
+                                <rect key="frame" x="281" y="435" width="206" height="155"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="bFQ-EC-FOM" appends="YES" id="ObL-qQ-wQm"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ds-RG-J9E" secondAttribute="bottom" constant="434" id="Hat-EE-lPJ"/>
+                            <constraint firstItem="0ds-RG-J9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="281" id="Vy9-Ee-sMM"/>
+                            <constraint firstItem="0ds-RG-J9E" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="415" id="uuV-YY-0D2"/>
+                            <constraint firstItem="0ds-RG-J9E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ye9-Oc-vGp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="0ds-RG-J9E" id="xtN-32-3vZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="bFQ-EC-FOM">
+                    <connections>
+                        <action selector="foundTap:" destination="BYZ-38-t0r" id="jr2-lB-wSP"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="117.1875" y="117.18749999999999"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Image1" width="64" height="64"/>
+    </resources>
+</document>
