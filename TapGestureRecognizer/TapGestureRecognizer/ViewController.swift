@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     
     var bTrashEmpty = false
+    var bTrashNil = false
     var imageTrashFull: UIImage!
     var imageTrashEmpty: UIImage!
     
@@ -37,6 +38,19 @@ class ViewController: UIViewController {
         }
         
         bTrashEmpty = !bTrashEmpty
+    }
+    
+    @IBAction func longPress(_ sender: Any) {
+        let paramSender = sender as! UILongPressGestureRecognizer
+        
+        if paramSender.state == .began {
+            if bTrashNil {
+                self.imageView.image = self.imageTrashFull
+            } else {
+                self.imageView.image = nil
+            }
+            bTrashNil = !bTrashNil
+        }        
     }
 }
 
