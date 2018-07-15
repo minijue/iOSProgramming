@@ -25,6 +25,7 @@
                                     <outletCollection property="gestureRecognizers" destination="bFQ-EC-FOM" appends="YES" id="ObL-qQ-wQm"/>
                                     <outletCollection property="gestureRecognizers" destination="3W4-8i-qLG" appends="YES" id="zMu-M7-S76"/>
                                     <outletCollection property="gestureRecognizers" destination="6Aw-Y2-4cc" appends="YES" id="o8d-oz-dwa"/>
+                                    <outletCollection property="gestureRecognizers" destination="OVl-B2-RTD" appends="YES" id="Rkj-ae-dFs"/>
                                 </connections>
                             </imageView>
                         </subviews>
@@ -57,6 +58,11 @@
                         <action selector="foundPan:" destination="BYZ-38-t0r" id="36t-8f-XZ4"/>
                     </connections>
                 </panGestureRecognizer>
+                <swipeGestureRecognizer direction="left" numberOfTouchesRequired="2" id="OVl-B2-RTD">
+                    <connections>
+                        <action selector="swipe:" destination="BYZ-38-t0r" id="4kP-SA-STV"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.1875" y="117.18749999999999"/>
         </scene>

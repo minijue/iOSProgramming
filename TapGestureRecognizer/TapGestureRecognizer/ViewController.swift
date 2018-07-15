@@ -13,6 +13,9 @@ class ViewController: UIViewController {
     
     var bTrashEmpty = false
     var bTrashNil = false
+    
+    var rotationAngle = 0.0
+    
     var imageTrashFull: UIImage!
     var imageTrashEmpty: UIImage!
     
@@ -61,5 +64,24 @@ class ViewController: UIViewController {
             paramSender.view!.center = location
         }
     }
+    
+    @IBAction func swipe(_ sender: Any) {
+        let paramSender = sender as! UISwipeGestureRecognizer
+        
+        switch paramSender.direction {
+        case .down:
+            NSLog("down")
+        case .left:
+            NSLog("left")
+        case .right:
+            NSLog("right")
+        case .up:
+            NSLog("up")
+        default:
+            NSLog("others")
+        }
+       
+    }
+    
 }
 
