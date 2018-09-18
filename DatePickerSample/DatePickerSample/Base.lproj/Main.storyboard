@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="ipad9_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="DatePickerSample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="CvV-eH-UWQ">
+                                <rect key="frame" x="0.0" y="20" width="768" height="216"/>
+                                <date key="date" timeIntervalSinceReferenceDate="558963564.99018896">
+                                    <!--2018-09-18 11:39:24 +0000-->
+                                </date>
+                            </datePicker>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kRr-Tg-Lm7">
+                                <rect key="frame" x="33" y="239" width="64" height="30"/>
+                                <state key="normal" title="Click me!"/>
+                                <connections>
+                                    <action selector="onclick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="zdv-9N-erh"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="JFT-b3-rCV">
+                                <rect key="frame" x="0.0" y="312" width="768" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="bAl-xm-JRp"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="v13-8i-NrJ"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6h-xq-y63">
+                                <rect key="frame" x="129" y="514" width="619" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OAg-x3-aZt">
+                                <rect key="frame" x="24" y="509" width="64" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Click me!"/>
+                                <connections>
+                                    <action selector="onclick1:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kg0-KL-qs5"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VO9-1r-QJ8">
+                                <rect key="frame" x="129" y="244" width="619" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CvV-eH-UWQ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="3Ux-vv-gxK"/>
+                            <constraint firstItem="kRr-Tg-Lm7" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-258" id="8oD-dq-BRn"/>
+                            <constraint firstAttribute="trailing" secondItem="CvV-eH-UWQ" secondAttribute="trailing" id="INo-IA-DyB"/>
+                            <constraint firstItem="VO9-1r-QJ8" firstAttribute="top" secondItem="CvV-eH-UWQ" secondAttribute="bottom" constant="8" id="PCA-7u-5qQ"/>
+                            <constraint firstItem="VO9-1r-QJ8" firstAttribute="centerX" secondItem="kRr-Tg-Lm7" secondAttribute="centerX" constant="373.5" id="dUP-b6-Dih"/>
+                            <constraint firstItem="CvV-eH-UWQ" firstAttribute="centerX" secondItem="VO9-1r-QJ8" secondAttribute="centerX" constant="-54.5" id="lhQ-6g-8HV"/>
+                            <constraint firstItem="CvV-eH-UWQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="zo8-bK-Dln"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="datePicker" destination="CvV-eH-UWQ" id="Usj-bF-VKZ"/>
+                        <outlet property="label" destination="VO9-1r-QJ8" id="fkc-tA-koQ"/>
+                        <outlet property="label1" destination="h6h-xq-y63" id="nFm-ZS-aYB"/>
+                        <outlet property="pickerView" destination="JFT-b3-rCV" id="mhw-j0-Y9k"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="19.53125" y="16.9921875"/>
+        </scene>
+    </scenes>
+</document>

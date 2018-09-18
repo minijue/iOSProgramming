@@ -26,10 +26,13 @@
                                     <outletCollection property="gestureRecognizers" destination="3W4-8i-qLG" appends="YES" id="zMu-M7-S76"/>
                                     <outletCollection property="gestureRecognizers" destination="6Aw-Y2-4cc" appends="YES" id="o8d-oz-dwa"/>
                                     <outletCollection property="gestureRecognizers" destination="OVl-B2-RTD" appends="YES" id="Rkj-ae-dFs"/>
+                                    <outletCollection property="gestureRecognizers" destination="hf5-Zb-xlM" appends="YES" id="ovb-wv-FhG"/>
+                                    <outletCollection property="gestureRecognizers" destination="fbZ-R5-x5u" appends="YES" id="eum-7G-3MG"/>
                                 </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0ds-RG-J9E" secondAttribute="bottom" constant="434" id="Hat-EE-lPJ"/>
                             <constraint firstItem="0ds-RG-J9E" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="281" id="Vy9-Ee-sMM"/>
@@ -37,17 +40,16 @@
                             <constraint firstItem="0ds-RG-J9E" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ye9-Oc-vGp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="Eo7-dD-9OH" appends="YES" id="eef-hW-IRg"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="imageView" destination="0ds-RG-J9E" id="xtN-32-3vZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="bFQ-EC-FOM">
-                    <connections>
-                        <action selector="foundTap:" destination="BYZ-38-t0r" id="jr2-lB-wSP"/>
-                    </connections>
-                </tapGestureRecognizer>
+                <tapGestureRecognizer id="bFQ-EC-FOM"/>
                 <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="0.5" id="3W4-8i-qLG">
                     <connections>
                         <action selector="longPress:" destination="BYZ-38-t0r" id="boo-M9-yUF"/>
@@ -63,6 +65,22 @@
                         <action selector="swipe:" destination="BYZ-38-t0r" id="4kP-SA-STV"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <rotationGestureRecognizer id="hf5-Zb-xlM">
+                    <connections>
+                        <action selector="foundRotation:" destination="BYZ-38-t0r" id="8Va-eF-pPm"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pinchGestureRecognizer id="fbZ-R5-x5u">
+                    <connections>
+                        <action selector="foundPinch:" destination="BYZ-38-t0r" id="zRX-YW-Zci"/>
+                    </connections>
+                </pinchGestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="Eo7-dD-9OH">
+                    <rectEdge key="edges" right="YES"/>
+                    <connections>
+                        <action selector="foundEdgePan:" destination="BYZ-38-t0r" id="yNn-7C-L6n"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="117.1875" y="117.18749999999999"/>
         </scene>

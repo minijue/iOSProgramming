@@ -14,7 +14,8 @@ class ViewController: UIViewController {
     var bTrashEmpty = false
     var bTrashNil = false
     
-    var rotationAngle = 0.0
+    var rotationAngle : CGFloat = 0.0
+    var currentScale: CGFloat = 1.0
     
     var imageTrashFull: UIImage!
     var imageTrashEmpty: UIImage!
@@ -31,9 +32,14 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        let touch = touches.first
+        if touch?.tapCount == 1 {
+            self.foundTap()
+        } 
 
-
-    @IBAction func foundTap(_ sender: Any) {
+    func foundTap() {
         if bTrashEmpty {
             self.imageView.image = self.imageTrashFull
         } else {
@@ -41,6 +47,32 @@ class ViewController: UIViewController {
         }
         
         bTrashEmpty = !bTrashEmpty
+    }
+    
+    @IBAction func foundRotation(_ sender: Any) {
+        let paramSender = sender as! UIRotationGestureRecognizer
+        
+        self.imageView.transform = CGAffineTransform(rotationAngle: rotationAngle + paramSender.rotation)
+        
+        if paramSender.state == .ended {
+            rotationAngle += paramSender.rotation
+        }
+    }
+    
+    @IBAction func foundPinch(_ sender: Any) {
+        let paramSender = sender as! UIPinchGestureRecognizer
+        
+        if paramSender.state == .ended {
+            currentScale = paramSender.scale
+        } else if paramSender.state == .began && currentScale != 0.0 {
+            paramSender.scale = currentScale
+        }
+        
+        self.imageView.transform = CGAffineTransform(scaleX: paramSender.scale, y: paramSender.scale)
+    }
+    
+    @IBAction func foundEdgePan(_ paramSender: UIScreenEdgePanGestureRecognizer) {        
+        NSLog("边缘滑动")
     }
     
     @IBAction func longPress(_ sender: Any) {
