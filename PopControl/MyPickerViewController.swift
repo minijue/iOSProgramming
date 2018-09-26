@@ -29,6 +29,8 @@ UIPickerViewDelegate, UIPickerViewDataSource {
     override public func viewDidLoad() {
         super.viewDidLoad()
 
+        self.picker.dataSource = self
+        self.picker.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -52,7 +54,7 @@ UIPickerViewDelegate, UIPickerViewDataSource {
             superview.addSubview(self.view)
         }
         
-        self.view.center = CGPoint(x: self.view.center.x, y: 900)
+        self.view.center = CGPoint(x: self.view.center.x, y: 2800)
         self.view.frame = CGRect(x: self.view.frame.origin.x, y: self.view.frame.origin.y, width: superview.frame.size.width, height: superview.frame.size.height)
         
         UIView.animate(withDuration: 0.3, animations: {()->Void in
@@ -63,7 +65,7 @@ UIPickerViewDelegate, UIPickerViewDataSource {
     
     public func hideInView() {
         UIView.animate(withDuration: 0.3, delay: 0.0, options: UIView.AnimationOptions.curveEaseInOut, animations: {
-            self.view.center = CGPoint(x: self.view.center.x, y: 900)
+            self.view.center = CGPoint(x: self.view.center.x, y: 2800)
         }, completion: nil)
     }
     /*
@@ -83,6 +85,9 @@ UIPickerViewDelegate, UIPickerViewDataSource {
         return self.pickerData.count
     }
     
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.pickerData[row] as? String
+    }
 
 }
 
