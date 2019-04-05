@@ -18,8 +18,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CqC-26-74L">
+                                <rect key="frame" x="130" y="413" width="148" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9nd-46-CYG">
+                                        <rect key="frame" x="11" y="32" width="132" height="30"/>
+                                        <state key="normal" title="Popup ActionSheet"/>
+                                        <connections>
+                                            <action selector="popupActionSheet:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HMJ-nR-E9N"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="9nd-46-CYG" firstAttribute="centerX" secondItem="CqC-26-74L" secondAttribute="centerX" constant="3" id="72r-8J-HRl"/>
+                                    <constraint firstItem="9nd-46-CYG" firstAttribute="bottom" secondItem="CqC-26-74L" secondAttribute="bottomMargin" id="Rqq-Rq-X7L"/>
+                                    <constraint firstItem="9nd-46-CYG" firstAttribute="leading" secondItem="CqC-26-74L" secondAttribute="leading" constant="11" id="mcP-VX-cDl"/>
+                                    <constraint firstAttribute="top" secondItem="9nd-46-CYG" secondAttribute="bottom" constant="-62" id="skt-JB-fdg"/>
+                                </constraints>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mK9-YO-7De">
-                                <rect key="frame" x="150" y="433" width="114" height="30"/>
+                                <rect key="frame" x="150" y="375" width="114" height="30"/>
                                 <state key="normal" title="Popup AlertView"/>
                                 <connections>
                                     <action selector="popupAlertView:" destination="BYZ-38-t0r" eventType="touchUpInside" id="g7J-DB-9u4"/>
@@ -28,8 +47,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="mK9-YO-7De" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="IHL-Hb-ZbZ"/>
-                            <constraint firstItem="mK9-YO-7De" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="trf-7Z-2kz"/>
+                            <constraint firstItem="CqC-26-74L" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Jja-uM-XYh"/>
+                            <constraint firstItem="CqC-26-74L" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="130" id="akh-Ac-tHz"/>
+                            <constraint firstItem="mK9-YO-7De" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="dNq-fk-WkA"/>
+                            <constraint firstItem="mK9-YO-7De" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-58" id="zkc-sa-En5"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>

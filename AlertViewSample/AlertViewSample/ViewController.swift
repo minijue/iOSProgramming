@@ -24,5 +24,28 @@ class ViewController: UIViewController{
         self.present(alertController, animated: true, completion: nil)
     }
     
+    @IBAction func popupActionSheet(_ sender: Any) {
+        let actionController:UIAlertController = UIAlertController(title: nil, message: nil, preferredStyle: .actionSheet)
+        
+        let destructiveAction:UIAlertAction = UIAlertAction(title: "破坏性按钮", style: .destructive, handler: {(alerts:UIAlertAction!)->Void in
+            NSLog("破坏性按钮")
+        })
+        actionController.addAction(destructiveAction)
+        
+        let list1Action = UIAlertAction(title: "Facebook", style: .default, handler: { (alerts: UIAlertAction)->Void
+            in
+            NSLog("touched facebook")            
+        })
+        actionController.addAction(list1Action)
+        
+        let list2Action = UIAlertAction(title: "Twitter", style: .default, handler: { (alerts: UIAlertAction)->Void in NSLog("touched twitter")})
+        actionController.addAction(list2Action)
+        
+        
+        let cancelAction = UIAlertAction(title: "取消", style: .cancel, handler: {(alerts: UIAlertAction)-> Void in NSLog("...")})
+        actionController.addAction(cancelAction)
+        
+        self.present(actionController, animated: true, completion: nil)
+    }
 }
 
