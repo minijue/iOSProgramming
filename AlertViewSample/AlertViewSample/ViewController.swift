@@ -10,6 +10,7 @@ import UIKit
 
 class ViewController: UIViewController{
 
+    @IBOutlet weak var label: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
@@ -46,6 +47,16 @@ class ViewController: UIViewController{
         actionController.addAction(cancelAction)
         
         self.present(actionController, animated: true, completion: nil)
+    }
+    @IBAction func save(_ sender: Any) {
+        self.label.text = "Clicked Save"
+    }
+    
+    @IBAction func open(_ sender: Any) {
+        self.label.text = "Clicked Open"
+    }
+    @IBAction func add(_ sender: Any) {
+        self.label.text = "Clicked Add"
     }
 }
 
