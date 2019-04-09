@@ -1,0 +1,481 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		981A678A225C974300EA37C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981A6789225C974300EA37C6 /* AppDelegate.swift */; };
+		981A678F225C974300EA37C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981A678D225C974300EA37C6 /* Main.storyboard */; };
+		981A6791225C974500EA37C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 981A6790225C974500EA37C6 /* Assets.xcassets */; };
+		981A6794225C974500EA37C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 981A6792225C974500EA37C6 /* LaunchScreen.storyboard */; };
+		981A679C225C97C200EA37C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981A679B225C97C200EA37C6 /* ViewController.swift */; };
+		981A67C0225C9AD600EA37C6 /* Ghana.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67A0225C9AD600EA37C6 /* Ghana.png */; };
+		981A67C1225C9AD600EA37C6 /* Argentina.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67A1225C9AD600EA37C6 /* Argentina.png */; };
+		981A67C2225C9AD600EA37C6 /* SouthAfrica.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67A2225C9AD600EA37C6 /* SouthAfrica.png */; };
+		981A67C3225C9AD600EA37C6 /* Holland.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67A3225C9AD600EA37C6 /* Holland.png */; };
+		981A67C4225C9AD600EA37C6 /* Algeria.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67A4225C9AD600EA37C6 /* Algeria.png */; };
+		981A67C5225C9AD600EA37C6 /* Honduras.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67A5225C9AD600EA37C6 /* Honduras.png */; };
+		981A67C6225C9AD600EA37C6 /* USA.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67A6225C9AD600EA37C6 /* USA.png */; };
+		981A67C7225C9AD600EA37C6 /* Australia.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67A7225C9AD600EA37C6 /* Australia.png */; };
+		981A67C8225C9AD600EA37C6 /* Cameroon.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67A8225C9AD600EA37C6 /* Cameroon.png */; };
+		981A67C9225C9AD600EA37C6 /* England.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67A9225C9AD600EA37C6 /* England.png */; };
+		981A67CA225C9AD600EA37C6 /* CoteDIvoire.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67AA225C9AD600EA37C6 /* CoteDIvoire.png */; };
+		981A67CB225C9AD600EA37C6 /* Brazil.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67AB225C9AD600EA37C6 /* Brazil.png */; };
+		981A67CC225C9AD600EA37C6 /* Greece.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67AC225C9AD600EA37C6 /* Greece.png */; };
+		981A67CD225C9AD600EA37C6 /* NewZealand.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67AD225C9AD600EA37C6 /* NewZealand.png */; };
+		981A67CE225C9AD600EA37C6 /* Switzerland.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67AE225C9AD600EA37C6 /* Switzerland.png */; };
+		981A67CF225C9AD600EA37C6 /* SouthKorea.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67AF225C9AD600EA37C6 /* SouthKorea.png */; };
+		981A67D0225C9AD600EA37C6 /* Nigeria.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67B0225C9AD600EA37C6 /* Nigeria.png */; };
+		981A67D1225C9AD600EA37C6 /* Germany.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67B1225C9AD600EA37C6 /* Germany.png */; };
+		981A67D2225C9AD600EA37C6 /* Portugal.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67B2225C9AD600EA37C6 /* Portugal.png */; };
+		981A67D3225C9AD600EA37C6 /* Spain.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67B3225C9AD600EA37C6 /* Spain.png */; };
+		981A67D4225C9AD600EA37C6 /* Paraguay.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67B4225C9AD600EA37C6 /* Paraguay.png */; };
+		981A67D5225C9AD600EA37C6 /* Serbia.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67B5225C9AD600EA37C6 /* Serbia.png */; };
+		981A67D6225C9AD600EA37C6 /* France.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67B6225C9AD600EA37C6 /* France.png */; };
+		981A67D7225C9AD600EA37C6 /* Italy.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67B7225C9AD600EA37C6 /* Italy.png */; };
+		981A67D8225C9AD600EA37C6 /* Denmark.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67B8225C9AD600EA37C6 /* Denmark.png */; };
+		981A67D9225C9AD600EA37C6 /* Japan.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67B9225C9AD600EA37C6 /* Japan.png */; };
+		981A67DA225C9AD600EA37C6 /* Uruguay.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67BA225C9AD600EA37C6 /* Uruguay.png */; };
+		981A67DB225C9AD600EA37C6 /* NorthKorea.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67BB225C9AD600EA37C6 /* NorthKorea.png */; };
+		981A67DC225C9AD600EA37C6 /* Slovenia.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67BC225C9AD600EA37C6 /* Slovenia.png */; };
+		981A67DD225C9AD600EA37C6 /* Slovakia.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67BD225C9AD600EA37C6 /* Slovakia.png */; };
+		981A67DE225C9AD600EA37C6 /* Chile.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67BE225C9AD600EA37C6 /* Chile.png */; };
+		981A67DF225C9AD600EA37C6 /* Mexico.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67BF225C9AD600EA37C6 /* Mexico.png */; };
+		981A67E1225C9ADF00EA37C6 /* team.plist in Resources */ = {isa = PBXBuildFile; fileRef = 981A67E0225C9ADF00EA37C6 /* team.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		981A6786225C974300EA37C6 /* SimpleTable.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleTable.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		981A6789225C974300EA37C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		981A678E225C974300EA37C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		981A6790225C974500EA37C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		981A6793225C974500EA37C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		981A6795225C974500EA37C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		981A679B225C97C200EA37C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		981A67A0225C9AD600EA37C6 /* Ghana.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Ghana.png; sourceTree = "<group>"; };
+		981A67A1225C9AD600EA37C6 /* Argentina.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Argentina.png; sourceTree = "<group>"; };
+		981A67A2225C9AD600EA37C6 /* SouthAfrica.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SouthAfrica.png; sourceTree = "<group>"; };
+		981A67A3225C9AD600EA37C6 /* Holland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Holland.png; sourceTree = "<group>"; };
+		981A67A4225C9AD600EA37C6 /* Algeria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Algeria.png; sourceTree = "<group>"; };
+		981A67A5225C9AD600EA37C6 /* Honduras.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Honduras.png; sourceTree = "<group>"; };
+		981A67A6225C9AD600EA37C6 /* USA.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = USA.png; sourceTree = "<group>"; };
+		981A67A7225C9AD600EA37C6 /* Australia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Australia.png; sourceTree = "<group>"; };
+		981A67A8225C9AD600EA37C6 /* Cameroon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Cameroon.png; sourceTree = "<group>"; };
+		981A67A9225C9AD600EA37C6 /* England.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = England.png; sourceTree = "<group>"; };
+		981A67AA225C9AD600EA37C6 /* CoteDIvoire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = CoteDIvoire.png; sourceTree = "<group>"; };
+		981A67AB225C9AD600EA37C6 /* Brazil.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Brazil.png; sourceTree = "<group>"; };
+		981A67AC225C9AD600EA37C6 /* Greece.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Greece.png; sourceTree = "<group>"; };
+		981A67AD225C9AD600EA37C6 /* NewZealand.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NewZealand.png; sourceTree = "<group>"; };
+		981A67AE225C9AD600EA37C6 /* Switzerland.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Switzerland.png; sourceTree = "<group>"; };
+		981A67AF225C9AD600EA37C6 /* SouthKorea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = SouthKorea.png; sourceTree = "<group>"; };
+		981A67B0225C9AD600EA37C6 /* Nigeria.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Nigeria.png; sourceTree = "<group>"; };
+		981A67B1225C9AD600EA37C6 /* Germany.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Germany.png; sourceTree = "<group>"; };
+		981A67B2225C9AD600EA37C6 /* Portugal.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Portugal.png; sourceTree = "<group>"; };
+		981A67B3225C9AD600EA37C6 /* Spain.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spain.png; sourceTree = "<group>"; };
+		981A67B4225C9AD600EA37C6 /* Paraguay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Paraguay.png; sourceTree = "<group>"; };
+		981A67B5225C9AD600EA37C6 /* Serbia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Serbia.png; sourceTree = "<group>"; };
+		981A67B6225C9AD600EA37C6 /* France.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = France.png; sourceTree = "<group>"; };
+		981A67B7225C9AD600EA37C6 /* Italy.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Italy.png; sourceTree = "<group>"; };
+		981A67B8225C9AD600EA37C6 /* Denmark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Denmark.png; sourceTree = "<group>"; };
+		981A67B9225C9AD600EA37C6 /* Japan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Japan.png; sourceTree = "<group>"; };
+		981A67BA225C9AD600EA37C6 /* Uruguay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Uruguay.png; sourceTree = "<group>"; };
+		981A67BB225C9AD600EA37C6 /* NorthKorea.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = NorthKorea.png; sourceTree = "<group>"; };
+		981A67BC225C9AD600EA37C6 /* Slovenia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slovenia.png; sourceTree = "<group>"; };
+		981A67BD225C9AD600EA37C6 /* Slovakia.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Slovakia.png; sourceTree = "<group>"; };
+		981A67BE225C9AD600EA37C6 /* Chile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chile.png; sourceTree = "<group>"; };
+		981A67BF225C9AD600EA37C6 /* Mexico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mexico.png; sourceTree = "<group>"; };
+		981A67E0225C9ADF00EA37C6 /* team.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = team.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		981A6783225C974300EA37C6 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		981A677D225C974300EA37C6 = {
+			isa = PBXGroup;
+			children = (
+				981A6788225C974300EA37C6 /* SimpleTable */,
+				981A6787225C974300EA37C6 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		981A6787225C974300EA37C6 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				981A6786225C974300EA37C6 /* SimpleTable.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		981A6788225C974300EA37C6 /* SimpleTable */ = {
+			isa = PBXGroup;
+			children = (
+				981A67E0225C9ADF00EA37C6 /* team.plist */,
+				981A6789225C974300EA37C6 /* AppDelegate.swift */,
+				981A678D225C974300EA37C6 /* Main.storyboard */,
+				981A6790225C974500EA37C6 /* Assets.xcassets */,
+				981A6792225C974500EA37C6 /* LaunchScreen.storyboard */,
+				981A6795225C974500EA37C6 /* Info.plist */,
+				981A679B225C97C200EA37C6 /* ViewController.swift */,
+				981A679F225C9AD600EA37C6 /* 球队图片 */,
+			);
+			path = SimpleTable;
+			sourceTree = "<group>";
+		};
+		981A679F225C9AD600EA37C6 /* 球队图片 */ = {
+			isa = PBXGroup;
+			children = (
+				981A67A0225C9AD600EA37C6 /* Ghana.png */,
+				981A67A1225C9AD600EA37C6 /* Argentina.png */,
+				981A67A2225C9AD600EA37C6 /* SouthAfrica.png */,
+				981A67A3225C9AD600EA37C6 /* Holland.png */,
+				981A67A4225C9AD600EA37C6 /* Algeria.png */,
+				981A67A5225C9AD600EA37C6 /* Honduras.png */,
+				981A67A6225C9AD600EA37C6 /* USA.png */,
+				981A67A7225C9AD600EA37C6 /* Australia.png */,
+				981A67A8225C9AD600EA37C6 /* Cameroon.png */,
+				981A67A9225C9AD600EA37C6 /* England.png */,
+				981A67AA225C9AD600EA37C6 /* CoteDIvoire.png */,
+				981A67AB225C9AD600EA37C6 /* Brazil.png */,
+				981A67AC225C9AD600EA37C6 /* Greece.png */,
+				981A67AD225C9AD600EA37C6 /* NewZealand.png */,
+				981A67AE225C9AD600EA37C6 /* Switzerland.png */,
+				981A67AF225C9AD600EA37C6 /* SouthKorea.png */,
+				981A67B0225C9AD600EA37C6 /* Nigeria.png */,
+				981A67B1225C9AD600EA37C6 /* Germany.png */,
+				981A67B2225C9AD600EA37C6 /* Portugal.png */,
+				981A67B3225C9AD600EA37C6 /* Spain.png */,
+				981A67B4225C9AD600EA37C6 /* Paraguay.png */,
+				981A67B5225C9AD600EA37C6 /* Serbia.png */,
+				981A67B6225C9AD600EA37C6 /* France.png */,
+				981A67B7225C9AD600EA37C6 /* Italy.png */,
+				981A67B8225C9AD600EA37C6 /* Denmark.png */,
+				981A67B9225C9AD600EA37C6 /* Japan.png */,
+				981A67BA225C9AD600EA37C6 /* Uruguay.png */,
+				981A67BB225C9AD600EA37C6 /* NorthKorea.png */,
+				981A67BC225C9AD600EA37C6 /* Slovenia.png */,
+				981A67BD225C9AD600EA37C6 /* Slovakia.png */,
+				981A67BE225C9AD600EA37C6 /* Chile.png */,
+				981A67BF225C9AD600EA37C6 /* Mexico.png */,
+			);
+			path = "球队图片";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		981A6785225C974300EA37C6 /* SimpleTable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 981A6798225C974500EA37C6 /* Build configuration list for PBXNativeTarget "SimpleTable" */;
+			buildPhases = (
+				981A6782225C974300EA37C6 /* Sources */,
+				981A6783225C974300EA37C6 /* Frameworks */,
+				981A6784225C974300EA37C6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SimpleTable;
+			productName = SimpleTable;
+			productReference = 981A6786225C974300EA37C6 /* SimpleTable.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		981A677E225C974300EA37C6 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = wangjue;
+				TargetAttributes = {
+					981A6785225C974300EA37C6 = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = 981A6781225C974300EA37C6 /* Build configuration list for PBXProject "SimpleTable" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 981A677D225C974300EA37C6;
+			productRefGroup = 981A6787225C974300EA37C6 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				981A6785225C974300EA37C6 /* SimpleTable */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		981A6784225C974300EA37C6 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				981A67DC225C9AD600EA37C6 /* Slovenia.png in Resources */,
+				981A67CB225C9AD600EA37C6 /* Brazil.png in Resources */,
+				981A6794225C974500EA37C6 /* LaunchScreen.storyboard in Resources */,
+				981A67D5225C9AD600EA37C6 /* Serbia.png in Resources */,
+				981A67C1225C9AD600EA37C6 /* Argentina.png in Resources */,
+				981A67DB225C9AD600EA37C6 /* NorthKorea.png in Resources */,
+				981A67D9225C9AD600EA37C6 /* Japan.png in Resources */,
+				981A67CF225C9AD600EA37C6 /* SouthKorea.png in Resources */,
+				981A6791225C974500EA37C6 /* Assets.xcassets in Resources */,
+				981A67D7225C9AD600EA37C6 /* Italy.png in Resources */,
+				981A67CA225C9AD600EA37C6 /* CoteDIvoire.png in Resources */,
+				981A67DD225C9AD600EA37C6 /* Slovakia.png in Resources */,
+				981A67D3225C9AD600EA37C6 /* Spain.png in Resources */,
+				981A67C8225C9AD600EA37C6 /* Cameroon.png in Resources */,
+				981A67C9225C9AD600EA37C6 /* England.png in Resources */,
+				981A67D4225C9AD600EA37C6 /* Paraguay.png in Resources */,
+				981A67D8225C9AD600EA37C6 /* Denmark.png in Resources */,
+				981A67C4225C9AD600EA37C6 /* Algeria.png in Resources */,
+				981A67CC225C9AD600EA37C6 /* Greece.png in Resources */,
+				981A67E1225C9ADF00EA37C6 /* team.plist in Resources */,
+				981A67C2225C9AD600EA37C6 /* SouthAfrica.png in Resources */,
+				981A67C6225C9AD600EA37C6 /* USA.png in Resources */,
+				981A67CD225C9AD600EA37C6 /* NewZealand.png in Resources */,
+				981A67C7225C9AD600EA37C6 /* Australia.png in Resources */,
+				981A67DF225C9AD600EA37C6 /* Mexico.png in Resources */,
+				981A67CE225C9AD600EA37C6 /* Switzerland.png in Resources */,
+				981A67D2225C9AD600EA37C6 /* Portugal.png in Resources */,
+				981A67C3225C9AD600EA37C6 /* Holland.png in Resources */,
+				981A67D6225C9AD600EA37C6 /* France.png in Resources */,
+				981A678F225C974300EA37C6 /* Main.storyboard in Resources */,
+				981A67D1225C9AD600EA37C6 /* Germany.png in Resources */,
+				981A67DE225C9AD600EA37C6 /* Chile.png in Resources */,
+				981A67D0225C9AD600EA37C6 /* Nigeria.png in Resources */,
+				981A67C5225C9AD600EA37C6 /* Honduras.png in Resources */,
+				981A67DA225C9AD600EA37C6 /* Uruguay.png in Resources */,
+				981A67C0225C9AD600EA37C6 /* Ghana.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		981A6782225C974300EA37C6 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				981A679C225C97C200EA37C6 /* ViewController.swift in Sources */,
+				981A678A225C974300EA37C6 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		981A678D225C974300EA37C6 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				981A678E225C974300EA37C6 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		981A6792225C974500EA37C6 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				981A6793225C974500EA37C6 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		981A6796225C974500EA37C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		981A6797225C974500EA37C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		981A6799225C974500EA37C6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GVN682F3UK;
+				INFOPLIST_FILE = SimpleTable/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.wangjue.SimpleTable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		981A679A225C974500EA37C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = GVN682F3UK;
+				INFOPLIST_FILE = SimpleTable/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = www.wangjue.SimpleTable;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		981A6781225C974300EA37C6 /* Build configuration list for PBXProject "SimpleTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981A6796225C974500EA37C6 /* Debug */,
+				981A6797225C974500EA37C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		981A6798225C974500EA37C6 /* Build configuration list for PBXNativeTarget "SimpleTable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				981A6799225C974500EA37C6 /* Debug */,
+				981A679A225C974500EA37C6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 981A677E225C974300EA37C6 /* Project object */;
+}
