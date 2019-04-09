@@ -38,15 +38,19 @@ class ViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath)
+        let cell: CustomCell! = tableView.dequeueReusableCell(withIdentifier: "CellIdentifier", for: indexPath) as? CustomCell
         
         let row = indexPath.row
         let rowDict = self.listTeams[row] as! NSDictionary
         
-        cell.textLabel?.text = rowDict["name"] as? String
+        // cell.textLabel?.text = rowDict["name"] as? String
+        cell.myLabel.text = rowDict["name"] as? String
         
         let imagePath = String(format: "%@.png", rowDict["image"] as! String)
-        cell.imageView?.image = UIImage(named: imagePath)        
+        // cell.imageView?.image = UIImage(named: imagePath)
+        cell.myImageView.image = UIImage(named: imagePath)
+        
+        cell.accessoryType = UITableViewCell.AccessoryType.disclosureIndicator
 
         return cell
     }

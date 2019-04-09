@@ -45,6 +45,7 @@
 		981A67DE225C9AD600EA37C6 /* Chile.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67BE225C9AD600EA37C6 /* Chile.png */; };
 		981A67DF225C9AD600EA37C6 /* Mexico.png in Resources */ = {isa = PBXBuildFile; fileRef = 981A67BF225C9AD600EA37C6 /* Mexico.png */; };
 		981A67E1225C9ADF00EA37C6 /* team.plist in Resources */ = {isa = PBXBuildFile; fileRef = 981A67E0225C9ADF00EA37C6 /* team.plist */; };
+		981A67E3225CA5CC00EA37C6 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 981A67E2225CA5CC00EA37C6 /* CustomCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -88,6 +89,7 @@
 		981A67BE225C9AD600EA37C6 /* Chile.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Chile.png; sourceTree = "<group>"; };
 		981A67BF225C9AD600EA37C6 /* Mexico.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Mexico.png; sourceTree = "<group>"; };
 		981A67E0225C9ADF00EA37C6 /* team.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = team.plist; sourceTree = "<group>"; };
+		981A67E2225CA5CC00EA37C6 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +130,7 @@
 				981A6795225C974500EA37C6 /* Info.plist */,
 				981A679B225C97C200EA37C6 /* ViewController.swift */,
 				981A679F225C9AD600EA37C6 /* 球队图片 */,
+				981A67E2225CA5CC00EA37C6 /* CustomCell.swift */,
 			);
 			path = SimpleTable;
 			sourceTree = "<group>";
@@ -276,6 +279,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				981A679C225C97C200EA37C6 /* ViewController.swift in Sources */,
+				981A67E3225CA5CC00EA37C6 /* CustomCell.swift in Sources */,
 				981A678A225C974300EA37C6 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
