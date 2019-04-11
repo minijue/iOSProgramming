@@ -10,8 +10,7 @@ import UIKit
 
 class ViewController: UITableViewController {
     var dictData: NSDictionary!
-    var listGroupname: NSArray!
-    
+    var listGroupname: NSArray!    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +37,11 @@ class ViewController: UITableViewController {
         let row = indexPath.row
         let groupName = self.listGroupname[section] as! String
         let listTeams = self.dictData[groupName] as! NSArray
-        cell.textLabel?.text = listTeams[row] as? String
+        let team = listTeams[row] as! NSDictionary
+        cell.textLabel?.text = team["name"] as? String
+        
+        let imagePath = String(format: "%@.png", team["image"] as! String)
+        cell.imageView?.image = UIImage(named: imagePath)
         
         return cell
     }

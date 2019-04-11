@@ -4,59 +4,219 @@
 <dict>
 	<key>A组</key>
 	<array>
-		<string>A1-南非</string>
-		<string>A2-墨西哥</string>
-		<string>A3-乌拉圭</string>
-		<string>A4-法国</string>
+		<dict>
+			<key>name</key>
+			<string>南非</string>
+			<key>image</key>
+			<string>SouthAfrica</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>墨西哥</string>
+			<key>image</key>
+			<string>Mexico</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>乌拉圭</string>
+			<key>image</key>
+			<string>Uruguay</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>法国</string>
+			<key>image</key>
+			<string>France</string>
+		</dict>
 	</array>
 	<key>B组</key>
 	<array>
-		<string>B1-阿根廷</string>
-		<string>B2-尼日利亚</string>
-		<string>B3-韩国</string>
-		<string>B4-希腊</string>
+		<dict>
+			<key>name</key>
+			<string>阿根廷</string>
+			<key>image</key>
+			<string>Argentina</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>尼日利亚</string>
+			<key>image</key>
+			<string>Nigeria</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>韩国</string>
+			<key>image</key>
+			<string>SouthKorea</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>希腊</string>
+			<key>image</key>
+			<string>Greece</string>
+		</dict>
 	</array>
 	<key>C组</key>
 	<array>
-		<string>C1-英格兰</string>
-		<string>C2-美国</string>
-		<string>C3-阿尔及利亚</string>
-		<string>C4-斯洛文尼亚</string>
+		<dict>
+			<key>name</key>
+			<string>英格兰</string>
+			<key>image</key>
+			<string>England</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>美国</string>
+			<key>image</key>
+			<string>USA</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>阿尔及利亚</string>
+			<key>image</key>
+			<string>Algeria</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>斯洛文尼亚</string>
+			<key>image</key>
+			<string>Slovenia</string>
+		</dict>
 	</array>
 	<key>D组</key>
 	<array>
-		<string>D1-德国</string>
-		<string>D2-澳大利亚</string>
-		<string>D3-塞尔维亚</string>
-		<string>D4-加纳</string>
+		<dict>
+			<key>name</key>
+			<string>德国</string>
+			<key>image</key>
+			<string>Germany</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>澳大利亚</string>
+			<key>image</key>
+			<string>Australia</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>塞尔维亚</string>
+			<key>image</key>
+			<string>Serbia</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>加纳</string>
+			<key>image</key>
+			<string>Ghana</string>
+		</dict>
 	</array>
 	<key>E组</key>
 	<array>
-		<string>E1-荷兰</string>
-		<string>E2-丹麦</string>
-		<string>E3-日本</string>
-		<string>E4-喀麦隆</string>
+		<dict>
+			<key>name</key>
+			<string>荷兰</string>
+			<key>image</key>
+			<string>Holland</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>丹麦</string>
+			<key>image</key>
+			<string>Denmark</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>日本</string>
+			<key>image</key>
+			<string>Japan</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>喀麦隆</string>
+			<key>image</key>
+			<string>Cameroon</string>
+		</dict>
 	</array>
 	<key>F组</key>
 	<array>
-		<string>F1-意大利</string>
-		<string>F2-巴拉圭</string>
-		<string>F3-斯洛伐克</string>
-		<string>F4-新西兰</string>
+		<dict>
+			<key>name</key>
+			<string>意大利</string>
+			<key>image</key>
+			<string>Italy</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>巴拉圭</string>
+			<key>image</key>
+			<string>Paraguay</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>斯洛伐克</string>
+			<key>image</key>
+			<string>Slovakia</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>新西兰</string>
+			<key>image</key>
+			<string>NewZealand</string>
+		</dict>
 	</array>
 	<key>G组</key>
 	<array>
-		<string>G1-巴西</string>
-		<string>G2-朝鲜</string>
-		<string>G3-科特迪瓦</string>
-		<string>G4-葡萄牙</string>
+		<dict>
+			<key>name</key>
+			<string>巴西</string>
+			<key>image</key>
+			<string>Brazil</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>朝鲜</string>
+			<key>image</key>
+			<string>NorthKorea</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>科特迪瓦</string>
+			<key>image</key>
+			<string>CoteDIvoire</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>葡萄牙</string>
+			<key>image</key>
+			<string>Portugal</string>
+		</dict>
 	</array>
 	<key>H组</key>
 	<array>
-		<string>H1-西班牙</string>
-		<string>H2-瑞士</string>
-		<string>H3-洪都拉斯</string>
-		<string>H4-智利</string>
+		<dict>
+			<key>name</key>
+			<string>西班牙</string>
+			<key>image</key>
+			<string>Spain</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>瑞士</string>
+			<key>image</key>
+			<string>Switzerland</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>洪都拉斯</string>
+			<key>image</key>
+			<string>Honduras</string>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>智利</string>
+			<key>image</key>
+			<string>Chile</string>
+		</dict>
 	</array>
 </dict>
 </plist>
