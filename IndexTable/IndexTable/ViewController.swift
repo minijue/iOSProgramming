@@ -14,7 +14,7 @@ class ViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        // Do any additional setup after loading the view.        
         let plistPath = Bundle.main.path(forResource: "team_dictionary", ofType: "plist")
         self.dictData = NSDictionary(contentsOfFile: plistPath!)
         
