@@ -1,8 +1,8 @@
 //
 //  AppDelegate.swift
-//  SimpleTable
+//  excercise2
 //
-//  Created by 王珏 on 2019/5/17.
+//  Created by 王珏 on 2019/5/16.
 //  Copyright © 2019 wangjue. All rights reserved.
 //
 
