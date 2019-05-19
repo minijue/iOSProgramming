@@ -94,5 +94,11 @@ class E2TableViewController: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
+    /* 隐藏状态栏
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
+    */
 
 }
