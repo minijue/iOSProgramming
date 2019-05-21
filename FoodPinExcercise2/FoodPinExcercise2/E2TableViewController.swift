@@ -15,7 +15,8 @@ class E2TableViewController: UITableViewController {
     
     var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea house", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea Shop", "Coffee & Tea Shop", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
 
-
+    var restaurantIsVisited = Array(repeating: false, count: 21)
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -47,6 +48,9 @@ class E2TableViewController: UITableViewController {
         cell.typeLabel.text = restaurantTypes[indexPath.row]
         
         cell.tImageView.image = UIImage(named: restaurantNames[indexPath.row])
+        
+        cell.checkImage.isHidden = !restaurantIsVisited[indexPath.row]
+        
         return cell
     }
 
@@ -100,5 +104,25 @@ class E2TableViewController: UITableViewController {
         return true
     }
     */
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let cell = tableView.cellForRow(at: indexPath) as! E2TableViewCell
+        
+        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        optionMenu.addAction(cancelAction)
+        
+        let checktitle = restaurantIsVisited[indexPath.row] ? "Undo Check" : "Check in"
+        let checkAction = UIAlertAction(title: checktitle, style: .default, handler: {(action: UIAlertAction) -> Void in
+            cell.checkImage.isHidden = self.restaurantIsVisited[indexPath.row]
+            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
+        })
+        optionMenu.addAction(checkAction)
+        
+        present(optionMenu, animated: true, completion: nil)
+        
+        tableView.deselectRow(at: indexPath, animated: false)
+    }
 
 }

@@ -14,6 +14,7 @@ class E2TableViewCell: UITableViewCell {
     @IBOutlet weak var typeLabel: UILabel!
     
     @IBOutlet weak var tImageView: UIImageView!
+    @IBOutlet weak var checkImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

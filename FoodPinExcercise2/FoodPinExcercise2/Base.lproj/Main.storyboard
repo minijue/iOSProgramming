@@ -55,16 +55,31 @@
                                                                 </label>
                                                             </subviews>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEg-Om-QbN">
-                                                            <rect key="frame" x="0.0" y="28.5" width="37.5" height="30"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Cik-ID-k5U">
+                                                            <rect key="frame" x="0.0" y="28.5" width="374" height="30"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEg-Om-QbN">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="336" height="30"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="heart-tick" translatesAutoresizingMaskIntoConstraints="NO" id="gPH-bY-Tqh">
+                                                                    <rect key="frame" x="344" y="0.0" width="30" height="30"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="30" id="OuZ-gS-eJm"/>
+                                                                        <constraint firstAttribute="height" constant="30" id="k4S-Fo-JjB"/>
+                                                                    </constraints>
+                                                                </imageView>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                     <constraints>
                                                         <constraint firstItem="WUc-ck-Bck" firstAttribute="leading" secondItem="thQ-uh-gi8" secondAttribute="leading" id="Otb-aO-YKo"/>
+                                                        <constraint firstItem="Cik-ID-k5U" firstAttribute="leading" secondItem="thQ-uh-gi8" secondAttribute="leading" id="ROd-0N-Awc"/>
                                                         <constraint firstAttribute="trailing" secondItem="WUc-ck-Bck" secondAttribute="trailing" id="hbP-eY-Tfg"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Cik-ID-k5U" secondAttribute="bottom" id="jiz-mL-iOd"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Cik-ID-k5U" secondAttribute="trailing" id="qCC-pg-cs7"/>
                                                     </constraints>
                                                 </stackView>
                                             </subviews>
@@ -82,6 +97,7 @@
                                     </constraints>
                                 </tableViewCellContentView>
                                 <connections>
+                                    <outlet property="checkImage" destination="gPH-bY-Tqh" id="0xQ-DE-Moc"/>
                                     <outlet property="locationLabel" destination="XJu-GG-DqF" id="iG1-ro-sHx"/>
                                     <outlet property="nameLabel" destination="afx-H6-ze5" id="HLI-2c-ah5"/>
                                     <outlet property="tImageView" destination="DGR-1t-ZlC" id="v7G-6a-Lpo"/>
@@ -100,4 +116,7 @@
             <point key="canvasLocation" x="-98.550724637681171" y="73.660714285714278"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="heart-tick" width="22" height="21"/>
+    </resources>
 </document>
