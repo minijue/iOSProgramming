@@ -25,6 +25,8 @@ class RestaurantTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
+        
+        tableView.cellLayoutMarginsFollowReadableWidth = true // 自动调节表格间距适合不同屏幕
     }
 
     // MARK: - Table view data source
@@ -102,31 +104,35 @@ class RestaurantTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let cell = tableView.cellForRow(at: indexPath)
-        if restaurantIsVisited[indexPath.row] {
-            cell?.accessoryType = .none
-            self.restaurantIsVisited[indexPath.row] = false
-        } else {
-            let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
-            
-            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-            optionMenu.addAction(cancelAction)
-            
-            let callActionHandler = {(action: UIAlertAction!) -> Void in
-                let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
-                alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-                self.present(alertMessage, animated: true, completion: nil)
-            }
-            let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
-            optionMenu.addAction(callAction)
-            
-            let checkInAction = UIAlertAction(title: "Check in", style: .default, handler: {(action: UIAlertAction!) -> Void in
-                cell?.accessoryType = .checkmark
-                self.restaurantIsVisited[indexPath.row] = true
-            })
-            optionMenu.addAction(checkInAction)
-            
-            present(optionMenu, animated: true, completion: nil)
+        
+        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
+        
+        // iPad 需要提供弹出菜单的视图及其位置
+        if let popoverController = optionMenu.popoverPresentationController {
+            popoverController.sourceView = cell
+            popoverController.sourceRect = cell!.bounds
         }
+        
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        optionMenu.addAction(cancelAction)
+        
+        let callActionHandler = {(action: UIAlertAction!) -> Void in
+            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
+            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alertMessage, animated: true, completion: nil)
+        }
+        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
+        optionMenu.addAction(callAction)
+        
+        let checkTitle = restaurantIsVisited[indexPath.row] ? "Undo Check" : "Check in"
+        let checkInAction = UIAlertAction(title: checkTitle, style: .default, handler: {(action: UIAlertAction!) -> Void in
+            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none :.checkmark
+            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
+        })
+        optionMenu.addAction(checkInAction)
+        
+        present(optionMenu, animated: true, completion: nil)
+        
         
         tableView.deselectRow(at: indexPath, animated: false)
     }
