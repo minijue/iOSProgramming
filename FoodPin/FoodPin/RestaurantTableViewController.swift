@@ -136,4 +136,79 @@ class RestaurantTableViewController: UITableViewController {
         
         tableView.deselectRow(at: indexPath, animated: false)
     }
+    
+    /* 采用 iOS 11 中的新方法
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            restaurantNames.remove(at: indexPath.row)
+            restaurantLocations.remove(at: indexPath.row)
+            restaurantTypes.remove(at: indexPath.row)
+            restaurantIsVisited.remove(at: indexPath.row)
+        }
+        
+        //tableView.reloadData()
+        tableView.deleteRows(at: [indexPath], with: .fade)
+    }
+ */
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
+            self.restaurantNames.remove(at: indexPath.row)
+            self.restaurantLocations.remove(at: indexPath.row)
+            self.restaurantTypes.remove(at: indexPath.row)
+            self.restaurantIsVisited.remove(at: indexPath.row)
+            
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            completionHandler(true)
+        }
+        deleteAction.image = UIImage(named: "delete")
+        
+        let shareAction = UIContextualAction(style: .normal, title: "Share") { (action, sourceView, completionHandler) in
+            let defaultText = "从iOS程序分享过来的字符串\nJust checking in at " + self.restaurantNames[indexPath.row]
+            let activityController: UIActivityViewController
+            if let imageToShare = UIImage(named: self.restaurantNames[indexPath.row]) {
+                activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+            } else {
+                activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+            }
+            
+            // iPad 给出弹出分享菜单的视图和位置
+            if let popovercontroller = activityController.popoverPresentationController {
+                if let cell = tableView.cellForRow(at: indexPath) {
+                    popovercontroller.sourceView = cell
+                    popovercontroller.sourceRect = cell.bounds
+                }
+            }
+            
+            self.present(activityController, animated: true, completion: nil)
+            
+            completionHandler(true)
+        }
+        shareAction.backgroundColor = UIColor(red: 254.0/255.0, green: 149.0/255.0, blue: 38.0/255.0, alpha: 1.0)
+        shareAction.image = UIImage(named: "share")
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
+        
+        return swipeConfiguration
+    }
+    
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {        
+        let cell = tableView.cellForRow(at: indexPath)
+        
+        let checkTitle = restaurantIsVisited[indexPath.row] ? "Undo Check" : "Check in"
+        let checkAction = UIContextualAction(style: .normal, title: checkTitle) { (action, sourceView, completionHandler) in
+            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none :.checkmark
+            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
+            
+            completionHandler(true)
+        }
+        checkAction.backgroundColor = UIColor.green
+        let checkimg = restaurantIsVisited[indexPath.row] ? "undo" : "tick"
+        checkAction.image = UIImage(named: checkimg)
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [checkAction])
+        
+        return swipeConfiguration
+    }
 }
