@@ -27,6 +27,8 @@ class RestaurantTableViewController: UITableViewController {
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
         
         tableView.cellLayoutMarginsFollowReadableWidth = true // 自动调节表格间距适合不同屏幕
+        
+        navigationController?.navigationBar.prefersLargeTitles = true   // 大导航栏标题模式
     }
 
     // MARK: - Table view data source
@@ -102,40 +104,41 @@ class RestaurantTableViewController: UITableViewController {
     }
     */
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let cell = tableView.cellForRow(at: indexPath)
-        
-        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
-        
-        // iPad 需要提供弹出菜单的视图及其位置
-        if let popoverController = optionMenu.popoverPresentationController {
-            popoverController.sourceView = cell
-            popoverController.sourceRect = cell!.bounds
-        }
-        
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
-        optionMenu.addAction(cancelAction)
-        
-        let callActionHandler = {(action: UIAlertAction!) -> Void in
-            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alertMessage, animated: true, completion: nil)
-        }
-        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
-        optionMenu.addAction(callAction)
-        
-        let checkTitle = restaurantIsVisited[indexPath.row] ? "Undo Check" : "Check in"
-        let checkInAction = UIAlertAction(title: checkTitle, style: .default, handler: {(action: UIAlertAction!) -> Void in
-            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none :.checkmark
-            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
-        })
-        optionMenu.addAction(checkInAction)
-        
-        present(optionMenu, animated: true, completion: nil)
-        
-        
-        tableView.deselectRow(at: indexPath, animated: false)
-    }
+//
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let cell = tableView.cellForRow(at: indexPath)
+//
+//        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
+//
+//        // iPad 需要提供弹出菜单的视图及其位置
+//        if let popoverController = optionMenu.popoverPresentationController {
+//            popoverController.sourceView = cell
+//            popoverController.sourceRect = cell!.bounds
+//        }
+//
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+//        optionMenu.addAction(cancelAction)
+//
+//        let callActionHandler = {(action: UIAlertAction!) -> Void in
+//            let alertMessage = UIAlertController(title: "Service Unavailable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
+//            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(alertMessage, animated: true, completion: nil)
+//        }
+//        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
+//        optionMenu.addAction(callAction)
+//
+//        let checkTitle = restaurantIsVisited[indexPath.row] ? "Undo Check" : "Check in"
+//        let checkInAction = UIAlertAction(title: checkTitle, style: .default, handler: {(action: UIAlertAction!) -> Void in
+//            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none :.checkmark
+//            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
+//        })
+//        optionMenu.addAction(checkInAction)
+//
+//        present(optionMenu, animated: true, completion: nil)
+//
+//
+//        tableView.deselectRow(at: indexPath, animated: false)
+//    }
     
     /* 采用 iOS 11 中的新方法
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
@@ -210,5 +213,17 @@ class RestaurantTableViewController: UITableViewController {
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [checkAction])
         
         return swipeConfiguration
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRestaurantDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! RestaurantDetailViewController
+                destinationController.restaurantImageName = restaurantNames[indexPath.row]
+                destinationController.restaurantName = restaurantNames[indexPath.row]
+                destinationController.restaurantType = restaurantTypes[indexPath.row]
+                destinationController.restaurantLoction = restaurantLocations[indexPath.row]
+            }
+        }
     }
 }
