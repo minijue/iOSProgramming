@@ -9,13 +9,27 @@
 import UIKit
 
 class RestaurantTableViewController: UITableViewController {
-    var restaurantNames = ["Cafe Deadend", "Homei", "Teakha", "Cafe Loisl", "Petite Oyster", "For Kee Restaurant", "Po's Atelier", "Bourke Street Bakery", "Haigh's Chocolate", "Palomino Espresso", "Upstate", "Traif", "Graham Avenue Meats And Deli", "Waffle & Wolf", "Five Leaves", "Cafe Lore", "Confessional", "Barrafina", "Donostia", "Royal Oak", "CASK Pub and Kitchen"]
-    
-    var restaurantLocations = ["Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Hong Kong", "Sydney", "Sydney", "Sydney", "Sydney", "New York", "New York", "New York", "New York", "New York", "New York", "New York", "London", "London", "London", "London"]
-    
-    var restaurantTypes = ["Coffee & Tea Shop", "Cafe", "Tea house", "Austrian / Causual Drink", "French", "Bakery", "Bakery", "Chocolate", "Cafe", "American / Seafood", "American", "American", "Breakfast & Brunch", "Coffee & Tea Shop", "Coffee & Tea Shop", "Latin American", "Spanish", "Spanish", "Spanish", "British", "Thai"]
-    
-    var restaurantIsVisited = Array(repeating: false, count: 21)
+    var restaurants: [Restaurant] = [Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "Hong Kong"),
+        Restaurant(name: "Homei", type: "Cafe", location: "Hong Kong"),
+        Restaurant(name: "Teakha", type: "Tea house", location: "Hong Kong"),
+        Restaurant(name: "Cafe Loisl", type: "Austrian / Causual Drink", location: "Hong Kong"),
+        Restaurant(name: "Petite Oyster", type: "French", location: "Hong Kong"),
+        Restaurant(name: "For Kee Restaurant", type: "Bakery", location: "Hong Kong"),
+        Restaurant(name: "Po's Atelier", type: "Bakery", location: "Hong Kong"),
+        Restaurant(name: "Bourke Street Bakery", type: "Chocolate", location: "Sydney"),
+        Restaurant(name: "Haigh's Chocolate", type: "Cafe", location: "Sydney"),
+        Restaurant(name: "Palomino Espresso", type: "American / Seafood", location: "Sydney"),
+        Restaurant(name: "Upstate", type: "American", location: "New York"),
+        Restaurant(name: "Traif", type: "American", location: "New York"),
+        Restaurant(name: "Graham Avenue Meats And Deli", type: "Breakfast & Brunch", location: "New York"),
+        Restaurant(name: "Waffle & Wolf", type: "Coffee & Tea Shop", location: "New York"),
+        Restaurant(name: "Five Leaves", type: "Coffee & Tea Shop", location: "New York"),
+        Restaurant(name: "Cafe Lore", type: "Latin American", location: "New York"),
+        Restaurant(name: "Confessional", type: "Spanish", location: "New York"),
+        Restaurant(name: "Barrafina", type: "Spanish", location: "London"),
+        Restaurant(name: "Donostia", type: "Spanish", location: "London"),
+        Restaurant(name: "Royal Oak", type: "British", location: "London"),
+        Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "London")]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,7 +54,7 @@ class RestaurantTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return restaurantNames.count
+        return restaurants.count
     }
 
     
@@ -48,12 +62,12 @@ class RestaurantTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "datacell", for: indexPath) as! RestaurantTableViewCell
 
         // Configure the cell...
-        cell.nameLabel.text = restaurantNames[indexPath.row]
-        cell.locationLabel.text = restaurantLocations[indexPath.row]
-        cell.typeLabel.text = restaurantTypes[indexPath.row]
-        cell.thumbnailImageView.image = UIImage(named: restaurantNames[indexPath.row])
+        cell.nameLabel.text = restaurants[indexPath.row].name
+        cell.locationLabel.text = restaurants[indexPath.row].location
+        cell.typeLabel.text = restaurants[indexPath.row].type
+        cell.thumbnailImageView.image = UIImage(named: restaurants[indexPath.row].image)
         
-        cell.accessoryType = (restaurantIsVisited[indexPath.row] ? .checkmark : .none)
+        cell.accessoryType = (restaurants[indexPath.row].isVisited ? .checkmark : .none)
 
         return cell
     }
@@ -127,10 +141,10 @@ class RestaurantTableViewController: UITableViewController {
 //        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
 //        optionMenu.addAction(callAction)
 //
-//        let checkTitle = restaurantIsVisited[indexPath.row] ? "Undo Check" : "Check in"
+//        let checkTitle = restaurants[indexPath.row] ? "Undo Check" : "Check in"
 //        let checkInAction = UIAlertAction(title: checkTitle, style: .default, handler: {(action: UIAlertAction!) -> Void in
-//            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none :.checkmark
-//            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
+//            cell?.accessoryType = self.restaurants[indexPath.row] ? .none :.checkmark
+//            self.restaurants[indexPath.row] = !self.restaurants[indexPath.row]
 //        })
 //        optionMenu.addAction(checkInAction)
 //
@@ -143,10 +157,10 @@ class RestaurantTableViewController: UITableViewController {
     /* 采用 iOS 11 中的新方法
     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
-            restaurantNames.remove(at: indexPath.row)
-            restaurantLocations.remove(at: indexPath.row)
-            restaurantTypes.remove(at: indexPath.row)
-            restaurantIsVisited.remove(at: indexPath.row)
+            restaurants.remove(at: indexPath.row)
+            restaurants.remove(at: indexPath.row)
+            restaurants.remove(at: indexPath.row)
+            restaurants.remove(at: indexPath.row)
         }
         
         //tableView.reloadData()
@@ -156,10 +170,7 @@ class RestaurantTableViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (action, sourceView, completionHandler) in
-            self.restaurantNames.remove(at: indexPath.row)
-            self.restaurantLocations.remove(at: indexPath.row)
-            self.restaurantTypes.remove(at: indexPath.row)
-            self.restaurantIsVisited.remove(at: indexPath.row)
+            self.restaurants.remove(at: indexPath.row)
             
             self.tableView.deleteRows(at: [indexPath], with: .fade)
             
@@ -168,9 +179,9 @@ class RestaurantTableViewController: UITableViewController {
         deleteAction.image = UIImage(named: "delete")
         
         let shareAction = UIContextualAction(style: .normal, title: "Share") { (action, sourceView, completionHandler) in
-            let defaultText = "从iOS程序分享过来的字符串\nJust checking in at " + self.restaurantNames[indexPath.row]
+            let defaultText = "从iOS程序分享过来的字符串\nJust checking in at " + self.restaurants[indexPath.row].name
             let activityController: UIActivityViewController
-            if let imageToShare = UIImage(named: self.restaurantNames[indexPath.row]) {
+            if let imageToShare = UIImage(named: self.restaurants[indexPath.row].image) {
                 activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
             } else {
                 activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
@@ -197,17 +208,18 @@ class RestaurantTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {        
-        let cell = tableView.cellForRow(at: indexPath)
+        let cell = tableView.cellForRow(at: indexPath) as! RestaurantTableViewCell
         
-        let checkTitle = restaurantIsVisited[indexPath.row] ? "Undo Check" : "Check in"
+        let checkTitle = restaurants[indexPath.row].isVisited ? "Undo Check" : "Check in"
         let checkAction = UIContextualAction(style: .normal, title: checkTitle) { (action, sourceView, completionHandler) in
-            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .none :.checkmark
-            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
+            cell.accessoryType = self.restaurants[indexPath.row].isVisited ? .none :.checkmark
+            self.restaurants[indexPath.row].isVisited = !self.restaurants[indexPath.row].isVisited
             
             completionHandler(true)
         }
-        checkAction.backgroundColor = UIColor.green
-        let checkimg = restaurantIsVisited[indexPath.row] ? "undo" : "tick"
+       
+        let checkimg = restaurants[indexPath.row].isVisited ? "undo" : "tick"
+        checkAction.backgroundColor = UIColor(red: 38.0/255.0, green: 162.0/255.0, blue: 78.0/255.0, alpha: 1.0)
         checkAction.image = UIImage(named: checkimg)
         
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [checkAction])
@@ -219,10 +231,7 @@ class RestaurantTableViewController: UITableViewController {
         if segue.identifier == "showRestaurantDetail" {
             if let indexPath = tableView.indexPathForSelectedRow {
                 let destinationController = segue.destination as! RestaurantDetailViewController
-                destinationController.restaurantImageName = restaurantNames[indexPath.row]
-                destinationController.restaurantName = restaurantNames[indexPath.row]
-                destinationController.restaurantType = restaurantTypes[indexPath.row]
-                destinationController.restaurantLoction = restaurantLocations[indexPath.row]
+                destinationController.restaurant = restaurants[indexPath.row]
             }
         }
     }
