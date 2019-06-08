@@ -29,23 +29,22 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         headerView.typeLabel.text = restaurant.type
         headerView.headerImageView.image = UIImage(named: restaurant.image)
         headerView.heartImageView.isHidden = !restaurant.isVisited
+       
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        
+        tableView.contentInsetAdjustmentBehavior = .never   // 导航栏覆盖视图
         
         tableView.dataSource = self
         tableView.delegate = self
         
         tableView.separatorStyle = .none
-        
-        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController?.navigationBar.shadowImage = UIImage()
-        navigationController?.navigationBar.tintColor = .white  // 导航栏按钮颜色
-        navigationController?.hidesBarsOnSwipe = false
-        
-        tableView.contentInsetAdjustmentBehavior = .never   // 导航栏覆盖视图
     }
     
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+        super.viewWillAppear(animated)        
+        navigationController?.navigationBar.tintColor = .white  // 导航栏按钮颜色
         
         // 滚动隐藏
         navigationController?.hidesBarsOnSwipe = false
@@ -102,11 +101,19 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             return cell
         case 4:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailMapCell.self), for: indexPath) as! RestaurantDetailMapCell
+            cell.configure(location: restaurant.location)
             cell.selectionStyle = .none
             
             return cell
         default:
             fatalError("Failed to instantiate the table view cell for detail view cont rooler")
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showMap" {
+            let destinationController = segue.destination as! MapViewController
+            destinationController.restaurant = restaurant
         }
     }
 
