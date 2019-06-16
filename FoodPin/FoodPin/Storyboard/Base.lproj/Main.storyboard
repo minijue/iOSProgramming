@@ -408,7 +408,7 @@
         <!--New Restanrant-->
         <scene sceneID="Ekz-Ks-dvN">
             <objects>
-                <tableViewController id="2JT-tg-abD" customClass="NewRestaurantControllerTableViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="2JT-tg-abD" customClass="NewRestaurantController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="sxY-a7-Kwh">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -570,15 +570,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="220" id="Lt8-66-6vp">
-                                        <rect key="frame" x="0.0" y="552" width="414" height="220"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="200" id="Lt8-66-6vp">
+                                        <rect key="frame" x="0.0" y="552" width="414" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Lt8-66-6vp" id="E2r-Er-am5">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="219.66666666666666"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="199.66666666666666"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="2JJ-Ta-7sd">
-                                                    <rect key="frame" x="22" y="16" width="370" height="192"/>
+                                                    <rect key="frame" x="22" y="16" width="370" height="172"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DESCRIPTION" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xom-Vu-pUP">
                                                             <rect key="frame" x="0.0" y="0.0" width="370" height="20.333333333333332"/>
@@ -586,10 +586,10 @@
                                                             <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9V8-ew-QXw">
-                                                            <rect key="frame" x="0.0" y="25.333333333333329" width="370" height="166.66666666666669"/>
+                                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="A great restaurant to try out" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9V8-ew-QXw">
+                                                            <rect key="frame" x="0.0" y="25.333333333333329" width="370" height="146.66666666666669"/>
                                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
                                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                                         </textView>
                                                     </subviews>
@@ -618,12 +618,19 @@
                                 <segue destination="FN8-eF-UdU" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="vQO-u6-7V0"/>
                             </connections>
                         </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" image="save" id="cxz-Ga-dQO">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <action selector="saveNewRestaurant:" destination="2JT-tg-abD" id="6U5-dP-aE5"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="addressTextField" destination="heN-Ud-U9z" id="9Lp-3P-EUk"/>
                         <outlet property="descriptionTextView" destination="9V8-ew-QXw" id="heR-bQ-oBc"/>
                         <outlet property="nameTextField" destination="aU3-3W-as1" id="eCV-kL-Jhm"/>
                         <outlet property="phoneTextField" destination="RF9-Ij-4Xr" id="JBV-4M-Szx"/>
+                        <outlet property="photoImageView" destination="JlI-Jw-hRl" id="dMC-eT-nhf"/>
                         <outlet property="typeTextField" destination="6eD-aV-hZP" id="6qU-za-R14"/>
                     </connections>
                 </tableViewController>
@@ -644,17 +651,17 @@
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vSA-zW-3Zo">
-                                <rect key="frame" x="382" y="44" width="16" height="22"/>
+                                <rect key="frame" x="365" y="44" width="33" height="32"/>
                                 <state key="normal" image="cross"/>
                                 <connections>
                                     <action selector="closeWithSegue:" destination="IKG-B3-Ygb" eventType="touchUpInside" id="jEP-Cn-VZm"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="IXk-0i-AcL">
-                                <rect key="frame" x="125" y="280.66666666666669" width="164" height="335.00000000000006"/>
+                                <rect key="frame" x="93.666666666666686" y="207.66666666666663" width="227" height="481"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="67S-Kh-6cQ">
-                                        <rect key="frame" x="0.0" y="0.0" width="125" height="59"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="82"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Love" image="love"/>
                                         <connections>
@@ -662,7 +669,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJp-VQ-vFT">
-                                        <rect key="frame" x="0.0" y="69" width="121" height="59"/>
+                                        <rect key="frame" x="0.0" y="92.000000000000028" width="181" height="83"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Cool" image="cool"/>
                                         <connections>
@@ -670,7 +677,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQK-gR-CdU">
-                                        <rect key="frame" x="0.0" y="138" width="164" height="59"/>
+                                        <rect key="frame" x="0.0" y="185.00000000000003" width="227" height="85.999999999999972"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Happy" image="happy"/>
                                         <connections>
@@ -678,7 +685,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="faQ-vF-0lW">
-                                        <rect key="frame" x="0.0" y="207" width="105" height="59"/>
+                                        <rect key="frame" x="0.0" y="281" width="167" height="87"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Sad" image="sad"/>
                                         <connections>
@@ -686,7 +693,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M68-TK-HH8">
-                                        <rect key="frame" x="0.0" y="275.99999999999994" width="147" height="59"/>
+                                        <rect key="frame" x="0.0" y="378" width="218" height="103"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Angry" image="angry"/>
                                         <connections>
@@ -771,5 +778,6 @@
         <image name="love" width="78" height="82"/>
         <image name="photo" width="24" height="18"/>
         <image name="sad" width="78" height="87"/>
+        <image name="save" width="20" height="20"/>
     </resources>
 </document>
