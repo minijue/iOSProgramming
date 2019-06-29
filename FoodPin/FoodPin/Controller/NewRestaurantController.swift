@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import CoreData
 
 class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     @IBOutlet weak var nameTextField: RoundedTextField! {
@@ -48,6 +49,8 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
     
     @IBOutlet var photoImageView: UIImageView!
     
+    var restaurant: RestaurantMO!
+    
     @IBAction func saveNewRestaurant(_ sender: Any) {
         if self.nameTextField.text == "" || self.typeTextField.text == "" || self.addressTextField.text == "" || self.phoneTextField.text == "" || self.descriptionTextView.text == "" {
             let alertController = UIAlertController(title: "Oops", message: "We can't proceed because one of the fields is blank. Please note that all fields are required.", preferredStyle: .alert)
@@ -56,11 +59,22 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
             
             present(alertController, animated: true, completion: nil)
         } else {
-            let newRestaurant = Restaurant.init(name: self.nameTextField.text!, type: self.typeTextField.text!, location: self.addressTextField.text!, phone: self.phoneTextField.text!, description: self.descriptionTextView.text!)
-            
-            let meg = "\nName: \(newRestaurant.name)\nType: \(newRestaurant.type)\nLocation: \(newRestaurant.location)\nPhone: \(newRestaurant.phone)\nDescription: \(newRestaurant.description)"
-            NSLog(meg)
-            
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                restaurant = RestaurantMO(context: appDelegate.persistentContainer.viewContext)
+                restaurant.name = nameTextField.text
+                restaurant.type = typeTextField.text
+                restaurant.location = addressTextField.text
+                restaurant.phone = phoneTextField.text
+                restaurant.summary = descriptionTextView.text
+                restaurant.isVisited = false
+                
+                if let restaurantImage = photoImageView.image {
+                    restaurant.image = restaurantImage.pngData()
+                }
+                
+                print("Saving data to context ...")
+                appDelegate.saveContext()
+            }
             dismiss(animated: true, completion: nil)
         }
     }

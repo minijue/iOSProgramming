@@ -8,11 +8,12 @@
 
 import UIKit
 import MapKit
+import CoreData
 
 class MapViewController: UIViewController, MKMapViewDelegate {
     @IBOutlet var mapView: MKMapView!
     
-    var restaurant = Restaurant()
+    var restaurant: RestaurantMO!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -21,7 +22,7 @@ class MapViewController: UIViewController, MKMapViewDelegate {
         navigationController?.navigationBar.tintColor = .black
         
         let geoCoder = CLGeocoder()
-        geoCoder.geocodeAddressString(restaurant.location) { (placemarks, error) in
+        geoCoder.geocodeAddressString(restaurant.location ?? "") { (placemarks, error) in
             if let error = error {
                 print(error.localizedDescription)
                 return
