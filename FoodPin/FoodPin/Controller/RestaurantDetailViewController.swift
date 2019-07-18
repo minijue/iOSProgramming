@@ -19,6 +19,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
                 self.restaurant.rating = rating
                 self.headerView.ratingImageView.image = UIImage(named: rating)
                 
+                // Updating a restaurant record
+                if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                    appDelegate.saveContext()
+                }
+                
                 let scaleTransform = CGAffineTransform.init(scaleX: 0.1, y: 0.1)
                 self.headerView.ratingImageView.transform = scaleTransform
                 self.headerView.ratingImageView.alpha = 0
@@ -63,6 +68,11 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         tableView.delegate = self
         
         tableView.separatorStyle = .none
+        
+        // Display the restaurant's rating when it is first loaded.
+        if let rating = restaurant.rating {
+            headerView.ratingImageView.image = UIImage(named: rating)
+        }
     }
     
     
@@ -114,7 +124,7 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
             return cell
         case 2:
             let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: RestaurantDetailTextCell.self), for: indexPath) as! RestaurantDetailTextCell
-            cell.descriptionLabel.text = restaurant.description
+            cell.descriptionLabel.text = restaurant.summary
             
             return cell
         case 3:
