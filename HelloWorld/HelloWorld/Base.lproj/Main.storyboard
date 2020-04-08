@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to Auto Layout" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iEc-QA-XdK">
-                                <rect key="frame" x="207" y="841" width="187" height="21"/>
+                                <rect key="frame" x="197" y="841" width="187" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -37,7 +37,7 @@
                             <constraint firstItem="MI3-oZ-wod" firstAttribute="centerX" secondItem="lSa-mV-PAa" secondAttribute="centerX" id="6ik-50-XMI"/>
                             <constraint firstItem="MI3-oZ-wod" firstAttribute="centerY" secondItem="lSa-mV-PAa" secondAttribute="centerY" id="GLZ-78-JwB"/>
                             <constraint firstItem="iEc-QA-XdK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gqC-aN-nx8" secondAttribute="leading" symbolic="YES" id="Yh5-Bd-2ow"/>
-                            <constraint firstItem="gqC-aN-nx8" firstAttribute="trailing" secondItem="iEc-QA-XdK" secondAttribute="trailing" constant="20" id="b10-fT-Mlo"/>
+                            <constraint firstItem="gqC-aN-nx8" firstAttribute="trailing" secondItem="iEc-QA-XdK" secondAttribute="trailing" constant="30" id="b10-fT-Mlo"/>
                             <constraint firstItem="gqC-aN-nx8" firstAttribute="bottom" secondItem="iEc-QA-XdK" secondAttribute="bottom" id="mVf-Rc-rSx"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gqC-aN-nx8"/>
