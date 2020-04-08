@@ -10,15 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
     @IBAction func showMessage(sender: UIButton) {
-        let emojiDict = ["👾":"异性怪兽", "👻":"幽灵", "🤓":"书呆子脸", "🤖":"机器人"]
+        //let emojiDict = ["👾":"异形怪兽", "👻":"幽灵", "🤓":"书呆子脸", "🤖":"机器人"]
         
-        let selectedButton = sender
+        //let selectedButton = sender
         
-        if let wordToLookup = selectedButton.titleLabel?.text {
-            let alertController = UIAlertController(title: "Welcome to My first App", message: emojiDict[wordToLookup], preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            present(alertController, animated: true, completion: nil)
-        }
+        //if let wordToLookup = selectedButton.titleLabel?.text {
+        let alertController = UIAlertController(title: "Welcome to My first App", message: /*emojiDict[wordToLookup]*/"Hello world!", preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+        present(alertController, animated: true, completion: nil)
+       //}
         
     }
 
