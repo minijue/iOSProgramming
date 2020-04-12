@@ -31,14 +31,30 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="😎" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X4D-oM-815">
+                                <rect key="frame" x="169.66666666666666" y="54.000000000000007" width="75" height="83.666666666666686"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="70"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👻" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SXQ-lL-7PZ">
+                                <rect key="frame" x="20" y="829" width="34" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="MI3-oZ-wod" firstAttribute="centerX" secondItem="lSa-mV-PAa" secondAttribute="centerX" id="6ik-50-XMI"/>
                             <constraint firstItem="MI3-oZ-wod" firstAttribute="centerY" secondItem="lSa-mV-PAa" secondAttribute="centerY" id="GLZ-78-JwB"/>
+                            <constraint firstItem="X4D-oM-815" firstAttribute="centerX" secondItem="lSa-mV-PAa" secondAttribute="centerX" id="Tux-m9-cnr"/>
                             <constraint firstItem="iEc-QA-XdK" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="gqC-aN-nx8" secondAttribute="leading" symbolic="YES" id="Yh5-Bd-2ow"/>
                             <constraint firstItem="gqC-aN-nx8" firstAttribute="trailing" secondItem="iEc-QA-XdK" secondAttribute="trailing" constant="30" id="b10-fT-Mlo"/>
+                            <constraint firstItem="SXQ-lL-7PZ" firstAttribute="leading" secondItem="gqC-aN-nx8" secondAttribute="leading" constant="20" id="gRJ-2d-JpQ"/>
+                            <constraint firstItem="X4D-oM-815" firstAttribute="top" secondItem="gqC-aN-nx8" secondAttribute="top" constant="10" id="gjD-nL-kpK"/>
                             <constraint firstItem="gqC-aN-nx8" firstAttribute="bottom" secondItem="iEc-QA-XdK" secondAttribute="bottom" id="mVf-Rc-rSx"/>
+                            <constraint firstItem="SXQ-lL-7PZ" firstAttribute="bottom" secondItem="gqC-aN-nx8" secondAttribute="bottom" constant="3" id="p8v-M1-9VV"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="gqC-aN-nx8"/>
                     </view>
