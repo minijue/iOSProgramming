@@ -152,4 +152,62 @@ class RestaurantTableViewController: UITableViewController {
         present(optionMenu, animated: true, completion: nil)
     }
     
+//    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+//        if editingStyle == .delete {
+//            self.restaurantNames.remove(at: indexPath.row)
+//            self.restaurantLocations.remove(at: indexPath.row)
+//            self.restaurantTypes.remove(at: indexPath.row)
+//            self.restaurantIsVisited.remove(at: indexPath.row)
+//        }
+//
+////        tableView.reloadData()
+//        tableView.deleteRows(at: [indexPath], with: .fade)
+//    }
+    
+    override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        // “删除”按钮
+        let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: {
+            (action, sourceView, completionHandler) in
+            self.restaurantNames.remove(at: indexPath.row)
+            self.restaurantLocations.remove(at: indexPath.row)
+            self.restaurantTypes.remove(at: indexPath.row)
+            self.restaurantIsVisited.remove(at: indexPath.row)
+            self.images.remove(at: indexPath.row)
+            self.tableView.deleteRows(at: [indexPath], with: .fade)
+            
+            completionHandler(true)
+        })
+        
+        deleteAction.backgroundColor = UIColor(displayP3Red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
+        deleteAction.image = UIImage(named: "delete")
+        
+        // “分享”按钮
+        let shareAction = UIContextualAction(style: .normal, title: "Share", handler: {
+            (action, sourceView, completionHandler) in
+            let defaultText = "Just checking in at " + self.restaurantNames[indexPath.row]
+            // 显示“分享”对话框
+            let activityController: UIActivityViewController
+            if let imageToShare = UIImage(named: self.images[indexPath.row]) {
+                activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
+            } else {
+                activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
+            }
+            if let popoverController = activityController.popoverPresentationController {
+                if let cell = tableView.cellForRow(at: indexPath) {
+                    popoverController.sourceView = cell
+                    popoverController.sourceRect = cell.bounds
+                }
+            }
+            self.present(activityController, animated: true, completion: nil)
+            
+            completionHandler(true)
+        })
+        
+        shareAction.backgroundColor = UIColor(displayP3Red: 254.0/255.0, green: 149.0/255.0, blue: 38.0/255.0, alpha: 1.0)
+        shareAction.image = UIImage(named: "share")
+        
+        let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
+        
+        return swipeConfiguration
+    }
 }
