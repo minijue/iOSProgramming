@@ -163,6 +163,42 @@ class RestaurantTableViewController: UITableViewController {
 ////        tableView.reloadData()
 //        tableView.deleteRows(at: [indexPath], with: .fade)
 //    }
+    override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let tickAction = UIContextualAction(style: .normal, title: "Tick", handler: {
+            (action, sourceView, completionHandler) in
+            self.restaurantIsVisited[indexPath.row] = true
+            
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType =  .checkmark
+            cell?.accessoryView?.isHidden = false
+            
+            tableView.deselectRow(at: indexPath, animated: false)
+            
+            completionHandler(true)
+        })
+        
+        tickAction.backgroundColor = UIColor.systemGreen
+        tickAction.image = UIImage(named: "tick")
+        
+        let undoAction = UIContextualAction(style: .normal, title: "Undo", handler: {
+            (action, sourceView, completionHandler) in
+            self.restaurantIsVisited[indexPath.row] = false
+            
+            let cell = tableView.cellForRow(at: indexPath)
+            cell?.accessoryType =  .none
+            cell?.accessoryView?.isHidden = true
+            
+            tableView.deselectRow(at: indexPath, animated: false)
+            
+            completionHandler(true)
+        })
+        undoAction.backgroundColor = UIColor.systemGreen
+        undoAction.image = UIImage(named: "undo")
+        
+        let swipeConfiguration = self.restaurantIsVisited[indexPath.row] ? UISwipeActionsConfiguration(actions: [undoAction]) : UISwipeActionsConfiguration(actions: [tickAction]) 
+        
+        return swipeConfiguration
+    }
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         // “删除”按钮
