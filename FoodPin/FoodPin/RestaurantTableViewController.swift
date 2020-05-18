@@ -20,6 +20,7 @@ class RestaurantTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        tableView.cellLayoutMarginsFollowReadableWidth = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -49,12 +50,8 @@ class RestaurantTableViewController: UITableViewController {
         cell.locationLabel?.text = restaurantLocations[indexPath.row]
         cell.typeLabel?.text = restaurantTypes[indexPath.row]
         
-        if restaurantIsVisited[indexPath.row] {
-            cell.accessoryType = .checkmark
-        } else {
-            cell.accessoryType = .none
-        }
-
+        cell.accessoryType = restaurantIsVisited[indexPath.row] ? .checkmark : .none
+        
         return cell
     }
 
@@ -125,6 +122,13 @@ class RestaurantTableViewController: UITableViewController {
             self.restaurantIsVisited[indexPath.row] = true
         })
         optionMenu.addAction(checkInAction)
+        
+        if let popoverController = optionMenu.popoverPresentationController {
+            if let cell = tableView.cellForRow(at: indexPath) {
+                popoverController.sourceView = cell
+                popoverController.sourceRect = cell.bounds
+            }
+        }
         
         present(optionMenu, animated: true, completion: nil)
         
