@@ -21,6 +21,8 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.cellLayoutMarginsFollowReadableWidth = true
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -109,48 +111,48 @@ class RestaurantTableViewController: UITableViewController {
     }
     */
     
-    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
-
-        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
-            (action:UIAlertAction!) -> Void in
-            tableView.deselectRow(at: indexPath, animated: false)
-        })
-        optionMenu.addAction(cancelAction)
-
-        let callActionHandler = { (action:UIAlertAction!) -> Void in
-            let alertMessage = UIAlertController(title: "Service Unavaliable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
-            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
-            self.present(alertMessage, animated: true, completion: nil)
-            
-            tableView.deselectRow(at: indexPath, animated: false)
-        }
-
-        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
-        optionMenu.addAction(callAction)
-
-        let menutitle: String = self.restaurantIsVisited[indexPath.row] ? "Undo Check" : "Check in"
-        let checkInAction = UIAlertAction(title: menutitle, style: .default, handler: {
-            (action:UIAlertAction!) -> Void in
-            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
-            
-            let cell = tableView.cellForRow(at: indexPath)
-            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .checkmark : .none
-            cell?.accessoryView?.isHidden = !self.restaurantIsVisited[indexPath.row]
-            
-            tableView.deselectRow(at: indexPath, animated: false)
-        })
-        optionMenu.addAction(checkInAction)
-
-        if let popoverController = optionMenu.popoverPresentationController {
-            if let cell = tableView.cellForRow(at: indexPath) {
-                popoverController.sourceView = cell
-                popoverController.sourceRect = cell.bounds
-            }
-        }
-
-        present(optionMenu, animated: true, completion: nil)
-    }
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
+//
+//        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: {
+//            (action:UIAlertAction!) -> Void in
+//            tableView.deselectRow(at: indexPath, animated: false)
+//        })
+//        optionMenu.addAction(cancelAction)
+//
+//        let callActionHandler = { (action:UIAlertAction!) -> Void in
+//            let alertMessage = UIAlertController(title: "Service Unavaliable", message: "Sorry, the call feature is not available yet. Please retry later.", preferredStyle: .alert)
+//            alertMessage.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+//            self.present(alertMessage, animated: true, completion: nil)
+//
+//            tableView.deselectRow(at: indexPath, animated: false)
+//        }
+//
+//        let callAction = UIAlertAction(title: "Call " + "123-000-\(indexPath.row)", style: .default, handler: callActionHandler)
+//        optionMenu.addAction(callAction)
+//
+//        let menutitle: String = self.restaurantIsVisited[indexPath.row] ? "Undo Check" : "Check in"
+//        let checkInAction = UIAlertAction(title: menutitle, style: .default, handler: {
+//            (action:UIAlertAction!) -> Void in
+//            self.restaurantIsVisited[indexPath.row] = !self.restaurantIsVisited[indexPath.row]
+//
+//            let cell = tableView.cellForRow(at: indexPath)
+//            cell?.accessoryType = self.restaurantIsVisited[indexPath.row] ? .checkmark : .none
+//            cell?.accessoryView?.isHidden = !self.restaurantIsVisited[indexPath.row]
+//
+//            tableView.deselectRow(at: indexPath, animated: false)
+//        })
+//        optionMenu.addAction(checkInAction)
+//
+//        if let popoverController = optionMenu.popoverPresentationController {
+//            if let cell = tableView.cellForRow(at: indexPath) {
+//                popoverController.sourceView = cell
+//                popoverController.sourceRect = cell.bounds
+//            }
+//        }
+//
+//        present(optionMenu, animated: true, completion: nil)
+//    }
     
 //    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
 //        if editingStyle == .delete {
@@ -245,5 +247,17 @@ class RestaurantTableViewController: UITableViewController {
         let swipeConfiguration = UISwipeActionsConfiguration(actions: [deleteAction, shareAction])
         
         return swipeConfiguration
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "showRestaurantDetail" {
+            if let indexPath = tableView.indexPathForSelectedRow {
+                let destinationController = segue.destination as! RestaurantDetailViewController
+                destinationController.restaurantImageName = self.images[indexPath.row]
+                destinationController.name = self.restaurantNames[indexPath.row]
+                destinationController.type = self.restaurantTypes[indexPath.row]
+                destinationController.location = self.restaurantLocations[indexPath.row]
+            }
+        }
     }
 }
