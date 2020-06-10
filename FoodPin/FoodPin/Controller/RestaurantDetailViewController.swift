@@ -13,6 +13,10 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerView: RestaurantDetailHeaderView!
     
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
+    }
+    
     var restaurant = Restaurant()
     
     override func viewDidLoad() {
@@ -26,11 +30,28 @@ class RestaurantDetailViewController: UIViewController, UITableViewDataSource, U
         headerView.headerImageView.image = UIImage(named: restaurant.image)
         headerView.heartImageView.isHidden = (restaurant.isVisited) ? false : true
         
+        navigationController?.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController?.navigationBar.shadowImage = UIImage()
+        navigationController?.navigationBar.tintColor = .white
+        
+        
+        navigationController?.hidesBarsOnSwipe = false
+        
+        tableView.contentInsetAdjustmentBehavior = .never   // 调整表格视图边距，使其覆盖导航栏
+        
+        tableView.separatorStyle = .none
+        
         tableView.dataSource = self
         tableView.delegate = self
     }
     
-
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        navigationController?.hidesBarsOnSwipe = false
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+   
     /*
     // MARK: - Navigation
 
