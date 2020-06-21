@@ -12,6 +12,8 @@ class ReviewViewController: UIViewController {
     @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet var rateButtons: [UIButton]!
     
+    @IBOutlet var closeButton: UIButton!
+    
     
     var restaurant = Restaurant()
     
@@ -35,6 +37,10 @@ class ReviewViewController: UIViewController {
             rateButton.transform = moveScaleTransform
             rateButton.alpha = 0
         }
+        
+        let moveTopTransform = CGAffineTransform(translationX: 0, y: -600)
+        closeButton.transform = moveTopTransform
+        closeButton.alpha = 0
     }
     
 
@@ -57,6 +63,11 @@ class ReviewViewController: UIViewController {
             }, completion: nil)
             delay += 0.05
         }
+        
+        UIView.animate(withDuration: 0.8, delay: 0.5, usingSpringWithDamping: 0.2, initialSpringVelocity: 0.2, options: [], animations: {
+            self.closeButton.alpha = 1.0
+            self.closeButton.transform = .identity
+        }, completion: nil)
     }
 
 }
