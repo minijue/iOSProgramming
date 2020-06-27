@@ -192,6 +192,10 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
             (action, sourceView, completionHandler) in
             self.restaurants[indexPath.row].isVisited = true
             
+            if let appDeleagate = (UIApplication.shared.delegate as? AppDelegate) {
+                appDeleagate.saveContext()
+            }
+            
             let cell = tableView.cellForRow(at: indexPath)
             cell?.accessoryType =  .checkmark
             cell?.accessoryView?.isHidden = false
@@ -207,6 +211,10 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         let undoAction = UIContextualAction(style: .normal, title: "Undo", handler: {
             (action, sourceView, completionHandler) in
             self.restaurants[indexPath.row].isVisited = false
+            
+            if let appDeleagate = (UIApplication.shared.delegate as? AppDelegate) {
+                appDeleagate.saveContext()
+            }
             
             let cell = tableView.cellForRow(at: indexPath)
             cell?.accessoryType =  .none
