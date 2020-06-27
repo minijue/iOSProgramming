@@ -395,11 +395,11 @@
             </objects>
             <point key="canvasLocation" x="2830.434782608696" y="102.45535714285714"/>
         </scene>
-        <!--New Restaurant Controller-->
+        <!--New Restaurant-->
         <scene sceneID="iBG-xx-tG7">
             <objects>
                 <tableViewController id="KSD-Up-Vsh" customClass="NewRestaurantController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Olp-3B-TzI">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="Olp-3B-TzI">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -598,8 +598,9 @@
                             <outlet property="delegate" destination="KSD-Up-Vsh" id="v8W-z3-pki"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bED-F4-LNk">
+                    <navigationItem key="navigationItem" title="New Restaurant" id="bED-F4-LNk">
                         <barButtonItem key="leftBarButtonItem" title="Item" image="close" id="V9D-qh-BXu">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="dPV-dT-PL5" kind="unwind" unwindAction="unwindToHomeWithSegue:" id="g8Z-KW-gtv"/>
                             </connections>

@@ -63,6 +63,8 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
         if let customFont = UIFont(name: "Rubik-Medium", size: 35.0) {
             navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231, green: 76, blue: 60), NSAttributedString.Key.font: customFont]
         }
+        
+        // self.tableView.separatorStyle = .none   // 已在属性中设置
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -128,16 +130,16 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
         }
         
         // 为photoImageView增加约束
-        let leadingConstraint = NSLayoutConstraint(item: photoImageView!, attribute: .leading, relatedBy: .equal, toItem: photoImageView.superview, attribute: .leading, multiplier: 1, constant: 0)
+        let leadingConstraint = NSLayoutConstraint(item: photoImageView as Any, attribute: .leading, relatedBy: .equal, toItem: photoImageView.superview, attribute: .leading, multiplier: 1, constant: 0)
         leadingConstraint.isActive = true
         
-        let trailingConstraint = NSLayoutConstraint(item: photoImageView!, attribute: .trailing, relatedBy: .equal, toItem: photoImageView.superview, attribute: .trailing, multiplier: 1, constant: 0)
+        let trailingConstraint = NSLayoutConstraint(item: photoImageView, attribute: .trailing, relatedBy: .equal, toItem: photoImageView.superview, attribute: .trailing, multiplier: 1, constant: 0)
         trailingConstraint.isActive = true
         
-        let topConstraint = NSLayoutConstraint(item: photoImageView!, attribute: .top, relatedBy: .equal, toItem: photoImageView.superview, attribute: .top, multiplier: 1, constant: 0)
+        let topConstraint = NSLayoutConstraint(item: photoImageView, attribute: .top, relatedBy: .equal, toItem: photoImageView.superview, attribute: .top, multiplier: 1, constant: 0)
         topConstraint.isActive = true
         
-        let bottomContraint = NSLayoutConstraint(item: photoImageView!, attribute: .bottom, relatedBy: .equal, toItem: photoImageView.superview, attribute: .bottom, multiplier: 1, constant: 0)
+        let bottomContraint = NSLayoutConstraint(item: photoImageView, attribute: .bottom, relatedBy: .equal, toItem: photoImageView.superview, attribute: .bottom, multiplier: 1, constant: 0)
         bottomContraint.isActive = true
                 
         dismiss(animated: true, completion: nil)
