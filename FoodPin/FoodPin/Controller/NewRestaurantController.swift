@@ -48,6 +48,25 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
     
     @IBOutlet weak var photoImageView: UIImageView!
     
+    @IBAction func saveButtonTapped(_ sender: Any) {
+        if nameTextField.text == "" || typeTextField.text == "" || addressTextField.text == "" || phoneTextField.text == "" || descriptionTextView.text == "" {
+            let saveAlert = UIAlertController(title: "Ooops", message: "We can't proceed because one of the fields is blank. Please note that all fields are required.", preferredStyle: .alert)
+            
+            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            saveAlert.addAction(okAction)
+            
+            present(saveAlert, animated: true, completion: nil)
+        } else {
+            print("Name: " + nameTextField.text!)
+            print("Type: " + typeTextField.text!)
+            print("Location: " + addressTextField.text!)
+            print("Phone: " + phoneTextField.text!)
+            print("Description: " + descriptionTextView.text!)
+            
+            dismiss(animated: true, completion: nil)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
