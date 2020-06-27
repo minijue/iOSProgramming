@@ -96,8 +96,31 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emptyRestaurantView" destination="erW-ft-pt7" id="EWv-aw-48S"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gL0-fd-idp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="erW-ft-pt7">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty" translatesAutoresizingMaskIntoConstraints="NO" id="Cj3-ZQ-mhA">
+                            <rect key="frame" x="28" y="100" width="319" height="339"/>
+                            <constraints>
+                                <constraint firstAttribute="width" secondItem="Cj3-ZQ-mhA" secondAttribute="height" multiplier="319:339" id="C3k-Td-Mcq"/>
+                            </constraints>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstItem="Cj3-ZQ-mhA" firstAttribute="leading" secondItem="4nG-S4-uTv" secondAttribute="leading" constant="28" id="QZg-o5-EHk"/>
+                        <constraint firstItem="4nG-S4-uTv" firstAttribute="bottom" secondItem="Cj3-ZQ-mhA" secondAttribute="bottom" constant="61" id="Trs-G4-s1N"/>
+                        <constraint firstItem="4nG-S4-uTv" firstAttribute="trailing" secondItem="Cj3-ZQ-mhA" secondAttribute="trailing" constant="28" id="WjP-jc-qce"/>
+                        <constraint firstItem="Cj3-ZQ-mhA" firstAttribute="top" secondItem="erW-ft-pt7" secondAttribute="top" constant="100" id="jLH-go-IIg"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="4nG-S4-uTv"/>
+                </view>
             </objects>
             <point key="canvasLocation" x="1050.7246376811595" y="99.776785714285708"/>
         </scene>
@@ -760,6 +783,7 @@
         <image name="close" width="16" height="16"/>
         <image name="cool" width="78" height="83"/>
         <image name="cross" width="33" height="32"/>
+        <image name="empty" width="310" height="372"/>
         <image name="happy" width="78" height="86"/>
         <image name="heart-tick" width="22" height="21"/>
         <image name="love" width="78" height="82"/>

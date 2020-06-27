@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import CoreData
 
-class RestaurantTableViewController: UITableViewController {
-    var restaurants:[Restaurant] = [
+class RestaurantTableViewController: UITableViewController, NSFetchedResultsControllerDelegate {
+    var restaurants: [RestaurantMO] = []
+    /*var restaurants:[Restaurant] = [
         Restaurant(name: "Cafe Deadend", type: "Coffee & Tea Shop", location: "香港特别行政区新界观塘兴芳路72号一楼", phone: "232-923423", description: "Searching for great breakfast eateries and coffee? This place is for you. We open at 6:30 every morning, and close at 9 PM. We offer espresso and espresso based drink, such as capuccino, cafe latte, piccolo and many more. Come over and enjoy a great meal.", image: "cafedeadend.jpg", isVisited: false),
         Restaurant(name: "Homei", type: "Cafe", location: "香港特别行政区太平山街22-24号SOHO一楼，Shop B", phone: "348-233423", description: "A little gem hidden at the corner of the street is nothing but fantastic! This place is warm and cozy. We open at 7 every morning except Sunday, and close at 9 PM. We offer a variety of coffee drinks and specialties including lattes, cappuccinos, teas, and more. We serve breakfast, lunch, and dinner in an airy open setting. Come over, have a coffee and enjoy a chit-chat with our baristas.", image: "homei.jpg", isVisited: false),
         Restaurant(name: "Teakha", type: "Tea House", location: "香港特别行政区太平山街18号SOHO，Shop B", phone: "354-243523", description: "Take a moment to stop and smell tealeaves! We are about the community, our environment, and all things created by the warmth of our hands. We open at 11 AM, and close at 7 PM. At teakha, we sell only the best single-origin teas sourced by our sister company Plantation directly from small tea plantations. The teas are then either cooked to perfection with milk in a pot or brewed.", image: "teakha.jpg", isVisited: false),
@@ -31,7 +33,9 @@ class RestaurantTableViewController: UITableViewController {
         Restaurant(name: "Donostia", type: "Spanish", location: "10 Seymour Place London W1H 7ND United Kingdom", phone: "722-232323", description: "Very good basque food, creative dishes with terrific flavors! Donostia is a high end tapas restaurant with a friendly relaxed ambiance. Come over to enjoy awesome tapas!", image: "donostia.jpg", isVisited: false),
         Restaurant(name: "Royal Oak", type: "British", location: "江西省南昌市北京西路437号", phone: "343-988834", description: "Specialise in great pub food. Established in 1872, we have local and world lagers, craft beer and a selection of wine and spirits for people to enjoy. Don't forget to try our range of Young's Ales and Fish and Chips.", image: "royaloak.jpg", isVisited: false),
         Restaurant(name: "CASK Pub and Kitchen", type: "Thai", location: "江西省南昌市紫阳大道99号", phone: "432-344050", description: "With kitchen serving gourmet burgers. We offer food every day of the week, Monday through to Sunday. Join us every Sunday from 4:30 – 7:30pm for live acoustic music!", image: "caskpubkitchen.jpg", isVisited: false)
-    ]
+    ]*/
+    
+    @IBOutlet var emptyRestaurantView: UIView!
 
     @IBAction func unwindToHome(segue: UIStoryboardSegue) {
         dismiss(animated: true, completion: nil)
@@ -42,6 +46,10 @@ class RestaurantTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        // Prepare the empty view
+        tableView.backgroundView = emptyRestaurantView
+        tableView.backgroundView?.isHidden = true
+        
         tableView.cellLayoutMarginsFollowReadableWidth = true
         
         navigationController?.navigationBar.prefersLargeTitles = true
@@ -51,6 +59,25 @@ class RestaurantTableViewController: UITableViewController {
         
         if let customFont = UIFont(name: "Rubik-Medium", size: 40.0) {
             navigationController?.navigationBar.largeTitleTextAttributes = [ NSAttributedString.Key.foregroundColor: UIColor(red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0), NSAttributedString.Key.font: customFont ]
+        }
+        // fetch data from Core Data
+        let fetchRequest: NSFetchRequest<RestaurantMO> = RestaurantMO.fetchRequest()
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+            let context = appDelegate.persistentContainer.viewContext
+            fetchResultController = NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: context, sectionNameKeyPath: nil, cacheName: nil)
+            fetchResultController.delegate = self
+            
+            do {
+                try fetchResultController.performFetch()
+                if let fetchedObjects = fetchResultController.fetchedObjects {
+                    restaurants = fetchedObjects
+                }
+            } catch {
+                print(error)
+            }
         }
     }
     
@@ -64,6 +91,13 @@ class RestaurantTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        if restaurants.count > 0 {
+            tableView.backgroundView?.isHidden = true
+            tableView.separatorStyle = .singleLine
+        } else {
+            tableView.backgroundView?.isHidden = false
+            tableView.separatorStyle = .none
+        }
         return 1
     }
 
@@ -77,7 +111,9 @@ class RestaurantTableViewController: UITableViewController {
 
         // Configure the cell...
         cell.nameLabel?.text = restaurants[indexPath.row].name
-        cell.thumbnailImageView?.image = UIImage(named: restaurants[indexPath.row].image)
+        if let restaurantImage = restaurants[indexPath.row].image {
+            cell.thumbnailImageView?.image = UIImage(data: restaurantImage as Data)
+        }
         cell.locationLabel?.text = restaurants[indexPath.row].location
         cell.typeLabel?.text = restaurants[indexPath.row].type
         
@@ -96,7 +132,7 @@ class RestaurantTableViewController: UITableViewController {
     }
 
     // MARK: - Table view delegate
-    
+   
 //    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 //        let optionMenu = UIAlertController(title: nil, message: "What do you want to do?", preferredStyle: .actionSheet)
 //
@@ -192,11 +228,23 @@ class RestaurantTableViewController: UITableViewController {
         // “删除”按钮
         let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: {
             (action, sourceView, completionHandler) in
+            if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
+                let context = appDelegate.persistentContainer.viewContext
+                let restaurantToDelete = self.fetchResultController.object(at: indexPath)
+                context.delete(restaurantToDelete)
+                
+                appDelegate.saveContext()
+            }
+            
+            completionHandler(true)
+        })
+        /*let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: {
+            (action, sourceView, completionHandler) in
             self.restaurants.remove(at: indexPath.row)
             self.tableView.deleteRows(at: [indexPath], with: .fade)
             
             completionHandler(true)
-        })
+        })*/
         
         deleteAction.backgroundColor = UIColor(displayP3Red: 231.0/255.0, green: 76.0/255.0, blue: 60.0/255.0, alpha: 1.0)
         deleteAction.image = UIImage(named: "delete")
@@ -204,10 +252,10 @@ class RestaurantTableViewController: UITableViewController {
         // “分享”按钮
         let shareAction = UIContextualAction(style: .normal, title: "Share", handler: {
             (action, sourceView, completionHandler) in
-            let defaultText = "Just checking in at " + self.restaurants[indexPath.row].name
+            let defaultText = "Just checking in at " + self.restaurants[indexPath.row].name!
             // 显示“分享”对话框
             let activityController: UIActivityViewController
-            if let imageToShare = UIImage(named: self.restaurants[indexPath.row].image) {
+            if let restaurantImage = self.restaurants[indexPath.row].image, let imageToShare = UIImage(data: restaurantImage as Data) {
                 activityController = UIActivityViewController(activityItems: [defaultText, imageToShare], applicationActivities: nil)
             } else {
                 activityController = UIActivityViewController(activityItems: [defaultText], applicationActivities: nil)
@@ -240,5 +288,41 @@ class RestaurantTableViewController: UITableViewController {
                 destinationController.restaurant = self.restaurants[indexPath.row]
             }
         }
+    }
+    
+    // MARK: - NSFetchedResultsControllerDelegate
+    
+    var fetchResultController: NSFetchedResultsController<RestaurantMO>!
+    
+    func controllerWillChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.beginUpdates()
+    }
+    
+    func controller(_ controller: NSFetchedResultsController<NSFetchRequestResult>, didChange anObject: Any, at indexPath: IndexPath?, for type: NSFetchedResultsChangeType, newIndexPath: IndexPath?) {
+        
+        switch type {
+            case .insert:
+                if let newIndexPath = newIndexPath {
+                    tableView.insertRows(at: [newIndexPath], with: .fade)
+            }
+            case .delete:
+                if let indexPath = indexPath {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+            }
+            case .update:
+                if let indexPath = indexPath {
+                    tableView.reloadRows(at: [indexPath], with: .fade)
+            }
+            @unknown default:
+                tableView.reloadData()
+        }
+        
+        if let fetchedObjects = controller.fetchedObjects {
+            restaurants = fetchedObjects as! [RestaurantMO]
+        }
+    }
+    
+    func controllerDidChangeContent(_ controller: NSFetchedResultsController<NSFetchRequestResult>) {
+        tableView.endUpdates()
     }
 }

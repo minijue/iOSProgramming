@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		980B84FB24879A17006D1CD6 /* RestaurantDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 980B84FA24879A17006D1CD6 /* RestaurantDetailViewController.swift */; };
+		9824A23124A7278C00320846 /* FoodPin.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9824A22F24A7278C00320846 /* FoodPin.xcdatamodeld */; };
 		982D317F24A228C70048971A /* RoundedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 982D317E24A228C70048971A /* RoundedTextField.swift */; };
 		983FB6472470F6E90063BAA4 /* RestaurantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 983FB6462470F6E90063BAA4 /* RestaurantTableViewCell.swift */; };
 		98440DD42491126100DDC465 /* UIColor+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98440DD32491126100DDC465 /* UIColor+Ext.swift */; };
@@ -17,7 +18,6 @@
 		9879218C2494E59100F5E38C /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9879218B2494E59100F5E38C /* ReviewViewController.swift */; };
 		989400602490737200216A02 /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9894005F2490737200216A02 /* RestaurantDetailIconTextCell.swift */; };
 		98940062249075BD00216A02 /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98940061249075BD00216A02 /* RestaurantDetailTextCell.swift */; };
-		9894DF1C24888DC400563441 /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9894DF1B24888DC400563441 /* Restaurant.swift */; };
 		98A2B7BC246B899B0072913A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A2B7BB246B899B0072913A /* AppDelegate.swift */; };
 		98A2B7BE246B899B0072913A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A2B7BD246B899B0072913A /* SceneDelegate.swift */; };
 		98A2B7C3246B899B0072913A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A2B7C1246B899B0072913A /* Main.storyboard */; };
@@ -42,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		980B84FA24879A17006D1CD6 /* RestaurantDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailViewController.swift; sourceTree = "<group>"; };
+		9824A23024A7278C00320846 /* FoodPin.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = FoodPin.xcdatamodel; sourceTree = "<group>"; };
+		9824A23224A72A3F00320846 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		982D317E24A228C70048971A /* RoundedTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedTextField.swift; sourceTree = "<group>"; };
 		983FB6462470F6E90063BAA4 /* RestaurantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantTableViewCell.swift; sourceTree = "<group>"; };
 		98440DD32491126100DDC465 /* UIColor+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Ext.swift"; sourceTree = "<group>"; };
@@ -51,7 +53,6 @@
 		9879218B2494E59100F5E38C /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		9894005F2490737200216A02 /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		98940061249075BD00216A02 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
-		9894DF1B24888DC400563441 /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		98A2B7B8246B899B0072913A /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A2B7BB246B899B0072913A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98A2B7BD246B899B0072913A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -100,7 +101,6 @@
 		9894DF1D248894D800563441 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				9894DF1B24888DC400563441 /* Restaurant.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -170,6 +170,7 @@
 				98A2B7BD246B899B0072913A /* SceneDelegate.swift */,
 				98A2B7C4246B899C0072913A /* Assets.xcassets */,
 				98A2B7C9246B899C0072913A /* Info.plist */,
+				9824A22F24A7278C00320846 /* FoodPin.xcdatamodeld */,
 			);
 			path = FoodPin;
 			sourceTree = "<group>";
@@ -177,6 +178,7 @@
 		98B7672E24921F6E00076BD4 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				9824A23224A72A3F00320846 /* CoreData.framework */,
 				98B7672F24921F6E00076BD4 /* MapKit.framework */,
 			);
 			name = Frameworks;
@@ -294,7 +296,6 @@
 				9879218C2494E59100F5E38C /* ReviewViewController.swift in Sources */,
 				98940062249075BD00216A02 /* RestaurantDetailTextCell.swift in Sources */,
 				98A2B7BC246B899B0072913A /* AppDelegate.swift in Sources */,
-				9894DF1C24888DC400563441 /* Restaurant.swift in Sources */,
 				989400602490737200216A02 /* RestaurantDetailIconTextCell.swift in Sources */,
 				98BB4F22248F724A00484D13 /* RestaurantDetailHeaderView.swift in Sources */,
 				98B767322492240100076BD4 /* RestaurantDetailSeparatorCell.swift in Sources */,
@@ -305,6 +306,7 @@
 				98A2B7BE246B899B0072913A /* SceneDelegate.swift in Sources */,
 				98A2B7D0246B8AF90072913A /* RestaurantTableViewController.swift in Sources */,
 				985FAA9D249243890053D054 /* MapViewController.swift in Sources */,
+				9824A23124A7278C00320846 /* FoodPin.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -504,6 +506,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		9824A22F24A7278C00320846 /* FoodPin.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				9824A23024A7278C00320846 /* FoodPin.xcdatamodel */,
+			);
+			currentVersion = 9824A23024A7278C00320846 /* FoodPin.xcdatamodel */;
+			path = FoodPin.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 98A2B7B0246B899B0072913A /* Project object */;
 }
