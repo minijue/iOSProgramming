@@ -91,6 +91,7 @@
                     <navigationItem key="navigationItem" title="FoodPin" id="o4N-wd-7F2">
                         <barButtonItem key="backBarButtonItem" title=" " id="9Y3-Y7-ZD7"/>
                         <barButtonItem key="rightBarButtonItem" image="plus" id="Dcl-vB-2w5">
+                            <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <connections>
                                 <segue destination="NBK-aY-dgf" kind="presentation" identifier="addRestaurant" id="fXI-lS-GuN"/>
                             </connections>
