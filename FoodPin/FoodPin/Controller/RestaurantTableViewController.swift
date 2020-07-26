@@ -107,6 +107,19 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         }
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        if UserDefaults.standard.bool(forKey: "hasViewedWalkthrough") {
+            return
+        }
+        let storyboard = UIStoryboard(name: "Onboarding", bundle: nil)
+        if let walkthroughViewController = storyboard.instantiateViewController(identifier: "WalkthroughViewController") as?
+            WalkthroughViewController {
+            walkthroughViewController.modalPresentationStyle = .fullScreen
+        
+            present(walkthroughViewController, animated: true, completion: nil)
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -353,6 +366,8 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
                 if let indexPath = indexPath {
                     tableView.reloadRows(at: [indexPath], with: .fade)
             }
+            case .move:
+                break
             @unknown default:
                 tableView.reloadData()
         }
