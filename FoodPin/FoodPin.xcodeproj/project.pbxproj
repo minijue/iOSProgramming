@@ -22,6 +22,8 @@
 		9879218C2494E59100F5E38C /* ReviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9879218B2494E59100F5E38C /* ReviewViewController.swift */; };
 		989400602490737200216A02 /* RestaurantDetailIconTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9894005F2490737200216A02 /* RestaurantDetailIconTextCell.swift */; };
 		98940062249075BD00216A02 /* RestaurantDetailTextCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98940061249075BD00216A02 /* RestaurantDetailTextCell.swift */; };
+		9897D2DC24CD1F31001BF5B4 /* About.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9897D2DA24CD1F31001BF5B4 /* About.storyboard */; };
+		9897D2DE24CD1F68001BF5B4 /* Discover.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9897D2DD24CD1F68001BF5B4 /* Discover.storyboard */; };
 		98A2B7BC246B899B0072913A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A2B7BB246B899B0072913A /* AppDelegate.swift */; };
 		98A2B7BE246B899B0072913A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98A2B7BD246B899B0072913A /* SceneDelegate.swift */; };
 		98A2B7C3246B899B0072913A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 98A2B7C1246B899B0072913A /* Main.storyboard */; };
@@ -61,6 +63,8 @@
 		9879218B2494E59100F5E38C /* ReviewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewViewController.swift; sourceTree = "<group>"; };
 		9894005F2490737200216A02 /* RestaurantDetailIconTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailIconTextCell.swift; sourceTree = "<group>"; };
 		98940061249075BD00216A02 /* RestaurantDetailTextCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantDetailTextCell.swift; sourceTree = "<group>"; };
+		9897D2DB24CD1F31001BF5B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = FoodPin/Storyboaard/Base.lproj/About.storyboard; sourceTree = "<group>"; };
+		9897D2DD24CD1F68001BF5B4 /* Discover.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Discover.storyboard; sourceTree = "<group>"; };
 		98A2B7B8246B899B0072913A /* FoodPin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodPin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		98A2B7BB246B899B0072913A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		98A2B7BD246B899B0072913A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -117,6 +121,8 @@
 			isa = PBXGroup;
 			children = (
 				98A2B7C1246B899B0072913A /* Main.storyboard */,
+				9897D2DD24CD1F68001BF5B4 /* Discover.storyboard */,
+				9897D2DA24CD1F31001BF5B4 /* About.storyboard */,
 				98A2B7C6246B899C0072913A /* LaunchScreen.storyboard */,
 				983146D524C7D75300C3024A /* Onboarding.storyboard */,
 			);
@@ -288,8 +294,10 @@
 				98BB4F1B248F694800484D13 /* Rubik-Italic.ttf in Resources */,
 				98BB4F1F248F694800484D13 /* Rubik-MediumItalic.ttf in Resources */,
 				98BB4F17248F694800484D13 /* Rubik-Black.ttf in Resources */,
+				9897D2DE24CD1F68001BF5B4 /* Discover.storyboard in Resources */,
 				98BB4F1A248F694800484D13 /* Rubik-BoldItalic.ttf in Resources */,
 				98BB4F20248F694800484D13 /* Rubik-Regular.ttf in Resources */,
+				9897D2DC24CD1F31001BF5B4 /* About.storyboard in Resources */,
 				983146D624C7D75300C3024A /* Onboarding.storyboard in Resources */,
 				98BB4F1E248F694800484D13 /* Rubik-Medium.ttf in Resources */,
 				98A2B7C3246B899B0072913A /* Main.storyboard in Resources */,
@@ -329,6 +337,14 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
+		9897D2DA24CD1F31001BF5B4 /* About.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9897D2DB24CD1F31001BF5B4 /* Base */,
+			);
+			name = About.storyboard;
+			sourceTree = "<group>";
+		};
 		98A2B7C1246B899B0072913A /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (

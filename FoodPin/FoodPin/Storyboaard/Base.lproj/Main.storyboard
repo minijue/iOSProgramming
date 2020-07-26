@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="PK1-mS-egk">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jkp-zB-1QO">
     <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -123,12 +123,12 @@
                     <viewLayoutGuide key="safeArea" id="4nG-S4-uTv"/>
                 </view>
             </objects>
-            <point key="canvasLocation" x="1050.7246376811595" y="99.776785714285708"/>
+            <point key="canvasLocation" x="1960.8695652173915" y="99.776785714285708"/>
         </scene>
         <!--Restaurant Detail View Controller-->
         <scene sceneID="dHy-Ki-dU6">
             <objects>
-                <viewController title="Restaurant Detail View Controller" id="P0L-NQ-GQq" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Restaurant Detail View Controller" hidesBottomBarWhenPushed="YES" id="P0L-NQ-GQq" customClass="RestaurantDetailViewController" customModule="FoodPin" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="0dy-S8-zGm">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -387,7 +387,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w87-UP-yX6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2002.8985507246377" y="99.776785714285708"/>
+            <point key="canvasLocation" x="2913.04347826087" y="99.776785714285708"/>
         </scene>
         <!-- -->
         <scene sceneID="h2u-P8-qq9">
@@ -417,7 +417,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aFk-ss-Urv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2830.434782608696" y="102.45535714285714"/>
+            <point key="canvasLocation" x="3740.579710144928" y="102.45535714285714"/>
         </scene>
         <!--New Restaurant-->
         <scene sceneID="iBG-xx-tG7">
@@ -648,7 +648,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TZO-qH-OdF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="dPV-dT-PL5" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2004" y="832"/>
+            <point key="canvasLocation" x="2943" y="860"/>
         </scene>
         <!--Review View Controller-->
         <scene sceneID="FLc-mm-CGA">
@@ -669,10 +669,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oT8-2W-4c1">
-                                <rect key="frame" x="94" y="180.66666666666663" width="226" height="481"/>
+                                <rect key="frame" x="93.666666666666686" y="180.66666666666663" width="227" height="481"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4P-Z6-HMv">
-                                        <rect key="frame" x="0.0" y="0.0" width="187" height="82"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="188" height="82"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Love" image="love"/>
                                         <connections>
@@ -680,7 +680,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOq-vo-RYz">
-                                        <rect key="frame" x="0.0" y="92.000000000000028" width="183" height="83"/>
+                                        <rect key="frame" x="0.0" y="92.000000000000028" width="181" height="83"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Cool" image="cool"/>
                                         <connections>
@@ -688,7 +688,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQv-Jy-ELI">
-                                        <rect key="frame" x="0.0" y="185.00000000000003" width="226" height="85.999999999999972"/>
+                                        <rect key="frame" x="0.0" y="185.00000000000003" width="227" height="85.999999999999972"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Happy" image="happy"/>
                                         <connections>
@@ -704,7 +704,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgi-Hf-s7n">
-                                        <rect key="frame" x="0.0" y="378" width="209" height="103"/>
+                                        <rect key="frame" x="0.0" y="378" width="218" height="103"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Angry" image="angry"/>
                                         <connections>
@@ -742,10 +742,11 @@
             </objects>
             <point key="canvasLocation" x="3792.753623188406" y="860.49107142857144"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Favorites-->
         <scene sceneID="1Ok-ys-KiO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PK1-mS-egk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorites" selectedImage="favorite" id="ORH-0R-G1l"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BIH-Bi-URI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -758,7 +759,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HWc-uH-eEs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="140.57971014492756" y="99.776785714285708"/>
+            <point key="canvasLocation" x="1050.7246376811595" y="99.776785714285708"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="xX9-dX-FHZ">
@@ -776,7 +777,46 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GUz-mn-AET" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1051" y="832"/>
+            <point key="canvasLocation" x="1961" y="860"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="dRz-qY-3eZ">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jkp-zB-1QO" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XOE-rm-fOb">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="PK1-mS-egk" kind="relationship" relationship="viewControllers" id="cnH-Qh-1Xx"/>
+                        <segue destination="0jN-Kq-rSi" kind="relationship" relationship="viewControllers" id="vr5-KN-A3N"/>
+                        <segue destination="pKW-BI-twZ" kind="relationship" relationship="viewControllers" id="s70-oU-r8n"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BE6-K0-lo8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="100"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="mjh-en-HlK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="About" id="pKW-BI-twZ" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="yNQ-xk-ij3"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dMY-40-Qeg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="122" y="569"/>
+        </scene>
+        <!--Discover-->
+        <scene sceneID="pZs-hw-qIK">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Discover" id="0jN-Kq-rSi" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="vye-RQ-RBe"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TfP-r5-Yeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="653" y="-438"/>
         </scene>
     </scenes>
     <resources>
@@ -785,6 +825,7 @@
         <image name="cool" width="78" height="83"/>
         <image name="cross" width="33" height="32"/>
         <image name="empty" width="310" height="372"/>
+        <image name="favorite" width="22" height="22"/>
         <image name="happy" width="78" height="86"/>
         <image name="heart-tick" width="22" height="21"/>
         <image name="love" width="78" height="82"/>
