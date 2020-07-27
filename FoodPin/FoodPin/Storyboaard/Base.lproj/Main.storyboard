@@ -669,10 +669,10 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="oT8-2W-4c1">
-                                <rect key="frame" x="93.666666666666686" y="180.66666666666663" width="227" height="481"/>
+                                <rect key="frame" x="94" y="180.66666666666663" width="226" height="481"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p4P-Z6-HMv">
-                                        <rect key="frame" x="0.0" y="0.0" width="188" height="82"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="187" height="82"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Love" image="love"/>
                                         <connections>
@@ -680,7 +680,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pOq-vo-RYz">
-                                        <rect key="frame" x="0.0" y="92.000000000000028" width="181" height="83"/>
+                                        <rect key="frame" x="0.0" y="92.000000000000028" width="183" height="83"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Cool" image="cool"/>
                                         <connections>
@@ -688,7 +688,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQv-Jy-ELI">
-                                        <rect key="frame" x="0.0" y="185.00000000000003" width="227" height="85.999999999999972"/>
+                                        <rect key="frame" x="0.0" y="185.00000000000003" width="226" height="85.999999999999972"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Happy" image="happy"/>
                                         <connections>
@@ -704,7 +704,7 @@
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sgi-Hf-s7n">
-                                        <rect key="frame" x="0.0" y="378" width="218" height="103"/>
+                                        <rect key="frame" x="0.0" y="378" width="209" height="103"/>
                                         <fontDescription key="fontDescription" name="Rubik-Regular" family="Rubik" pointSize="50"/>
                                         <state key="normal" title="Angry" image="angry"/>
                                         <connections>
@@ -746,7 +746,7 @@
         <scene sceneID="1Ok-ys-KiO">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="PK1-mS-egk" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Favorites" selectedImage="favorite" id="ORH-0R-G1l"/>
+                    <tabBarItem key="tabBarItem" title="Favorites" image="favorite" selectedImage="favorite" id="ORH-0R-G1l"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="BIH-Bi-URI">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -785,6 +785,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="jkp-zB-1QO" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="XOE-rm-fOb">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -802,7 +803,7 @@
         <scene sceneID="mjh-en-HlK">
             <objects>
                 <viewControllerPlaceholder storyboardName="About" id="pKW-BI-twZ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="yNQ-xk-ij3"/>
+                    <tabBarItem key="tabBarItem" selectedImage="about" systemItem="more" id="yNQ-xk-ij3"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dMY-40-Qeg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -812,7 +813,7 @@
         <scene sceneID="pZs-hw-qIK">
             <objects>
                 <viewControllerPlaceholder storyboardName="Discover" id="0jN-Kq-rSi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="vye-RQ-RBe"/>
+                    <tabBarItem key="tabBarItem" selectedImage="discover" systemItem="recents" id="vye-RQ-RBe"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TfP-r5-Yeh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -820,10 +821,12 @@
         </scene>
     </scenes>
     <resources>
+        <image name="about" width="23" height="21"/>
         <image name="angry" width="78" height="103"/>
         <image name="close" width="16" height="16"/>
         <image name="cool" width="78" height="83"/>
         <image name="cross" width="33" height="32"/>
+        <image name="discover" width="35" height="20"/>
         <image name="empty" width="310" height="372"/>
         <image name="favorite" width="22" height="22"/>
         <image name="happy" width="78" height="86"/>
