@@ -51,9 +51,9 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
     
     @IBAction func saveButtonTapped(_ sender: Any) {
         if nameTextField.text == "" || typeTextField.text == "" || addressTextField.text == "" || phoneTextField.text == "" {
-            let saveAlert = UIAlertController(title: "Ooops", message: "We can't proceed because one of the fields is blank. Please note that all fields are required.", preferredStyle: .alert)
+            let saveAlert = UIAlertController(title: NSLocalizedString("Ooops", comment: "Ooops"), message: NSLocalizedString("We can't proceed because one of the fields is blank. Please note that all fields are required.", comment: "We can't proceed because one of the fields is blank. Please note that all fields are required."), preferredStyle: .alert)
             
-            let okAction = UIAlertAction(title: "OK", style: .default, handler: nil)
+            let okAction = UIAlertAction(title: NSLocalizedString("OK", comment: "OK"), style: .default, handler: nil)
             saveAlert.addAction(okAction)
             
             present(saveAlert, animated: true, completion: nil)
@@ -107,8 +107,8 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row == 0 {
-            let photoSourceRequestController = UIAlertController(title: "", message: "Choose your photo source", preferredStyle: .actionSheet)
-            let cameraAction = UIAlertAction(title: "Camera", style: .default, handler: {
+            let photoSourceRequestController = UIAlertController(title: "", message: NSLocalizedString("Choose your photo source", comment: "Choose your photo source"), preferredStyle: .actionSheet)
+            let cameraAction = UIAlertAction(title: NSLocalizedString("Camera", comment: "Camera"), style: .default, handler: {
                 (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.camera) {
                     let imagePicker = UIImagePickerController()
@@ -121,7 +121,7 @@ class NewRestaurantController: UITableViewController, UITextFieldDelegate, UIIma
                 }
             })
             
-            let photoLibraryAction = UIAlertAction(title: "Photo library", style: .default, handler: {
+            let photoLibraryAction = UIAlertAction(title: NSLocalizedString("Photo library", comment: "Photo library"), style: .default, handler: {
                 (action) in
                 if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
                     let imagePicker = UIImagePickerController()

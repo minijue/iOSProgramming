@@ -1,0 +1,45 @@
+/* Camera */
+"Camera" = "相机";
+
+/* Choose your photo source */
+"Choose your photo source" = "选择照片来源";
+
+/* Delete */
+"Delete" = "删除";
+
+/* Feedback */
+"Feedback" = "反馈";
+
+/* Follow Us */
+"Follow Us" = "联系我们";
+
+/* OK */
+"OK" = "好";
+
+/* Ooops */
+"Ooops" = "哦...";
+
+/* Photo library */
+"Photo library" = "相册";
+
+/* Rate us on App Store */
+"Rate us on App Store" = "在App Store进行评分";
+
+/* Search restaurants... */
+"Search restaurants..." = "搜索餐馆...";
+
+/* Share */
+"Share" = "分享";
+
+/* Tell us your feedback */
+"Tell us your feedback" = "告诉我们你的意见";
+
+/* Tick */
+"Tick" = "标记";
+
+/* Undo */
+"Undo" = "撤销";
+
+/* We can't proceed because one of the fields is blank. Please note that all fields are required. */
+"We can't proceed because one of the fields is blank. Please note that all fields are required." = "某项内容为空，请检查所有必填的项。";
+

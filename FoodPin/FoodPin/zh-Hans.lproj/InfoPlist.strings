@@ -1,0 +1,6 @@
+/* Privacy - Camera Usage Description */
+"NSCameraUsageDescription" = "你需要授权应用访问相机以拍照";
+
+/* Privacy - Photo Library Usage Description */
+"NSPhotoLibraryUsageDescription" = "你需要授权应用访问相册以选取喜欢的餐馆照片";
+

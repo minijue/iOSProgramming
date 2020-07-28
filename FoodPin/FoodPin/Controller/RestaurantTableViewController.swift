@@ -77,7 +77,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         
         searchController = UISearchController(searchResultsController: nil)
         searchController.searchBar.barTintColor = .white
-        searchController.searchBar.placeholder = "Search restaurants..."
+        searchController.searchBar.placeholder = NSLocalizedString("Search restaurants...", comment: "Search restaurants...")
         searchController.searchBar.backgroundImage = UIImage()
         searchController.searchBar.tintColor = UIColor(red: 231, green: 76, blue: 60)
         tableView.tableHeaderView = searchController.searchBar
@@ -233,7 +233,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
 //        tableView.deleteRows(at: [indexPath], with: .fade)
 //    }
     override func tableView(_ tableView: UITableView, leadingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        let tickAction = UIContextualAction(style: .normal, title: "Tick", handler: {
+        let tickAction = UIContextualAction(style: .normal, title: NSLocalizedString("Tick", comment: "Tick"), handler: {
             (action, sourceView, completionHandler) in
             self.restaurants[indexPath.row].isVisited = true
             
@@ -253,7 +253,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         tickAction.backgroundColor = UIColor.systemGreen
         tickAction.image = UIImage(named: "tick")
         
-        let undoAction = UIContextualAction(style: .normal, title: "Undo", handler: {
+        let undoAction = UIContextualAction(style: .normal, title: NSLocalizedString("Undo", comment: "Undo"), handler: {
             (action, sourceView, completionHandler) in
             self.restaurants[indexPath.row].isVisited = false
             
@@ -279,7 +279,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
     
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         // “删除”按钮
-        let deleteAction = UIContextualAction(style: .destructive, title: "Delete", handler: {
+        let deleteAction = UIContextualAction(style: .destructive, title: NSLocalizedString("Delete", comment: "Delete"), handler: {
             (action, sourceView, completionHandler) in
             if let appDelegate = (UIApplication.shared.delegate as? AppDelegate) {
                 let context = appDelegate.persistentContainer.viewContext
@@ -303,7 +303,7 @@ class RestaurantTableViewController: UITableViewController, NSFetchedResultsCont
         deleteAction.image = UIImage(named: "delete")
         
         // “分享”按钮
-        let shareAction = UIContextualAction(style: .normal, title: "Share", handler: {
+        let shareAction = UIContextualAction(style: .normal, title: NSLocalizedString("Share", comment: "Share"), handler: {
             (action, sourceView, completionHandler) in
             let defaultText = "Just checking in at " + self.restaurants[indexPath.row].name!
             // 显示“分享”对话框
